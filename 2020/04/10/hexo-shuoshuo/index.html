@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta itemprop="name" content="Uncle_drew">
+  <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  <meta name="description" itemprop="description" content="Hand down,man down">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="keywords" content="Uncle_drew,drew,欧文,acm,icpc,algorithm,算法,篮球,web,建站,chevereto,hexo">
+  
+  <title itemprop="name">为你的hexo博客添加动态的（可直接发布说说的）说说页面 | Uncle_drew</title>
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//cdn.bootcss.com">
+  <link rel="dns-prefetch" href="//cdn.mathjax.org">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/cdn/gg.css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="https://cdn.jsdelivr.net/gh/drew233/css/wustyle.min.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/lib.min.css" media="all">
+  <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/rfsearch.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/font.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/zoom.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/sharejs.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/matery.min.css">
+
+
+  <style type="text/css">
+          #drew {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              margin-bottom: 15px;
+              margin-top: 15px;
+              text-align: center;
+              border: 0;
+              border-radius: 10px;
+              color: rgba(0, 0, 0, .87);
+              background: #fff 50%;
+              background-size: cover;
+              box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+              margin:0 auto;
+          }
+  </style>
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+
+   Function.prototype.getMultiLine = function () {
+            var lines = new String(this);
+            lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));
+            return lines;
+        }
+
+        var string = function () {
+/*
+  Hello!
+（〃｀ 3′〃）
+*/
+        }
+        window.console.log(string.getMultiLine());
+
+
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /*
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+  /*End of Initial Variables*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/drew233/imgcdn/1589450799625.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200514082037.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200508193114.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/at166.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200407230036.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  var issafariBrowser = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+  if(issafariBrowser){
+    alert('本站图片主要采用Webp，暂不兼容Safari');
+  };
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="/random.html">
+          <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Hand down,man down.</p>
+        <div class="top-social_v2">
+          <!-- <li id="bg-pre"> -->
+            <!-- <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/Drew233" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811021906.webp">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1120437716&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811022455.webp">
+                  </a>
+                </li>
+              
+            
+          
+          <!-- <li id="bg-next"> -->
+            <!-- <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+
+    <div id="page" class="site wrapper">
+      
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top" id="pcmenu">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Uncle_drew</span>
+            <span class="shironeko"></span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Algorithm/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          算法
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Life/">
+                          <i class="fa fa-bathtub" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Training/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          集训
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/analytics/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-line-chart" aria-hidden="true"></i>
+                    统计
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          lab
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/category/">
+                          <i class="fa fa-list" aria-hidden="true"></i>
+                          分类
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/">
+                          <i class="fa fa-tags" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/2020/06/02/mcwallpaper/">
+                          <i class="fa fa-television" aria-hidden="true"></i>
+                          MC壁纸
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/atom.xml">
+                          <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                          订阅
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/donate/">
+                          <i class="fa fa-money" aria-hidden="true"></i>
+                          打赏
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/random.html">
+                          <i class="fa fa-random" aria-hidden="true"></i>
+                          随机文章
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/shuoshuo/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-clock-o" aria-hidden="true"></i>
+                    说说
+                  </span>
+                </a>
+                
+              </li>
+            
+            <li>
+              <a role="button" class="popup-trigger">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  搜索
+              </a>
+              
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+     
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200410165227.webp);" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200410165227.webp">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      为你的hexo博客添加动态的（可直接发布说说的）说说页面</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://cndrew.cn/">
+            <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+          </a>
+        </span>
+        <span>
+          <a href="https://cndrew.cn/">Uncle_drew</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        <i class="fa fa-calendar" aria-hidden="true">&nbsp&nbsp</i>2020-4-10<span class="bull">
+        ·</span>
+      <i class="fa fa-eye" aria-hidden="true">&nbsp&nbsp</i>本文共<span id="busuanzi_value_page_pv"></span>次阅读 &nbsp·&nbsp
+         <i class="fa fa-book" aria-hidden="true">&nbsp&nbsp</i><span class="post-count">字数统计：2.8k</span> &nbsp·&nbsp
+           <span class="post-count"><i class="fa fa-coffee" aria-hidden="true">&nbsp&nbsp</i>阅读时长≈14分钟</span></p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div id="point"></div>
+
+        <script>
+          function intervalTime(startTime,endTime){
+              var date1 = new Date(startTime);
+              var date2 = new Date(endTime);  
+              var date3 = date2.getTime() - date1.getTime(); 
+              var days = Math.floor(date3 / (24 * 3600 * 1000));
+              return days;
+          }
+          function format(Date){
+            var Y = Date.getFullYear();
+            var M = Date.getMonth() + 1;
+              M = M < 10 ? '0' + M : M;// 不够两位补充0
+            var D = Date.getDate();
+              D = D < 10 ? '0' + D : D;
+            var H = Date.getHours();
+              H = H < 10 ? '0' + H : H;
+            var Mi = Date.getMinutes();
+              Mi = Mi < 10 ? '0' + Mi : Mi;
+            var S = Date.getSeconds();
+              S = S < 10 ? '0' + S : S;
+              return Y + '-' + M + '-' + D + ' ' + H + ':' + Mi + ':' + S;
+          }
+          var pdate = new Date("Fri Apr 10 2020 15:33:31 GMT+0800");
+          var update = new Date("Mon May 11 2020 10:54:06 GMT+0800");
+          var now = new Date();
+          now=format(now);
+          pdate=format(pdate);
+          update=format(update);
+          var days=intervalTime(pdate,now),udays=intervalTime(update,now);
+          var mid=parseInt(days,10);
+          var mi=parseInt("30",10);
+          // alert(mid+mi);
+          if(mid > mi){
+            document.getElementById("point").innerHTML="<div class=\"tip share\">请注意，本文编写于"+days+"天前，最后修改于"+udays+"天前，其中某些信息可能已经过时。<img src=\"https://cdn.jsdelivr.net/gh/drew233/cdn/kawayi.webp\"><\img> </div>";
+            // alert(days);
+          }
+        </script>
+
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+
+        <div class="entry-content">
+
+          <blockquote>
+<p>前言：我美化的没那么好看，如果不喜欢的话，你可以在css中根据自己的需要调整。本页面用到的所有css均在一个文件。持续更新到我不知道更新什么为止。2.0版本已解决验证问题。</p>
+</blockquote>
+<p>项目初期版本迭代更新较快，请着重参考文档中的介绍。<br>活前往查看最新教程：<a href="https://cndrew.cn/2020/05/11/artitalk/" target="_blank" rel="noopener">https://cndrew.cn/2020/05/11/artitalk/</a></p>
+<p>文档地址：<a href="https://artitalk.js.org/" target="_blank" rel="noopener">https://artitalk.js.org/</a><br>如果有问题或者建议，欢迎进群交流，群号：1104585229</p>
+<p><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Artitalk交流群" title="Artitalk交流群"></p>
+<h1 id="一开始我想说的话"><a href="#一开始我想说的话" class="headerlink" title="一开始我想说的话"></a>一开始我想说的话</h1><p>本文可能不会实时更新，推荐前往GitHub。<br>本篇文章中涉及到的js和css都已上传到GitHub: <a href="https://github.com/Drew233/hexo-shuoshuo" target="_blank" rel="noopener">Hexo-shuoshuo</a><br>之前弄了一个简单的说说页面，没想到效果挺好。挺多小伙伴都表示了很有用，最近突然意识到既然评论数据可以存储在<code>leancloud</code>然后展示出来，那说说肯定也可以啊！说干就干。<br>之前那篇文章的链接: <a href="https://cndrew.cn/2019/09/11/shuoshuo/" target="_blank" rel="noopener">为你的hexo博客添加说说页面</a><br>视频教程：<a href="https://www.bilibili.com/video/BV16A411b7UF" target="_blank" rel="noopener">Hexo-shuoshuo bilibili</a><br>目前最新版本：<code>V2.1.1</code></p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性:"></a>特性:</h2><ul>
+<li>在<code>Hexo</code>中显示一个说说页面，并且支持站长实时发布，可移步<code>leancloud</code>后台进行修改。</li>
+<li>可直接使用<code>html</code>语法插入歌曲或者图片视频等。理论上支持除了<code>&lt;li&gt;</code>和<code>&lt;ui&gt;</code>的其他任何<code>html</code>语法。</li>
+<li>通过leancloud的用户直接调用保证仅站长可以发布说说，且被破解的概率理论上为0.</li>
+</ul>
+<p>Demo: <a href="https://cndrew.cn/shuoshuo/" target="_blank" rel="noopener">Hexo-说说</a></p>
+<h1 id="具体食用方法"><a href="#具体食用方法" class="headerlink" title="具体食用方法"></a>具体食用方法</h1><h2 id="关于Leancloud"><a href="#关于Leancloud" class="headerlink" title="关于Leancloud"></a>关于Leancloud</h2><p>这里我们要求使用<a href="https://console.leancloud.app/login.html#/signup" target="_blank" rel="noopener">leancloud国际版</a>注册，因为国际版不需要绑定备案的域名<br>注册结束后首先找到账号设置，绑定邮箱和手机号。这一步是必须的，否则无法创建应用。邮箱和手机号都有临时的，所以也不难。<br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/lc1.webp" data-fancybox="images" data-caption="ohuo" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/lc1.webp" class="img-shadow img-margin"></center></a></p>
+<p>绑定成功之后，点击创建应用，并将应用名字设置为<code>shuoshuo</code><br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/lc2.webp" data-fancybox="images" data-caption="ohuo" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/lc2.webp" class="img-shadow img-margin"></center></a><br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/lcc2.webp" data-fancybox="images" data-caption="ohuo" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/lcc2.webp" class="img-shadow img-margin"></center></a></p>
+<p>创建之后点击应用跳转到控制台<br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/lc3.webp" data-fancybox="images" data-caption="ohuo" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/lc3.webp" class="img-shadow img-margin"></center></a></p>
+<p>在设置中找到应用keys中的<code>appId</code>和<code>appKey</code>记下来，或者页面一直开着。<br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/lc4.webp" data-fancybox="images" data-caption="ohuo" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/lc4.webp" class="img-shadow img-margin"></center></a></p>
+<p>在<code>leancloud</code>的存储中添加<code>class</code>，命名为<code>shuoshuo</code>。<br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/lc5.webp" data-fancybox="images" data-caption="ohuo" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/lc5.webp" class="img-shadow img-margin"></center></a></p>
+<p>然后在你新建的应用中找到<code>结构化数据</code>下的<code>用户</code>。<br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/20200417234538.webp" data-fancybox="images" data-caption="ohuo" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200417234538.webp" class="img-shadow img-margin"></center></a></p>
+<p>然后点击<code>添加用户</code>，输入你想使用的<code>用户名</code>以及<code>密码</code>。<br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/20200417234719.webp" data-fancybox="images" data-caption="ohuo" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200417234719.webp" class="img-shadow img-margin"></center></a></p>
+<p>接着回到<code>结构化数据-&gt;shuoshuo-&gt;权限</code>，在<code>Class访问权限</code>中将<code>add_fields</code>以及<code>create</code>权限设置为指定用户，输入你刚才输入的用户名会自动匹配。为了安全起见，将<code>delete</code>和<code>update</code>也设置为跟它们一样的权限。<br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/20200417235209.webp" data-fancybox="images" data-caption="20200417235209" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200417235209.webp" class="img-shadow img-margin"></center></a><br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/20200417235312.webp" data-fancybox="images" data-caption="20200417235312" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200417235312.webp" class="img-shadow img-margin"></center></a></p>
+<p>最后将<code>_User</code>中的权限全部调为指定用户，或者数据创建者，为了保证不被篡改用户数据。</p>
+<p>到这里<code>leancloud</code>的设置就告一段落了。</p>
+<h2 id="关于js和css"><a href="#关于js和css" class="headerlink" title="关于js和css"></a>关于js和css</h2><p>去<code>GitHub</code>下载：<a href="https://github.com/Drew233/hexo-shuoshuo" target="_blank" rel="noopener">Hexo-shuoshuo</a><br>引用<code>jquery</code></p>
+<pre><code class="lang-html">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;!-- 如果之前引用过就不需要重复引用了 --&gt;
+</code></pre>
+<p>然后在根目录的<code>source</code>文件夹下新建一个<code>shuoshuo</code>文件夹，并在文件夹中新建<code>index.md</code><br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/index.webp" data-fancybox="images" data-caption="ohuo" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/index.webp" class="img-shadow img-margin"></center></a></p>
+<p>在<code>index.md</code>中除了<code>font-matter</code>之外写上以下内容</p>
+<pre><code class="lang-html">&lt;script&gt;
+var img=&quot;&quot;;
+var appID=&quot;&quot;;
+var appKEY=&quot;&quot;;
+var per=&quot;&quot;;
+var username=&quot;&quot;;
+&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/src/shuoshuov1.1.css&quot; media=&quot;all&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/src/os.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/src/shuoshuov2.1.1.js&quot;&gt;&lt;/script&gt;
+&lt;body&gt;
+  &lt;div id=&quot;lazy&quot;&gt;
+    &lt;div class=&quot;preloader&quot; style=&quot;opacity: 1; &quot;&gt;
+  &lt;svg version=&quot;1.1&quot; id=&quot;sun&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; width=&quot;10px&quot; height=&quot;10px&quot; viewBox=&quot;0 0 10 10&quot; enable-background=&quot;new 0 0 10 10&quot; xml:space=&quot;preserve&quot; style=&quot;opacity: 1; margin-left: 0px; margin-top: 0px;&quot;&gt;
+    &lt;g&gt;
+      &lt;path fill=&quot;none&quot; d=&quot;M6.942,3.876c-0.4-0.692-1.146-1.123-1.946-1.123c-0.392,0-0.779,0.104-1.121,0.301c-1.072,0.619-1.44,1.994-0.821,3.067C3.454,6.815,4.2,7.245,5,7.245c0.392,0,0.779-0.104,1.121-0.301C6.64,6.644,7.013,6.159,7.167,5.581C7.321,5,7.243,4.396,6.942,3.876z M6.88,5.505C6.745,6.007,6.423,6.427,5.973,6.688C5.676,6.858,5.34,6.948,5,6.948c-0.695,0-1.343-0.373-1.69-0.975C2.774,5.043,3.093,3.849,4.024,3.312C4.32,3.14,4.656,3.05,4.996,3.05c0.695,0,1.342,0.374,1.69,0.975C6.946,4.476,7.015,5,6.88,5.505z&quot;&gt;&lt;/path&gt;
+      &lt;path fill=&quot;none&quot; d=&quot;M8.759,2.828C8.718,2.757,8.626,2.732,8.556,2.774L7.345,3.473c-0.07,0.041-0.094,0.132-0.053,0.202C7.319,3.723,7.368,3.75,7.419,3.75c0.025,0,0.053-0.007,0.074-0.02l1.211-0.699C8.774,2.989,8.8,2.899,8.759,2.828z&quot;&gt;&lt;/path&gt;
+      &lt;path fill=&quot;none&quot; d=&quot;M1.238,7.171c0.027,0.047,0.077,0.074,0.128,0.074c0.025,0,0.051-0.008,0.074-0.02l1.211-0.699c0.071-0.041,0.095-0.133,0.054-0.203S2.574,6.228,2.503,6.269l-1.21,0.699C1.221,7.009,1.197,7.101,1.238,7.171z&quot;&gt;&lt;/path&gt;
+      &lt;path fill=&quot;none&quot; d=&quot;M6.396,2.726c0.052,0,0.102-0.026,0.13-0.075l0.349-0.605C6.915,1.976,6.89,1.885,6.819,1.844c-0.07-0.042-0.162-0.017-0.202,0.054L6.269,2.503C6.228,2.574,6.251,2.666,6.322,2.706C6.346,2.719,6.371,2.726,6.396,2.726z&quot;&gt;&lt;/path&gt;
+          &lt;path fill=&quot;none&quot; d=&quot;M3.472,7.347L3.123,7.952c-0.041,0.07-0.017,0.162,0.054,0.203C3.2,8.169,3.226,8.175,3.25,8.175c0.052,0,0.102-0.027,0.129-0.074l0.349-0.605c0.041-0.07,0.017-0.16-0.054-0.203C3.603,7.251,3.513,7.276,3.472,7.347z&quot;&gt;&lt;/path&gt;
+          &lt;path fill=&quot;none&quot; d=&quot;M3.601,2.726c0.025,0,0.051-0.007,0.074-0.02C3.746,2.666,3.77,2.574,3.729,2.503l-0.35-0.604C3.338,1.828,3.248,1.804,3.177,1.844C3.106,1.886,3.082,1.976,3.123,2.047l0.35,0.604C3.5,2.7,3.549,2.726,3.601,2.726z&quot;&gt;&lt;/path&gt;
+          &lt;path fill=&quot;none&quot; d=&quot;M6.321,7.292c-0.07,0.043-0.094,0.133-0.054,0.203l0.351,0.605c0.026,0.047,0.076,0.074,0.127,0.074c0.025,0,0.051-0.006,0.074-0.02c0.072-0.041,0.096-0.133,0.055-0.203l-0.35-0.605C6.483,7.276,6.393,7.253,6.321,7.292z&quot;&gt;&lt;/path&gt;
+          &lt;path fill=&quot;none&quot; d=&quot;M2.202,5.146c0.082,0,0.149-0.065,0.149-0.147S2.284,4.851,2.202,4.851H1.503c-0.082,0-0.148,0.066-0.148,0.148s0.066,0.147,0.148,0.147H2.202z&quot;&gt;&lt;/path&gt;
+          &lt;path fill=&quot;none&quot; d=&quot;M8.493,4.851H7.794c-0.082,0-0.148,0.066-0.148,0.148s0.066,0.147,0.148,0.147l0,0h0.699c0.082,0,0.148-0.065,0.148-0.147S8.575,4.851,8.493,4.851L8.493,4.851z&quot;&gt;&lt;/path&gt;
+          &lt;path fill=&quot;none&quot; d=&quot;M5.146,2.203V0.805c0-0.082-0.066-0.148-0.148-0.148c-0.082,0-0.148,0.066-0.148,0.148v1.398c0,0.082,0.066,0.149,0.148,0.149C5.08,2.352,5.146,2.285,5.146,2.203z&quot;&gt;&lt;/path&gt;
+          &lt;path fill=&quot;none&quot; d=&quot;M4.85,7.796v1.396c0,0.082,0.066,0.15,0.148,0.15c0.082,0,0.148-0.068,0.148-0.15V7.796c0-0.082-0.066-0.148-0.148-0.148C4.917,7.647,4.85,7.714,4.85,7.796z&quot;&gt;&lt;/path&gt;
+          &lt;path fill=&quot;none&quot; d=&quot;M2.651,3.473L1.44,2.774C1.369,2.732,1.279,2.757,1.238,2.828C1.197,2.899,1.221,2.989,1.292,3.031l1.21,0.699c0.023,0.013,0.049,0.02,0.074,0.02c0.051,0,0.101-0.026,0.129-0.075C2.747,3.604,2.722,3.514,2.651,3.473z&quot;&gt;&lt;/path&gt;
+          &lt;path fill=&quot;none&quot; d=&quot;M8.704,6.968L7.493,6.269c-0.07-0.041-0.162-0.016-0.201,0.055c-0.041,0.07-0.018,0.162,0.053,0.203l1.211,0.699c0.023,0.012,0.049,0.02,0.074,0.02c0.051,0,0.102-0.027,0.129-0.074C8.8,7.101,8.776,7.009,8.704,6.968z&quot;&gt;&lt;/path&gt;
+      &lt;/g&gt;
+  &lt;/svg&gt;
+
+  &lt;svg version=&quot;1.1&quot; id=&quot;cloud&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; width=&quot;10px&quot; height=&quot;10px&quot; viewBox=&quot;0 0 10 10&quot; enable-background=&quot;new 0 0 10 10&quot; xml:space=&quot;preserve&quot;&gt;
+    &lt;path fill=&quot;none&quot; d=&quot;M8.528,5.624H8.247c-0.085,0-0.156-0.068-0.156-0.154c0-0.694-0.563-1.257-1.257-1.257c-0.098,0-0.197,0.013-0.3,0.038C6.493,4.259,6.45,4.252,6.415,4.229C6.38,4.208,6.356,4.172,6.348,4.131C6.117,3.032,5.135,2.235,4.01,2.235c-1.252,0-2.297,0.979-2.379,2.23c-0.004,0.056-0.039,0.108-0.093,0.13C1.076,4.793,0.776,5.249,0.776,5.752c0,0.693,0.564,1.257,1.257,1.257h6.495c0.383,0,0.695-0.31,0.695-0.692S8.911,5.624,8.528,5.624z&quot;&gt;&lt;/path&gt;
+  &lt;/svg&gt;
+
+  &lt;div class=&quot;rain&quot;&gt;
+    &lt;span class=&quot;drop&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drop&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drop&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drop&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drop&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drop&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drop&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drop&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drop&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;drop&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;text&quot;&gt;
+    LOOKING OUTSIDE FOR YOU... ONE SEC
+  &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=&quot;primary&quot; class=&quot;content-area&quot; style=&quot;&quot;&gt;
+    &lt;main id=&quot;main&quot; class=&quot;site-main&quot; role=&quot;main&quot;&gt;
+        &lt;div id=&quot;shuoshuo_content&quot;&gt;
+            &lt;div id=&quot;ccontent&quot;&gt;
+        &lt;/div&gt;
+&lt;div id=&quot;sa&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;saa&quot;&gt;&lt;/div&gt;
+&lt;textarea id=&quot;neirong&quot; placeholder=&quot;本页面仅支持站长发表说说，由于特殊原因关闭本页面评论功能&quot; style=&quot;width:100%;height:150px;background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20200409110727.webp);background-size: contain;background-repeat: no-repeat;background-position: right;&quot;&gt;&lt;/textarea&gt;
+&lt;button onclick=&quot;savecontent()&quot; style=&quot;float :right;&quot;&gt;biu~&lt;/button&gt;
+&lt;button onclick=&quot;preview()&quot; style=&quot;float :right;&quot;&gt;预览&lt;/button&gt;
+&lt;input type=&quot;password&quot; id=&quot;key&quot; value=&quot;&quot; class=&quot;mytxt&quot; placeholder=&quot;是时候验证你的身份了！&quot; autocomplete=&quot;off&quot;/&gt;
+
+&lt;div id=&quot;preview&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>变量含义及作用</li>
+<li><code>img</code>: 头像url链接</li>
+<li><code>appID</code>: leancloud的应用appId</li>
+<li><code>appKEY</code>: leancloud的应用appKey</li>
+<li><code>per</code>: 每一部分想展示的说说数以及每次点击查看更多的时候显示的说说数</li>
+<li><code>username</code>: 你在leancloud中添加的作为可发布说说的用户的用户名</li>
+<li>每个参数均必须填写(若未自己修改js)</li>
+</ul>
+<p>至此就添加完毕了。访问<code>yoursite.com/shuoshuo</code>就能看到你的动态说说界面了。<br>每次发说说填上你在leancloud中设置的密码，再也不会有人可能冒充你发说说了呢。<br>效果图<br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/lc6.webp" data-fancybox="images" data-caption="ohuo" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/lc6.webp" class="img-shadow img-margin"></center></a></p>
+<h2 id="与valine的一些冲突"><a href="#与valine的一些冲突" class="headerlink" title="与valine的一些冲突"></a>与valine的一些冲突</h2><p>说说页面无法开启<code>valine</code>评论<br>如果不可以，请联系我或者在<code>GitHub</code>提交<code>issues</code></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>本教程使用<code>hexo</code>默认主题做的示范，理论上任何主题均支持。<br>我只是一个小白，大家轻喷。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏<div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/alipay.webp"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/wechat.webp"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/04/18/mdjj/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200418230821.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200418230821.webp">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Hexo-Markdown写作进阶——标签</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/04/09/valinebq/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200410144729.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200410144729.webp">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                valine添加自定义表情</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+      document.getElementById("page_loading_time").innerHTML="It took me "+loadTime+"ms to meet you this time";
+      console.log('Page load time is '+ loadTime);  
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        avatar: 'monsterid',
+        appId: "pNiuQ1a1Kllv1bupuAAOYjl3-gzGzoHsz",
+        appKey: "0cJBUKqrJsFhMOrGAyxfL9VU",
+        path: window.location.pathname,
+        serverURL: "https://valine.cndrew.cn/",
+        placeholder: "若想及时收到回复消息，请在上方填入常用邮箱."
+      })
+  }
+</script>
+
+
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="https://cndrew.cn/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp" itemprop="image" alt="Uncle_drew" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://cndrew.cn/" itemprop="url" rel="author">Uncle_drew</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>
+    
+    
+
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Uncle_drew<br>
+      powered_by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019-2020 Uncle_drew</p>
+      <p style="color: #666666;" id="page_loading_time"></p>
+    </div>
+   
+
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a></a>
+        </span>
+      </p>
+   <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="静态网页托管于阿里云服务器">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+      <span class="badge-subject">DNS</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-brightgreen">jsDelivr</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv" target="_blank" title="本站访客量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">PV</span><span class="badge-value bg-orange" id="busuanzi_value_site_pv" target="_blank" title="本站浏览量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet" target="_blank" title="全站字数">340.2k</span>
+    </div>
+    </div><!-- .site-info -->
+
+
+  </footer>
+
+  
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/mmp/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/bug/sakura-ap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/fasearch.min.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/drew233/css/lvaline.min.js'></script>
+<script src="//cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20191003172815.webp"></img></center>
+
+<!-- 不蒜子 网页计数器 -->
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+    </div>
+
+
+    <div class="site-search">
+      <div class="popup search-popup" style="display: none;">
+      <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-container">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="输入关键词搜索" spellcheck="false" type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    </div>
+
+    <div id="search-result">
+      <div id="no-result"><i class="fa fa-frown-o fa-5x"></i>
+      </div>
+    </div>
+    </div>
+    <div class="search-pop-overlay" style="display: none;"></div>
+    </div>
+  </section>
+  
+
+  <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+ <div class="theme-controls row-container">
+  <ul class="menu-list">
+   <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+   <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+   <li id="gribs-bg"> <i class="fas fa-atom" aria-hidden="true"></i></li>
+   <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+   <li id="totem-bg"> <i class="fas fa-fish" aria-hidden="true"></i></li>
+   <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+   <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+   <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+  </ul>
+ </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+
+  <div class="changeSkin-gear no-select">
+  <div class="keys" id="setbtn">
+   <span id="open-skinMenu"> 切换主题 | SCHEME TOOL
+     <i class="iconfont icon-gear inline-block rotating"></i>
+   </span>
+  </div>
+</div>
+
+  
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Uncle_drew</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Drew233" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=1120437716&site=qq&menu=yes" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Algorithm/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  算法
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Life/">
+                  <i class="fa fa-bathtub" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Training/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  集训
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/analytics/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-line-chart" aria-hidden="true"></i>
+            统计
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  lab
+                </a>
+              </li>
+            
+              <li>
+                <a href="/category/">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  分类
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
+                <a href="/2020/06/02/mcwallpaper/">
+                  <i class="fa fa-television" aria-hidden="true"></i>
+                  MC壁纸
+                </a>
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                  订阅
+                </a>
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                  打赏
+                </a>
+              </li>
+            
+              <li>
+                <a href="/random.html">
+                  <i class="fa fa-random" aria-hidden="true"></i>
+                  随机文章
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/shuoshuo/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-clock-o" aria-hidden="true"></i>
+            说说
+          </span>
+        </a>
+        
+      </li>
+    
+    <li>
+      <a role="button" class="popup-trigger">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          搜索
+      </a>
+      
+    </li>
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">Hand down,man down</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+   
+
+
+
+</body>
+
+</html>

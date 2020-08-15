@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta itemprop="name" content="Uncle_drew">
+  <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  <meta name="description" itemprop="description" content="Hand down,man down">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="keywords" content="Uncle_drew,drew,欧文,acm,icpc,algorithm,算法,篮球,web,建站,chevereto,hexo">
+  
+  <title itemprop="name">HPU算法协会一二年级联合训练赛(Day 24) | Uncle_drew</title>
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//cdn.bootcss.com">
+  <link rel="dns-prefetch" href="//cdn.mathjax.org">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/cdn/gg.css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="https://cdn.jsdelivr.net/gh/drew233/css/wustyle.min.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/lib.min.css" media="all">
+  <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/rfsearch.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/font.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/zoom.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/sharejs.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/matery.min.css">
+
+
+  <style type="text/css">
+          #drew {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              margin-bottom: 15px;
+              margin-top: 15px;
+              text-align: center;
+              border: 0;
+              border-radius: 10px;
+              color: rgba(0, 0, 0, .87);
+              background: #fff 50%;
+              background-size: cover;
+              box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+              margin:0 auto;
+          }
+  </style>
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+
+   Function.prototype.getMultiLine = function () {
+            var lines = new String(this);
+            lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));
+            return lines;
+        }
+
+        var string = function () {
+/*
+  Hello!
+（〃｀ 3′〃）
+*/
+        }
+        window.console.log(string.getMultiLine());
+
+
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /*
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+  /*End of Initial Variables*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/drew233/imgcdn/1589450799625.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200514082037.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200508193114.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/at166.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200407230036.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  var issafariBrowser = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+  if(issafariBrowser){
+    alert('本站图片主要采用Webp，暂不兼容Safari');
+  };
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="/random.html">
+          <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Hand down,man down.</p>
+        <div class="top-social_v2">
+          <!-- <li id="bg-pre"> -->
+            <!-- <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/Drew233" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811021906.webp">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1120437716&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811022455.webp">
+                  </a>
+                </li>
+              
+            
+          
+          <!-- <li id="bg-next"> -->
+            <!-- <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+
+    <div id="page" class="site wrapper">
+      
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top" id="pcmenu">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Uncle_drew</span>
+            <span class="shironeko"></span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Algorithm/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          算法
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Life/">
+                          <i class="fa fa-bathtub" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Training/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          集训
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/analytics/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-line-chart" aria-hidden="true"></i>
+                    统计
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          lab
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/category/">
+                          <i class="fa fa-list" aria-hidden="true"></i>
+                          分类
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/">
+                          <i class="fa fa-tags" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/2020/06/02/mcwallpaper/">
+                          <i class="fa fa-television" aria-hidden="true"></i>
+                          MC壁纸
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/atom.xml">
+                          <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                          订阅
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/donate/">
+                          <i class="fa fa-money" aria-hidden="true"></i>
+                          打赏
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/random.html">
+                          <i class="fa fa-random" aria-hidden="true"></i>
+                          随机文章
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/shuoshuo/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-clock-o" aria-hidden="true"></i>
+                    说说
+                  </span>
+                </a>
+                
+              </li>
+            
+            <li>
+              <a role="button" class="popup-trigger">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  搜索
+              </a>
+              
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+     
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20190809172656.webp);" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190809172656.webp">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      HPU算法协会一二年级联合训练赛(Day 24)</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://cndrew.cn/">
+            <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+          </a>
+        </span>
+        <span>
+          <a href="https://cndrew.cn/">Uncle_drew</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        <i class="fa fa-calendar" aria-hidden="true">&nbsp&nbsp</i>2019-8-9<span class="bull">
+        ·</span>
+      <i class="fa fa-eye" aria-hidden="true">&nbsp&nbsp</i>本文共<span id="busuanzi_value_page_pv"></span>次阅读 &nbsp·&nbsp
+         <i class="fa fa-book" aria-hidden="true">&nbsp&nbsp</i><span class="post-count">字数统计：7.9k</span> &nbsp·&nbsp
+           <span class="post-count"><i class="fa fa-coffee" aria-hidden="true">&nbsp&nbsp</i>阅读时长≈45分钟</span></p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div id="point"></div>
+
+        <script>
+          function intervalTime(startTime,endTime){
+              var date1 = new Date(startTime);
+              var date2 = new Date(endTime);  
+              var date3 = date2.getTime() - date1.getTime(); 
+              var days = Math.floor(date3 / (24 * 3600 * 1000));
+              return days;
+          }
+          function format(Date){
+            var Y = Date.getFullYear();
+            var M = Date.getMonth() + 1;
+              M = M < 10 ? '0' + M : M;// 不够两位补充0
+            var D = Date.getDate();
+              D = D < 10 ? '0' + D : D;
+            var H = Date.getHours();
+              H = H < 10 ? '0' + H : H;
+            var Mi = Date.getMinutes();
+              Mi = Mi < 10 ? '0' + Mi : Mi;
+            var S = Date.getSeconds();
+              S = S < 10 ? '0' + S : S;
+              return Y + '-' + M + '-' + D + ' ' + H + ':' + Mi + ':' + S;
+          }
+          var pdate = new Date("Fri Aug 09 2019 00:00:00 GMT+0800");
+          var update = new Date("Thu Apr 02 2020 00:13:51 GMT+0800");
+          var now = new Date();
+          now=format(now);
+          pdate=format(pdate);
+          update=format(update);
+          var days=intervalTime(pdate,now),udays=intervalTime(update,now);
+          var mid=parseInt(days,10);
+          var mi=parseInt("30",10);
+          // alert(mid+mi);
+          if(mid > mi){
+            document.getElementById("point").innerHTML="<div class=\"tip share\">请注意，本文编写于"+days+"天前，最后修改于"+udays+"天前，其中某些信息可能已经过时。<img src=\"https://cdn.jsdelivr.net/gh/drew233/cdn/kawayi.webp\"><\img> </div>";
+            // alert(days);
+          }
+        </script>
+
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+
+        <div class="entry-content">
+
+          <p>13道题，全是英文题，懒得没拿词典，后来才知道可以用电子词典(当然正经比赛里面是不可以的。先写一下我做出来的题解在总结吧。</p>
+<h3 id="MaratonIME-helps-Pablito"><a href="#MaratonIME-helps-Pablito" class="headerlink" title="MaratonIME helps Pablito"></a>MaratonIME helps Pablito</h3><p>Description:<br>♬ Caloventor tiene miedo... ♬<br>Benedetto, Nathan<br>As is well known by any cultured person, rats are the smartest beings on earth. Followed directly by dolphins.</p>
+<p>MaratonIME knows about the species hierarchy and uses this knowledge in it&#39;s regard. Usually, when they need some resource, they know it&#39;s always useful to have a smart rat available. Unfortunately, rats are not very fond of us, primates, and will only help us if they owe us some favour.</p>
+<p>With that in mind, MaratonIME decided to help a little rat called Pablito. Pablito is studying rat&#39;s genealogy, to help with cloning and genetic mapping. luckily, the way rats identify themselves make the job much easier.</p>
+<p>The rat society is, historically, matriarchal. At first, there were little families, each of which had it&#39;s own leading matriarch. At that time, it was decided that rats would organize themselves according to the following rules:</p>
+<p>Each martiarch had an id number greater than one.<br>Each of these ids were chosen in a way such that they would have the least amount of divisors possible.<br>Each family member had the same id as the matriarch.<br>The id of any newborn rat would be the product of its parents id&#39;s.<br>For instance, the offspring of a rat with id 6 and another with id 7 is 42.</p>
+<p>Pablito needs to know if two given rats have a common ancestor, but his only tool is the id number of each of the two rats, which is always a positive integer greater than 1 with no more than 16 digits. Can you help him?</p>
+<p>Create a program that decides if a pair of rats have some common ancestor.</p>
+<p>Input</p>
+<blockquote>
+<p>The input begins with a positive integer t ≤ 105, the number of test cases.<br>After that, follows t lines, each with two integers ai e bi identifying two rats.<br>Every rat&#39;s id is a positive integer greater than 1 and with no more than 16 digits.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>For each test case, print &quot;Sim&quot; if the rats ai and bi share a common ancestor and &quot;Nao&quot; otherwise.</p>
+</blockquote>
+<p>Example<br>Input</p>
+<blockquote>
+<p>2<br>2 4<br>3 5</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Sim<br>Nao</p>
+</blockquote>
+<p>Problem solving:<br>这道题我没看太懂意思。<br>题意好像就是如果两个数gcd不为1的话就说明有相同的祖先。</p>
+<p>看着样例感觉像是简单题，看了一下一血时间，准备试一下gcd，然后，就过了。</p>
+<p>Code:</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;algorithm&gt;
+using namespace std;
+int main()
+{
+    long long n,a,b;
+    cin&gt;&gt;n;
+    while(n--)
+    {
+        cin&gt;&gt;a&gt;&gt;b;
+        if(__gcd(a,b)==1)    puts(&quot;Nao&quot;);
+        else    puts(&quot;Sim&quot;);
+    }
+}
+</code></pre><h3 id="MaratonIME-plays-Cirokime"><a href="#MaratonIME-plays-Cirokime" class="headerlink" title="MaratonIME plays Cîrokime"></a>MaratonIME plays Cîrokime</h3><p>Description:<br>Have you ever seen flavored vodka?<br>Everaldo, Glauber<br>The MaratonIME members like to have fun. As they enjoy having fun so much, they have invented a game named &quot;Cîrokime&quot;. The game works as follows:</p>
+<p>First, n cups with Cîroc1 are lined up. In front of the i-th cup a number ai is written. It is guaranteed that ai &lt; ai + 1, for all 1 ≤ i &lt; n. Then, the numbers are covered and the game starts.</p>
+<p>The player must then find the cup that has a certain number x. It is guaranteed that this cup exists. For this, he has to choose a cup i and drink the beverage. Then, the cup&#39;s number ai is revealed and if this number is equal to x the game finished. Otherwise, the player has to choose another cup and so on.</p>
+<p>&quot;Cîrokime&quot; is a traditional game among MaratonIME members, they play it every party. At the last party, Sussu had to drink all of the n cups because he found the right cup only at the end. He got sick for drinking so much and had to be carried home3</p>
+<p>However, the DESMAME4 is scheduled for May 13 and Sussu wants to restore his dignity. For this, he wants to know, in the worst case, what is the maximum number of cups that he will have to drink if he plays in the optimal way.</p>
+<p>Input</p>
+<blockquote>
+<p>The first line has a single integer n, the number of cups. The second line has n integers ai, the values hidden in each cup.<br>1 ≤ n ≤ 1e5<br>For all i, 1 ≤ ai ≤ 1e9<br>For i &lt; n, ai &lt; ai + 1</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>The output has a single line with a single integer: the minimum number of cups that Sussu should drink, in the worst case, if he plays in the optimal way.</p>
+</blockquote>
+<p>Examples<br>Input</p>
+<blockquote>
+<p>3<br>2 5 7</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>2</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>8<br>1 2 3 4 5 6 7 8</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>4</p>
+</blockquote>
+<p>Note</p>
+<blockquote>
+<p>1: Cîroc is a vodka brand made in France, known by its high sales price in market2<br>2: Balalaika also works<br>3: Based on real facts<br>4: Pre-BIFE5 party<br>5: University games that IME6 attends<br>6: Institute of Mathematics and Statistics</p>
+</blockquote>
+<p>Problem solving:<br>这道题其实就是个猜数问题。问你在最差的情况下需要猜几次。</p>
+<p>题意知道了，就很简单了，答案只跟n有关，中间的数都没用。看n可以除以2几次，就是答案。<br>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+int main()
+{
+    ll n,a;
+    scanf(&quot;%lld&quot;,&amp;n);
+    for(int i=0;i&lt;n;i++)    scanf(&quot;%lld&quot;,&amp;a);
+    ll ans=0;
+    while(n)
+    {
+        n/=2;
+        ans++;
+    }
+    printf(&quot;%lld\n&quot;,ans);
+}
+</code></pre><h3 id="MaratonIME-plays-Nim"><a href="#MaratonIME-plays-Nim" class="headerlink" title="MaratonIME plays Nim"></a>MaratonIME plays Nim</h3><p>Description:<br>Ai Fox!<br>UnionFind, Germano<br>You open your eyes, but everything remains dark. The world is dark, and everything shakes. You realize you are locked in, but before desperation takes hold, you hear the door opening and the light invades your sight and blinds you for a few moments.</p>
+<p>They help you out, you had been locked inside a trunk. You don&#39;t know the masked faces before you, but remember that in the last competitive programming practice they told you that &quot;the beginning is yet to come&quot;. &quot;So this is the fabled MaratonIME&#39;s initiation challenge&quot;, you had heard rumors of this event, and you feel honored to be chosen.</p>
+<p>After walking into and abandoned building, they sit you on an old chair. The first test is to watch a soccer game without any show of excitement. Easy. The second is to install Linux on a notebook in less than 5 minutes. You were prepared, carrying the Arch Linux pendrive as usual, just in case. You face more tests, and manage to pass all of them despite a few difficulties.</p>
+<p>Hours go by, the members remove their masks, and each take a coin out of their pocket. &quot;I won! And I even got rich&quot; you think, but realize they place the coins in a table in front of you, divided in two piles. Renzo, MaratonIME&#39;s great boss, takes a chair and sits in front of you. You will play a match of Nim, and if you win you will become an honorary member of MaratonIME, that is, you win a balloon.</p>
+<p>Nim is a game of two players, alternating their turns. Two piles of coins are placed on a table and in each turn you can remove any non zero quantity of coins from one of the piles. The last player to take their turn (leaving both piles empty) wins.</p>
+<p>You start the game. So it would not be unfair, it is guaranteed that it is possible for you to win. Write a program than beats Renzo 100% of the time.</p>
+<p>Input</p>
+<blockquote>
+<p>In the first line, two integers, x and y, the size of the piles, such that 0 ≤ x, y ≤ 1e4. It is guaranteed that you can win the game.</p>
+</blockquote>
+<p>Interaction</p>
+<blockquote>
+<p>In your turn, print two integers, i and x, where i is the number of the pile from which you will remove the coins (), and x is the number of coins you will remove (x ≥ 1, such that i has at least x coins).<br>In Renzo&#39;s turn, read two integers, in the same format as in your turn.</p>
+</blockquote>
+<p>Example<br>Input</p>
+<blockquote>
+<p>2 1<br>1 1</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>1 1<br>2 1</p>
+</blockquote>
+<p>Note</p>
+<blockquote>
+<p>Of course we do not do an initiation challenge like this :P<br>In the example, we have a pile with 2 coins and another with 1. You remove 1 coin from the first pile, and now no matter what coin Renzo removes, you can remove the other and win.<br>Remember, after printing your play, flush the output, like: fflush(stdout); in C, cout.flush(); in C++, or sys.stdout.flush() in Python.</p>
+</blockquote>
+<p>Problem solving:<br>据说是nim博弈，毫无思路。<br>以后再补吧。。。</p>
+<p>Code:</p>
+<pre><code>/**
+ *　　　　　　　　┏┓　　 　┏┓
+ * 　　　　　　　┏┛┗━━━━━━━┛┗━━━┓
+ * 　　　　　　　┃　　　　　　　┃ 　
+ * 　　　　　　　┃　　　━　　 　┃
+ * 　　　　　　　┃　＞　　　＜　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┃...　⌒　... 　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┗━┓　　　┏━┛
+ * 　　　　　　　　　┃　　　┃　Code is far away from bug with the animal protecting　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃   神兽保佑,代码无bug
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃  　　　　　　
+ * 　　　　　　　　　┃　　　┃
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┗━━━┓
+ * 　　　　　　　　　┃　　　　　　　┣┓
+ * 　　　　　　　　　┃　　　　　　　┏┛
+ * 　　　　　　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　　　　　　┃┫┫　┃┫┫
+ * 　　　　　　　　　　┗┻┛　┗┻┛
+ */
+// warm heart, wagging tail,and a smile just for you!
+//
+//                            _ooOoo_
+//                           o8888888o
+//                           88&quot; . &quot;88
+//                           (| -_- |)
+//                           O\  =  /O
+//                        ____/`---&#39;\____
+//                      .&#39;  \|     |//  `.
+//                     /  \|||  :  |||//  \
+//                    /  _||||| -:- |||||-  \
+//                    |   | \\  -  /// |   |
+//                    | \_|  &#39;&#39;\---/&#39;&#39;  |   |
+//                    \  .-\__  `-`  ___/-. /
+//                  ___`. .&#39;  /--.--\  `. . __
+//               .&quot;&quot; &#39;&lt;  `.___\_&lt;|&gt;_/___.&#39;  &gt;&#39;&quot;&quot;.
+//              | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+//              \  \ `-.   \_ __\ /__ _/   .-` /  /
+//         ======`-.____`-.___\_____/___.-`____.-&#39;======
+//                            `=---=&#39;
+//        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//
+</code></pre><h3 id="MaratonIME-plays-Chess"><a href="#MaratonIME-plays-Chess" class="headerlink" title="MaratonIME plays Chess"></a>MaratonIME plays Chess</h3><p>Description:<br>This problem is boring as duck.<br>Kawakami, Marcos<br>Our dear Nathan, when a little child, used to like chess a lot, but this was a long time ago. One of these days he was challenged by @luisgust to a chess match and, as he is a guy that likes hard challenges, he accepted it. The problem is that Nathan keeps forgetting the rules of the game, so he asked you to help him determine if a given opponent&#39;s piece can be captured in one move.</p>
+<p>Chess, in MaratonIME, is represented as a matrix of characters. Instead of playing with black and white pieces, they play with uppercase and lowercase letters. Nathan has chosen to play with the lowercase letters.</p>
+<p>Besides that, as usual, the positions on the matrix are given in the following coordinates system: Each position is a pair with a character between a and h (inclusive), representing the column, and an integer between 1 and 8 (inclusive), representing the row. For exemple, the position d2 refers to the fourth column (from left to right) and second row (from bottom to top), and the position f6 refers to the sixth column and sixth row. Lowercase letters start on the bottom of the grid, on lines 1 and 2.</p>
+<p>Here position A is adjacent position B if A shares a vertex with B, that is, if the distance between their rows is at most one and the distance between their columns is at most one. For example, the position c4 is adjacent to 8 positions: b3, b4, b5, c3, c5, d3, d4 and d5.</p>
+<p>They decided to play a simplified version of chess. To help you, they gave you the following manual on how to play it:</p>
+<p>The pawn, represented by p or P, can capture pieces that share a diagonal and is in front of it, that is, the lowercase pawn on c4 can capture pieces at b5 or d5.<br>The knight, represented by c or C, makes L-shaped moves in any of the 8 possible directions, that is, it moves two positions in any direction and after that one position in a direction that is perpenticular to the first one. A knight on c4 can capture, in one move, pieces on positions a3, a5, b2, b6, d2, d6, e3 and e5.<br>The rook, represented by t or T, can capture pieces that are on the same row or the same column as it, as long as no other piece lies between them. For example, a rook on c4 can capture any piece on column c or row 4, as long as there is no other piece in between. If the rook is on c4 and there is another piece on c6, the rook can&#39;t capture pieces on c7 and c8.<br>The bishop, represented by b or B, can capture any piece on one of its diagonals as long as there are no piece between them (diagonaly). For example, the bishop on c4 can capture a piece on f7 as long as there are no piece on d5 and e6.<br>The queen, represented by r or R, can capture any piece that lies on the same row, column or diagonal, given there are no pieces in between, as if it were a bishop and a rook at the same time.<br>The king, represented by k or K, can capture any piece that is adjacent to it.<br>The character . represents an empty position.<br>Given a matrix representing a chess board and an opponent&#39;s piece, your program needs to determine whether you can capture it with one of your pieces. It is guaranteed that each player has at most two bishops, two rooks, two knights, eight pawns, one king and one queen.</p>
+<p>Input</p>
+<blockquote>
+<p>The input begins with 8 lines with 8 characters each, representing the chess board. The first line contains the characters on the positions a8, b8, ... , h8. The second line contains the characters on positions a7, b7, ... , h7, and so on. After that follows a line containing the position of the opponent&#39;s piece you wish to capture.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Print a single line containing the word Sim if it is possible to capture the piece or Nao otherwise.</p>
+</blockquote>
+<p>Examples<br>Input</p>
+<blockquote>
+<p>TCBRKBCT<br>PPPPPPPP<br>........<br>........<br>........<br>........<br>pppppppp<br>tcbrkbct<br>d8</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Nao</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>........<br>........<br>........<br>..R.....<br>...p....<br>........<br>........<br>........<br>c5</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Sim</p>
+</blockquote>
+<p>Problem solving:<br>毫无思路题。</p>
+<p>Code:</p>
+<pre><code>/**
+ *　　　　　　　　┏┓　　 　┏┓
+ * 　　　　　　　┏┛┗━━━━━━━┛┗━━━┓
+ * 　　　　　　　┃　　　　　　　┃ 　
+ * 　　　　　　　┃　　　━　　 　┃
+ * 　　　　　　　┃　＞　　　＜　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┃...　⌒　... 　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┗━┓　　　┏━┛
+ * 　　　　　　　　　┃　　　┃　Code is far away from bug with the animal protecting　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃   神兽保佑,代码无bug
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃  　　　　　　
+ * 　　　　　　　　　┃　　　┃
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┗━━━┓
+ * 　　　　　　　　　┃　　　　　　　┣┓
+ * 　　　　　　　　　┃　　　　　　　┏┛
+ * 　　　　　　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　　　　　　┃┫┫　┃┫┫
+ * 　　　　　　　　　　┗┻┛　┗┻┛
+ */
+// warm heart, wagging tail,and a smile just for you!
+//
+//                            _ooOoo_
+//                           o8888888o
+//                           88&quot; . &quot;88
+//                           (| -_- |)
+//                           O\  =  /O
+//                        ____/`---&#39;\____
+//                      .&#39;  \|     |//  `.
+//                     /  \|||  :  |||//  \
+//                    /  _||||| -:- |||||-  \
+//                    |   | \\  -  /// |   |
+//                    | \_|  &#39;&#39;\---/&#39;&#39;  |   |
+//                    \  .-\__  `-`  ___/-. /
+//                  ___`. .&#39;  /--.--\  `. . __
+//               .&quot;&quot; &#39;&lt;  `.___\_&lt;|&gt;_/___.&#39;  &gt;&#39;&quot;&quot;.
+//              | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+//              \  \ `-.   \_ __\ /__ _/   .-` /  /
+//         ======`-.____`-.___\_____/___.-`____.-&#39;======
+//                            `=---=&#39;
+//        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//
+</code></pre><h3 id="MaratonIME-rides-the-university-bus"><a href="#MaratonIME-rides-the-university-bus" class="headerlink" title="MaratonIME rides the university bus"></a>MaratonIME rides the university bus</h3><p>Description:<br>If we organize it correctly, ...<br>Unknown<br>To make the trip to the subway less boring and tiring, the SPSU, Sao Paulo State University, tried one of its most famous inventions: buses with Infinite Inner Length! In such a modern engineering wonder, there&#39;s always a couple of empty seats for the students to sit and chat during the trip.</p>
+<p>MaratonIME crew is very popular, so popular that they have friends at every SPSU institute. Like everyone else from this university, they need to take the bus after a long day learning how to fix the Wi-Fi network. Because they don&#39;t practice sports like rowing, every SPSU student sits right after entering the bus, making pairs whenever possible. Thinking about that, Gi, an ICPC expert, comes with a problem to think on the way to the subway: given a number n which indicates the number of institutes at SPSU and n integers ai representing the amount of people waiting for the bus at the institute i, Gi wants to know for m pairs lj, rj (lj ≤ rj) if all the people waiting for the bus at any point between lj e rj (inclusive) took an empty bus, they could sit together in pairs (nobody would sit alone).</p>
+<p>Input</p>
+<blockquote>
+<p>The input consist in one line with two integers n and m, the number of institutes and the number of Gi&#39;s questions. In the second line there are n integers ai, the number of people waiting for the bus at the ith institute. Then follows m lines with two integers each, li and ri, the first and last institute of Gi&#39;s question.<br>1 ≤ n, m ≤ 1e5<br>0 ≤ ai ≤ 1e5<br>1 ≤ li ≤ ri ≤ n</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Output &quot;Sim&quot; if it is possible to organize all the pairs in a way nobody sits alone or &quot;Nao&quot; otherwise.</p>
+</blockquote>
+<p>Example<br>Input</p>
+<blockquote>
+<p>5 2<br>1 4 10 3 2<br>3 5<br>2 3</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Nao<br>Sim</p>
+</blockquote>
+<p>Note</p>
+<blockquote>
+<p>In the first sample we have 5 institutes with 1, 4, 10, 3 and 2 students. Gi asks if it is possible to form only couples if the ones between the 3rd and the 5th institutes takes an empty bus and the ones between the 2nd and the 3rd. For the first we have 15 so we can&#39;t and for the second we have 14 so we can.</p>
+</blockquote>
+<p>Problem solving:<br>这道题的意思就是给你一组数，问你第i个数到第j个数的和的奇偶。</p>
+<p>不知道直接查询会不会超时，但是我用了前缀和数组。也算是个简单题吧。</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+ll a[213344],b[213344];
+int main()
+{
+    ll n,m,x,y;
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=0;i&lt;n;i++)    cin&gt;&gt;a[i];
+    b[0]=a[0];
+    for(int i=1;i&lt;n;i++)    b[i]=b[i-1]+a[i];
+    while(m--)
+    {
+        cin&gt;&gt;x&gt;&gt;y;
+        x--,y--;
+        if((b[y]-b[x-1])%2!=0)    puts(&quot;Nao&quot;);
+        else    puts(&quot;Sim&quot;);
+    }
+}
+</code></pre><h3 id="MaratonIME-attends-the-lecture-or-not"><a href="#MaratonIME-attends-the-lecture-or-not" class="headerlink" title="MaratonIME attends the lecture (or not)"></a>MaratonIME attends the lecture (or not)</h3><p>Description:<br>Has the prof taken attendance yet?<br>Student, IME&#39;s<br>In MaratonIME, as many other groups, some students want to attend lectures just enough to not be flunked by frequency (as we know, in USP, University of Sao Paulo, it is necessary to have 70 percent frequency), however some others are dedicated and try to accomplish the most frequency percent possible, going to school even when they are ill or tired. Curiously, there is not any other kind of students in MaratonIME.</p>
+<p>Wood, an old MaratonIME&#39;s member, needs help. He is taking the course MAC4815162342, and attended k of m lectures that were given. Consider that MAC4815162342 has n lectures in total per semester. He ask you to help finding the best way to accomplish his objectives, but, as you are new in MaratonIME, you don&#39;t know the kind of student that he is. Embarassed to ask more, you decide to solve two problems, so there is not way to go wrong.</p>
+<p>Input</p>
+<blockquote>
+<p>The input consists of a just one line. In this line, you are given three integers n, m and k, with 1 ≤ n ≤ 1e7 and 0 ≤ k ≤ m ≤ n.<br>n is the number of lectures of MAC4815162342 per semester, m is the quantity of lectures that were given and k is the number of lectures attended by Wood.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>In the first line, print the minimum number of lectures that Wood needs to attend to accomplish at least 70% frequency, or  - 1 if it is impossible to accomplish 70% frequency.<br>In the second line, print the maximum frequency percent that Wood can accomplish, if he goes to all of the lectures from the next lecture. This value has to be rounded down to the closest integer. Don&#39;t print &#39;%&#39;.</p>
+</blockquote>
+<p>Examples<br>Input</p>
+<blockquote>
+<p>10 5 2</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>5<br>70</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>11 2 1</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>7<br>90</p>
+</blockquote>
+<p>Note</p>
+<blockquote>
+<p>On the second example, the maximum percentage that Wood can get is 90.9090.</p>
+</blockquote>
+<p>Problem solving:<br>这道题意思就是有一门课本学期只上n节，现在已经上了m节，这个同学m节里面只去了k节，问你他还能不能达到70%的出勤率，如果不能输出-1，如果可以输出他最少再去上几次课就可以达到70%，然后输出他能达到的最大的出勤率。</p>
+<p>题挺简单的，最大出勤率也好算，就是(n-m+k)/n<br>还有个坑点就是你需要先判断一下他现在的出勤率是不是已经够了。这个也可以不处理，就像我用的那个max一样也行。</p>
+<p>但是这道题我WA了n发，因为这个题它对精度要求比(ka)较(jing)高(du)。</p>
+<p>这里涉及到高精度，我就想到用python写了，其实c++一样的</p>
+<p>Code:</p>
+<pre><code class="lang-python">a,b,c=input().split()
+a=eval(a)
+b=eval(b)
+c=eval(c)
+x=a-b
+y=int((a*70+99)/100)   #精度问题
+z=y-c
+if x&lt;z:
+    print(&quot;-1&quot;)
+else:
+    print(max(0,int(y)-c)) #处理如果当前出勤率已经到了%70的情况
+ans=int((x+c)*100/a)
+print(ans)
+</code></pre>
+<h3 id="MaratonIME-goes-rowing"><a href="#MaratonIME-goes-rowing" class="headerlink" title="MaratonIME goes rowing"></a>MaratonIME goes rowing</h3><p>Description:<br>Speed down, Colombooo!!!<br>rowing coach, Gabi<br>As common sense tells us, competitive programmers excel at rowing. The olympic lane is a wonderful place to row, run and work out. What few take their time to appreciate are the capybaras that inhabit the region. Capybaras are fascinating animals! Aside from their beauty, they possess many interesting behaviours. Did you know that capybaras can live in packs as big as 100 individuals?</p>
+<p>In a pleasant sunny morning, Yan was running, as usual. Watching the capybaras, he noticed that they would line up to sunbath. Each capybara was paired with another one, and only another one. Two capybaras can be paired if and only if both see each other. A capybara sees everything in the direction it is looking.</p>
+<p>Curious, Yan decided to represent the capybaras by the letters A and B, where A indicates that the capybara is looking right, and B indicates that the capybara is looking left.</p>
+<p>For example, the sequence AABABB accurately represents capybaras sunbathing, because it is possible to pair every capybara according to the rules above. Yan was so fascinate by this that he slipped and felt into the water, messing his representations. He was able to recover some, but now they are all messed up with each other. Can you help him and find out if a given sequence represent capybaras sunbathing?</p>
+<p>Input</p>
+<blockquote>
+<p>Every instance contains a sequence S of characters, composed only of &#39;A&#39; and &#39;B&#39; – Yan&#39;s representation. You may assume that 1 ≤ |S| ≤ 105.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>The output should contain a single line. Print &quot;Sim&quot; if the sequence represents capybaras sunbathing, or &quot;Nao&quot; otherwise.</p>
+</blockquote>
+<p>Example<br>Input</p>
+<blockquote>
+<p>AABABB</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Sim</p>
+</blockquote>
+<p>Problem solving:<br>这道题的意思就是一个a能和一个b能配对。但必须是a在左面b在右面，给你一串字符串问你可不可以全部配对。</p>
+<p>这道题跟括号匹配很像，用一个栈实现就行了。</p>
+<p>然后，，我比赛时候没想到，也不知道咋想到一个很zz的贪心算法，现在仔细一想才发现是错的，关键是。。还过了。。。数据水了吧。(我打败了它，滑稽</p>
+<p>Code:<br>这是我的水过的代码</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+    string s;
+    int x=0,y=0;
+    cin&gt;&gt;s;
+    if(s[0]==&#39;B&#39;||s[s.size()-1]==&#39;A&#39;)
+        puts(&quot;Nao&quot;);
+    else
+    {
+        for(int i=0;i&lt;s.size();i++)
+        {
+            if(s[i]==&#39;A&#39;)x++;
+            else y++;
+        }
+        if(x!=y)    puts(&quot;Nao&quot;);
+        else    puts(&quot;Sim&quot;);
+    }
+    return 0;
+}
+</code></pre><p>这是一血大佬<a href="https://blog.csdn.net/cloudy_happy" target="_blank" rel="noopener">cloudy_happy</a>的代码</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+#define ll long long
+typedef pair&lt;int,int&gt; pii;
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    string s;
+    cin&gt;&gt;s;
+    stack&lt;int&gt; st;
+    for (int i = 0;i &lt; s.size();i ++)
+    {
+        if (s[i] == &#39;A&#39;)
+            st.push(1);
+        else
+        {
+            if (!st.empty()) st.pop();
+            else
+            {
+                cout&lt;&lt;&quot;Nao&quot;&lt;&lt;&#39;\n&#39;;
+                return 0;
+            }
+        }
+    }
+    if (st.empty()) cout&lt;&lt;&quot;Sim&quot;&lt;&lt;&#39;\n&#39;;
+    else cout&lt;&lt;&quot;Nao&quot;&lt;&lt;&#39;\n&#39;;
+    return 0;
+}
+</code></pre><h3 id="MaratonIME-goes-to-the-movies"><a href="#MaratonIME-goes-to-the-movies" class="headerlink" title="MaratonIME goes to the movies"></a>MaratonIME goes to the movies</h3><p>Description:<br>Better than &quot;Fifth Wave&quot;<br>in the World, Everyone<br>Believe it if you can, studies show that we in MaratonIME live not only out of competitive programming.</p>
+<p>In a saturday, after taking part in a virtual contest, our heroes decide to enjoy the afternoon watching a movie session. But they didn&#39;t choose any movie, but an n-D movie, that is, a movie with n dimensions.</p>
+<p>During a chase scene, the main character jumps over a chain in the parking lot. Of course this was done in a very athletic way, and for some reason that drove Yan, one of the competitive programmers, mad.</p>
+<p>&quot;Hollywood makes everything seem easy, but jumping over a chain is really hard!&quot;</p>
+<p>The rest of the crowd, after the movie, argued with Yan that the actor surely jumped over the chain, but Yan disagreed, saying that it was done by some camera trick or by special effects.</p>
+<p>To prove his point, he bought another ticket for the movie and this time he took highly precise measuring instruments to the session. Yan&#39;s plan was to show that the distance from the actor&#39;s foot to the floor was smaller than the distance from the chain to the floor, and that would prove that the actor didn&#39;t actually jump over the chain.</p>
+<p>But math in n dimensions is hard. Everyone knows that distance in the 2D plane between two points (x0, y0) and (x1, y1) is given by the formula<br><a href="sakura" data-fancybox="images" data-caption="主人没有描述我哦~"><center><img src="sakura" class="img-shadow img-margin"></center></a><br>Most people also know that distance between two points (x0, y0, z0) e (x1, y1, z1) in 3D space is given by the formula<br><a href="sakura" data-fancybox="images" data-caption="主人没有描述我哦~"><center><img src="sakura" class="img-shadow img-margin"></center></a><br>Both formulas describe the euclidean distance, in the 2 and 3 dimensional case. Your task is, given three points in an n dimensional space, tell if the the closest ones are the foot and the floor or the chain and the flooor, according to euclidean distance.</p>
+<p>Input</p>
+<blockquote>
+<p>The input begins with an integer n, followed by three lines, each with the representation of a point in an n-dimensional space.<br>Dimensions confuse us, humans, so you can assume that 1 ≤ n ≤ 1e5.<br>The second line represents the coordinates of the floor, and contains n integers a1, ..., an.<br>The third line represents the coordinates of the foot of the main character, and contains n integers b1, ..., bn.<br>The fourth line represents the coordinates of the chain, and contains n integers c1, ..., cn.<br>The movie theather is not arbitrarily large, so you can assume that the absolute value of these coordinates are not greater than 1e4.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Print who wins the argument, that is, print &quot;Yan&quot; if the distance between the floor and the foot is not greater than the distance between the floor and the chain, or &quot;MaratonIME&quot; otherwise.</p>
+</blockquote>
+<p>Examples<br>Input</p>
+<blockquote>
+<p>2<br>0 0<br>1 1<br>2 2</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Yan</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>4<br>0 0 0 0<br>2 2 2 2<br>1 1 1 1</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>MaratonIME</p>
+</blockquote>
+<p>Problem solving:<br>这道题如果看懂了也不难。就是问你两个点的距离的大小，然后再比较一下，只不过是n维的，跟二维三维的公式一样，往里面套就行了。一个for循环，然后最后在开根号。</p>
+<p>输入三行对应着三个点，比较的是第二个和第三个点相对于第一个点的距离的大小。<br>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int sijia = 211314;
+typedef long long ll;
+ll f[sijia],m[sijia],gj[sijia];
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    for(int i=0;i&lt;n;i++)    cin&gt;&gt;f[i];
+    for(int i=0;i&lt;n;i++)    cin&gt;&gt;m[i];
+    for(int i=0;i&lt;n;i++)    cin&gt;&gt;gj[i];
+    double x,y;
+    x=y=0;
+    for(int i=0;i&lt;n;i++)
+    {
+        x+=(m[i]-f[i])*(m[i]-f[i]);
+        y+=(gj[i]-f[i])*(gj[i]-f[i]);
+    }
+    if(x&lt;=y)
+        puts(&quot;Yan&quot;);
+    else    puts(&quot;MaratonIME&quot;);
+}
+</code></pre><h3 id="MaratonIME-goes-to-a-japanese-restaurant"><a href="#MaratonIME-goes-to-a-japanese-restaurant" class="headerlink" title="MaratonIME goes to a japanese restaurant"></a>MaratonIME goes to a japanese restaurant</h3><p>Description:<br>Matsu?<br>Member, MaratonIME&#39;s<br>Nathan and Yan are very dedicated programmers. They apply their knowledge in algorithms in problems beyond the programming competitions themselves, optimizing even the most trivial every day things.</p>
+<p>Some question if they aren&#39;t just crazy, and if it wouldn&#39;t be better to just do what has to be done.</p>
+<p>Anyhow, eventually some conflicts happen when their approaches differ about what has to be done. That always happens when they decide to go to japanese restaurants.</p>
+<p>Everybody knows that the objective in an all-you-can eat it to try to eat many distinct kinds of food. Nathan and Yan differ in opinions on how to achieve that. Both competitors, when sitting to eat an asian delicacy, eat until nothing is left on their plates.</p>
+<p>The difference is that Yan, respecting the wisdom of the nipponic masters, eats in the order the food arrives, whereas Nathan claims that the food is better the latter it arrives, to spare the most expensive ingredients, and so asks that his plates come in inverted order.</p>
+<p>Given the default order the dishes will arrive and the time Nathan and Yan will stay at the restaurant, determine who is going to eat the most different kinds of food, or if both ate the same number of different kinds of food, given that Yan eats the food in order and Nathan in inverted order.</p>
+<p>Input</p>
+<blockquote>
+<p>The first line of input has two integers: 0 &lt; n ≤ 1e5, how many plates will be served and 0 &lt; T ≤ 1e6, how long (in minutes) Yan and Nathan will stay at the restaurant.<br>In the following line, n integers 0 &lt; ti ≤ 1e3, ti is how long it takes to eat the i-th dish (in minutes).<br>The restaurants are very well administrated, so you can assume that when one of the competitors finishes his dish, the following dish is already on the table.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>If Yan is going to taste more dishes than Nathan, print &quot;Yan&quot;. If Nathan is going to taste more dishes than Yan, print &quot;Nathan&quot;. Otherwise, if we have a tie, print &quot;Empate&quot;.</p>
+</blockquote>
+<p>Examples<br>Input</p>
+<blockquote>
+<p>10 45<br>1 2 3 4 5 6 7 8 9 10</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Yan</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>10 45<br>10 2 3 4 5 6 7 8 9 1</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Nathan</p>
+</blockquote>
+<p>Problem solving:<br>这道题的意思就是给你一个序列代表每个菜吃完需要用的时间，然后给你一个整数，代表你总共可以用的时间。现在有两个顺序，一个是正序一个是倒序，问你在那种情况下，可以吃到菜的种类比较多。并且每个菜都必须吃完。</p>
+<p>所以用两次for循环遍历直到给的整数不大于当前菜所需要的时间退出循环。</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+ll a[211314];
+int main()
+{
+    ll n,m;
+    cin&gt;&gt;n&gt;&gt;m;
+    for(ll i=0;i&lt;n;i++)
+        cin&gt;&gt;a[i];
+    ll x,y,s1=0,s2=0;
+    x=m,y=m;
+    for(ll i=0;i&lt;n;i++)
+    {
+        if(x&gt;=a[i])
+        {
+            x-=a[i];
+            s1++;
+        }
+        else    break;
+    }
+    for(ll i=n-1;i&gt;=0;i--)
+    {
+        if(y&gt;=a[i])
+        {
+            y-=a[i];
+            s2++;
+        }
+        else break;
+    }
+    if(s1&gt;s2)    puts(&quot;Yan&quot;);
+    else if(s1&lt;s2)    puts(&quot;Nathan&quot;);
+    else    puts(&quot;Empate&quot;);
+}
+</code></pre><h3 id="MaratonIME-goes-to-the-japanese-restaurant-again"><a href="#MaratonIME-goes-to-the-japanese-restaurant-again" class="headerlink" title="MaratonIME goes to the japanese restaurant (again)"></a>MaratonIME goes to the japanese restaurant (again)</h3><p>Description:<br>Nakato?<br>from MaratonIME, Members<br>After a long day of hard training, MaratonIME (マラトニメ) members decided to go to a Japanese restaurant. Yeah, we love Japanese food.</p>
+<p>After a lot of sushi boats, when everyone was more than satisfied, they asked the sushi-man Sussushi (ススシ) for the last boat. Sussushi felt challenged and answered:</p>
+<p>– You want one more boat? You shall have one more boat...</p>
+<p>The sushi boat that he brought was the biggest that any contestant had ever seen. Some contestants even dare saying that was the biggest sushi boat that ever existed, exceeding the previous limit of 105 sushis made by the suhiwoman Gioza (ジョザ) in 742, in a festival for the king that year, Carlos-sama (カーロス様).</p>
+<p>Besides that the contestants accepted the challenge, and together they managed to eat all the sushis. After that, the contestants we&#39;re so full that they couldn&#39;t touch each other. They couldn&#39;t even think about programming problems. Help them find what pair of friends are touching themselves, so they can move away from each other.</p>
+<p>The contestant are represented as circles in plane, and two contestants touch each other if the circles touch each other. It&#39;s guaranteed that the intersection area of any two circles is null.</p>
+<p>Input</p>
+<blockquote>
+<p>In the first line there is a single integer, n indicating the number of contestants (2 ≤ n ≤ 1000).<br>Each one of the next n lines has 3 integers xi, yi e ri, the (i + 1)-th line describes the ith contestant. (xi, yi) are the coordinates of the center of the circle, and ri is the radius. ( - 1e4 ≤ xi, yi ≤ 1e4, 1 ≤ ri ≤ 2·1e4)<br>It is guaranteed that the intersection area of any two circles is null.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>For each pair of circles that touch each other, print in one line the indexes of these circles. The collisions can be printed in any order, the indexes of both circles can also be printed in any order.<br>Don&#39;t print the collisions more than once, that means, if i intersects with j, print i j or j i, but not both.</p>
+</blockquote>
+<p>Example<br>Input</p>
+<blockquote>
+<p>3<br>0 0 2<br>5 0 3<br>10 10 1</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>1 2</p>
+</blockquote>
+<p>Problem solving:<br>这道题的意思就是给你几个圆的圆心以及半径，问你哪几个圆是相交的，有的话输出。</p>
+<p>输入的时候我用了结构体直接存的，然后两个for进行查找，因为n最大时1000，所以不会超时。</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+struct node{
+    int x,y,r;
+}a[1314];
+int main()
+{
+    int n;
+    cin&gt;&gt;n;
+    for(int i=1;i&lt;=n;i++)
+        cin&gt;&gt;a[i].x&gt;&gt;a[i].y&gt;&gt;a[i].r;
+    for(int i=1;i&lt;=n;i++)
+    {
+        for(int j=i+1;j&lt;=n;j++)
+        {
+            if(sqrt((a[j].y-a[i].y)*(a[j].y-a[i].y)+(a[j].x-a[i].x)*(a[j].x-a[i].x))&lt;=(a[i].r+a[j].r))
+                cout&lt;&lt;i &lt;&lt;&quot; &quot;&lt;&lt;j&lt;&lt;endl;
+        }
+    }
+    return 0;
+}
+</code></pre><h3 id="MaratonIME-goes-to-the-karaoke"><a href="#MaratonIME-goes-to-the-karaoke" class="headerlink" title="MaratonIME goes to the karaoke"></a>MaratonIME goes to the karaoke</h3><p>Description:<br>♬ Hit me, lock me up, do anything with me, ... ♬<br>and Marrone, Bruno<br>After thousands of years repeating the title of this problem statement, always with an excited and inviting tone, Nathan finally persuaded his colleagues to go to the karaoke. He is feeling radiant with this achievement.</p>
+<p>But there is a problem. After so much time trying to make his friends go to the karaoke, Nathan is afraid of embarrassing himself when he goes to sing the following classics of Brazilian music:</p>
+<p>Waitress – Reginaldo Rossi<br>Blue Nightclub – Joaquim and Manuel<br>Paper Heart – Sérgio Kings<br>Love Bubble – Fagner<br>You did not teach me to forget – Fernando Mendes<br>To avoid the humiliation, and to not discourage his fellows in future hang outs at the karaoke, Nathan decided to print all the song’s ciphers that are available in the karaoke, to check while he sings. However, this resulted in a colossal amount of paper, that he is not able to carry.</p>
+<p>But the perseverance and ingenuity of an envious programmer is not something you should underestimate.</p>
+<p>Nathan realized that, after all, there were only 7 musical notes. The specialists in this matter used to represent this notes with the letters A, B, C, D, E, F and G. Even more, it’s common that the same note appears several times in sequence. He decided then, to compress the songs, changing every occurrence of repeated notes with the note followed by how many times it occurs.</p>
+<p>For instance, given the sequence</p>
+<p>[(A,A,A,B,B,B,C,G,G,G,G,G,G,G,G,G,G,G)] the compressed version is [A3B3C1G11]</p>
+<p>Unfortunately, Nathan also needs to pack his floral suit and to comb his beard – two homeric jobs – and he is out of time to compress the notes. Help him to not embarrass himself by writing a program that can solve this task.</p>
+<p>Input</p>
+<blockquote>
+<p>Each input consist of a single line, a sequence of caracteres S such as |S| ≤ 105, formed only by the letters A, B, C, D, E, F and G.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>For each input, print in a single line, such as each sequence of similar notes are replaced by the note that occurs and how many times it occurs, as showed in the example.</p>
+</blockquote>
+<p>Examples</p>
+<p>Input</p>
+<blockquote>
+<p>ABBGA</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>A1B2G1A1</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>AAABBBCGGGGGGGGGGG</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>A3B3C1G11</p>
+</blockquote>
+<p>Problem solving:<br>这道题我没看题，直接看的样例哈哈。<br>这道题是给你一个字符串问你这个字符串中连续出现的字符以及个数。我用结构体存了一下，然后输出。<br>注意：同一个字母如果没有连着出现是不能算在一起的，这个看样例应该就可以看出来。</p>
+<p>Code:</p>
+<pre><code>#include&lt;cstdio&gt;
+#include&lt;string&gt;
+#include&lt;iostream&gt;
+const int xiaozhu=1e5+10;
+struct node{
+    char s;
+    int ti;
+}sijia[xiaozhu];
+using namespace std;
+int main()
+{
+    string s;
+    cin&gt;&gt;s;
+    sijia[0].s=s[0];sijia[0].ti=1;
+    int pos=0;
+    for(int i=1;i&lt;s.size();i++)
+    {
+        if(s[i]==sijia[pos].s)
+        {
+            sijia[pos].ti++;
+        }
+        else
+        {
+            pos++;
+            sijia[pos].s=s[i];
+            sijia[pos].ti=1;
+        }
+    }
+    for(int i=0;i&lt;=pos;i++)
+    {
+        cout&lt;&lt;sijia[i].s&lt;&lt;sijia[i].ti;
+    }
+    return 0;
+}
+</code></pre><h3 id="MaratonIME-goes-karting"><a href="#MaratonIME-goes-karting" class="headerlink" title="MaratonIME goes karting"></a>MaratonIME goes karting</h3><p>Description:<br>Yan, it&#39;s red!!!<br>desperate, Passengers<br>Once after a contest, the competitive programmers were sad because of bad results. Seeing the situation, Renzo, MaratonIME&#39;s coach, suggested they should do something fun to relax. After a big discussion, they decided to go karting. Looking for a place that was viable to all students, they found Kartforces, a kart track near Cidade Universitária. However, the track was too small and only fitted two racers by race. As passionate competitive programmers, they organised a fair tournament where everyone raced against everyone, two by two, only once. In each race, the winner got one point on the scoreboard. Draws were allowed and no one scored in this case. The winner was the biggest scorer. There were N competitive programmers present and:</p>
+<p>Each competitive programmer had a skill hi.<br>If hi &gt; hj where 1 ≤ i, j ≤ N and i ≠ j, then the competitive programmer i won the race against j.<br>You had access to the skills of all competitive programmers and now asks who was the champion.</p>
+<p>Input</p>
+<blockquote>
+<p>The first line consists on a single integer N, the number of competitive programmers. The second line contains N integers hi, the skill of the i - th competitive programmer.<br>1 ≤ N ≤ 1e5<br>0 ≤ hi ≤ 1e9</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>The output consists in a single integer i, the champion competitive programmer. If it&#39;s not possible to determine the champion, print  - 1.</p>
+</blockquote>
+<p>Example</p>
+<p>Input</p>
+<blockquote>
+<p>3<br>2 4 6</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>3</p>
+</blockquote>
+<p>Problem solving:<br>这道题的题意我没看很懂，但是就是给你一组数据问是否能确定一个冠军出来。</p>
+<p>什么情况下才不会产生冠军呢？就是如果有两个人得分相等的时候就不会产生冠军。而且题目说的是相邻两个人的比赛，所以只需要一个for循环比较一下看相邻的有没有相等的，如果有直接输出-1，没有的话直接输出最大值即可。</p>
+<p>Code:</p>
+<pre><code>#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+using namespace std;
+typedef long long ll;
+struct node{
+    ll x,id;
+}a[100005];
+bool cmp(node a,node b)
+{
+    return a.x&gt;b.x;
+}
+int main()
+{
+    ll n;
+    scanf(&quot;%lld&quot;,&amp;n);
+    for(int i=1;i&lt;=n;i++)
+    {
+        scanf(&quot;%lld&quot;,&amp;a[i].x);
+        a[i].id=i;
+    }
+    for(int i=1;i&lt;n;i++)
+    {
+        if(a[i].x==a[i+1].x)
+        {
+            puts(&quot;-1&quot;);
+            return 0;
+        }
+    }
+    sort(a+1,a+n+1,cmp);
+    printf(&quot;%lld\n&quot;,a[1].id);
+}
+</code></pre><h3 id="MaratonIME-returns-home"><a href="#MaratonIME-returns-home" class="headerlink" title="MaratonIME returns home"></a>MaratonIME returns home</h3><p>Description:<br>♬ Renzo, they&#39;re calling. Renzo, pick up the phone ♬<br>Ringtones, Top<br>Popular among the most traditional coders, the Summer Camp is famous for its fancy parties. After each party all attendees must return to their homes, but the way back home is not always easy: mildly drunk coders walk weird and often find or lose money along the way. However, MaratonIME always has a sober member in the group, who assures no one will lose money, except when they are robbed.</p>
+<p>On its way back MaratonIME knows that they can call their coach, Renzo, who will pick them up immediately. Instead of doing that right after the party, they want to know what is the maximum amount of money they can carry back to their homes.</p>
+<p>Your task is to write a program that solves this problem. Consider the following facts:</p>
+<p>The city map can be seen as an N by M grid;<br>Members of MaratonIME are initially at the top left corner, and start walking right, carrying no money;<br>Whenever they reach the end of a row, they walk to the row below and start walking in the opposite direction (if they were walking right, they walk left the next row, and vice-versa);<br>They cannot go past the last row;<br>Whenever they meet a burglar, they lose all their money;<br>They can call Renzo at anytime, and he will pick them up instantly.<br>Input</p>
+<blockquote>
+<p>The first line of the input contains two integers N and M (1 ≤ N, M ≤ 103), respectively, the number of rows and columns of the grid. Then follows N lines, each containing M characters, representing the city map. Each cell of the city map can be either:<br>, <code>_</code> meaning there is nothing at this cell of the grid;<br>, &#39;.&#39;  meaning there is a coin worth 1 unit of money at this cell;<br>, &#39;L&#39; meaning there is a burglar at that cell.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>The output must contain a single integer: the maximum amount of money MaratonIME can carry back home.</p>
+</blockquote>
+<p>Example<br>Input</p>
+<pre><code>3 3
+__.
+_._
+L._
+</code></pre><p>Output</p>
+<blockquote>
+<p>2</p>
+</blockquote>
+<p>Note</p>
+<blockquote>
+<p>In the example above, MaratonIME follows the following path: (1, 1)  (1, 2)  (1, 3)  (2, 3)  (2, 2)  (2, 1)  (3, 1)  (3, 2)  (3, 3). When they reach (2, 2) or (2, 1) they will have 2 coins, and that is the highest value they can get before calling Renzo.</p>
+</blockquote>
+<p>Problem solving:</p>
+<p>这道题就是给你一个图，问你在走的过程中能够拿到的最多的金币数。但是图里会有强盗，用L表示，如果你经过强盗，那么金币清零。但是因为方向是固定的，所以可以直接特殊的遍历一下图就行，或者可以像我一样构建一个新的字符串。<br>然后遍历整个字符串取每个状态下金币数的最大值就是答案。</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int xiao =1314;
+const int zhu =1314;
+char sijia[xiao][zhu];
+int n,m,ans,flag;
+int main()
+{
+    scanf(&quot;%d %d&quot;,&amp;n,&amp;m);
+    for(int i=0;i&lt;n;i++)
+        scanf(&quot;%s&quot;,sijia[i]);
+    string s;
+    for(int i=0;i&lt;n;i++)
+    {
+        if(i%2==0)
+        {
+            for(int j=0;j&lt;m;j++)
+                s+=sijia[i][j];
+        }
+        else
+        {
+            for(int j=m-1;j&gt;=0;j--)
+                s+=sijia[i][j];
+        }
+    }
+    int now=0;
+    for(int i=0;i&lt;s.size();i++)
+    {
+        if(s[i]==&#39;.&#39;)    now++;
+        if(s[i]==&#39;L&#39;)    now=0;
+        ans=max(ans,now);
+    }
+    cout&lt;&lt;ans&lt;&lt;endl;
+}
+</code></pre><p>最后再总结一下吧，今天好多题都没读懂，于是有了罚时换题意。。。英语能力需要提升！</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏<div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/alipay.webp"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/wechat.webp"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/08/10/super/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/zhuaz.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/zhuaz.webp">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Win10 or Win7 下下载并配置gcc/g++编译环境</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/08/08/23/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/zhu111.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/zhu111.webp">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                HPU Summer Day23(河南理工大学暑期第二十三天)</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+      document.getElementById("page_loading_time").innerHTML="It took me "+loadTime+"ms to meet you this time";
+      console.log('Page load time is '+ loadTime);  
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        avatar: 'monsterid',
+        appId: "pNiuQ1a1Kllv1bupuAAOYjl3-gzGzoHsz",
+        appKey: "0cJBUKqrJsFhMOrGAyxfL9VU",
+        path: window.location.pathname,
+        serverURL: "https://valine.cndrew.cn/",
+        placeholder: "若想及时收到回复消息，请在上方填入常用邮箱."
+      })
+  }
+</script>
+
+
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="https://cndrew.cn/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp" itemprop="image" alt="Uncle_drew" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://cndrew.cn/" itemprop="url" rel="author">Uncle_drew</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>
+    
+    
+
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Uncle_drew<br>
+      powered_by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019-2020 Uncle_drew</p>
+      <p style="color: #666666;" id="page_loading_time"></p>
+    </div>
+   
+
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a></a>
+        </span>
+      </p>
+   <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="静态网页托管于阿里云服务器">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+      <span class="badge-subject">DNS</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-brightgreen">jsDelivr</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv" target="_blank" title="本站访客量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">PV</span><span class="badge-value bg-orange" id="busuanzi_value_site_pv" target="_blank" title="本站浏览量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet" target="_blank" title="全站字数">340.2k</span>
+    </div>
+    </div><!-- .site-info -->
+
+
+  </footer>
+
+  
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/mmp/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/bug/sakura-ap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/fasearch.min.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/drew233/css/lvaline.min.js'></script>
+<script src="//cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20191003172815.webp"></img></center>
+
+<!-- 不蒜子 网页计数器 -->
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+    </div>
+
+
+    <div class="site-search">
+      <div class="popup search-popup" style="display: none;">
+      <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-container">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="输入关键词搜索" spellcheck="false" type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    </div>
+
+    <div id="search-result">
+      <div id="no-result"><i class="fa fa-frown-o fa-5x"></i>
+      </div>
+    </div>
+    </div>
+    <div class="search-pop-overlay" style="display: none;"></div>
+    </div>
+  </section>
+  
+
+  <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+ <div class="theme-controls row-container">
+  <ul class="menu-list">
+   <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+   <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+   <li id="gribs-bg"> <i class="fas fa-atom" aria-hidden="true"></i></li>
+   <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+   <li id="totem-bg"> <i class="fas fa-fish" aria-hidden="true"></i></li>
+   <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+   <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+   <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+  </ul>
+ </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+
+  <div class="changeSkin-gear no-select">
+  <div class="keys" id="setbtn">
+   <span id="open-skinMenu"> 切换主题 | SCHEME TOOL
+     <i class="iconfont icon-gear inline-block rotating"></i>
+   </span>
+  </div>
+</div>
+
+  
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Uncle_drew</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Drew233" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=1120437716&site=qq&menu=yes" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Algorithm/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  算法
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Life/">
+                  <i class="fa fa-bathtub" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Training/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  集训
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/analytics/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-line-chart" aria-hidden="true"></i>
+            统计
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  lab
+                </a>
+              </li>
+            
+              <li>
+                <a href="/category/">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  分类
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
+                <a href="/2020/06/02/mcwallpaper/">
+                  <i class="fa fa-television" aria-hidden="true"></i>
+                  MC壁纸
+                </a>
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                  订阅
+                </a>
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                  打赏
+                </a>
+              </li>
+            
+              <li>
+                <a href="/random.html">
+                  <i class="fa fa-random" aria-hidden="true"></i>
+                  随机文章
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/shuoshuo/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-clock-o" aria-hidden="true"></i>
+            说说
+          </span>
+        </a>
+        
+      </li>
+    
+    <li>
+      <a role="button" class="popup-trigger">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          搜索
+      </a>
+      
+    </li>
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">Hand down,man down</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+   
+
+
+
+</body>
+
+</html>

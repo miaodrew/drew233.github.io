@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta itemprop="name" content="Uncle_drew">
+  <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  <meta name="description" itemprop="description" content="Hand down,man down">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="keywords" content="Uncle_drew,drew,欧文,acm,icpc,algorithm,算法,篮球,web,建站,chevereto,hexo">
+  
+  <title itemprop="name">Getting started-MkDocs | Uncle_drew</title>
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//cdn.bootcss.com">
+  <link rel="dns-prefetch" href="//cdn.mathjax.org">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/cdn/gg.css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="https://cdn.jsdelivr.net/gh/drew233/css/wustyle.min.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/lib.min.css" media="all">
+  <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/rfsearch.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/font.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/zoom.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/sharejs.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/matery.min.css">
+
+
+  <style type="text/css">
+          #drew {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              margin-bottom: 15px;
+              margin-top: 15px;
+              text-align: center;
+              border: 0;
+              border-radius: 10px;
+              color: rgba(0, 0, 0, .87);
+              background: #fff 50%;
+              background-size: cover;
+              box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+              margin:0 auto;
+          }
+  </style>
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+
+   Function.prototype.getMultiLine = function () {
+            var lines = new String(this);
+            lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));
+            return lines;
+        }
+
+        var string = function () {
+/*
+  Hello!
+（〃｀ 3′〃）
+*/
+        }
+        window.console.log(string.getMultiLine());
+
+
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /*
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+  /*End of Initial Variables*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/drew233/imgcdn/1589450799625.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200514082037.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200508193114.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/at166.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200407230036.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  var issafariBrowser = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+  if(issafariBrowser){
+    alert('本站图片主要采用Webp，暂不兼容Safari');
+  };
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="/random.html">
+          <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Hand down,man down.</p>
+        <div class="top-social_v2">
+          <!-- <li id="bg-pre"> -->
+            <!-- <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/Drew233" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811021906.webp">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1120437716&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811022455.webp">
+                  </a>
+                </li>
+              
+            
+          
+          <!-- <li id="bg-next"> -->
+            <!-- <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+
+    <div id="page" class="site wrapper">
+      
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top" id="pcmenu">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Uncle_drew</span>
+            <span class="shironeko"></span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Algorithm/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          算法
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Life/">
+                          <i class="fa fa-bathtub" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Training/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          集训
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/analytics/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-line-chart" aria-hidden="true"></i>
+                    统计
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          lab
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/category/">
+                          <i class="fa fa-list" aria-hidden="true"></i>
+                          分类
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/">
+                          <i class="fa fa-tags" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/2020/06/02/mcwallpaper/">
+                          <i class="fa fa-television" aria-hidden="true"></i>
+                          MC壁纸
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/atom.xml">
+                          <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                          订阅
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/donate/">
+                          <i class="fa fa-money" aria-hidden="true"></i>
+                          打赏
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/random.html">
+                          <i class="fa fa-random" aria-hidden="true"></i>
+                          随机文章
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/shuoshuo/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-clock-o" aria-hidden="true"></i>
+                    说说
+                  </span>
+                </a>
+                
+              </li>
+            
+            <li>
+              <a role="button" class="popup-trigger">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  搜索
+              </a>
+              
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+     
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20190804090451.webp);" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804090451.webp">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Getting started-MkDocs</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://cndrew.cn/">
+            <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+          </a>
+        </span>
+        <span>
+          <a href="https://cndrew.cn/">Uncle_drew</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        <i class="fa fa-calendar" aria-hidden="true">&nbsp&nbsp</i>2019-6-16<span class="bull">
+        ·</span>
+      <i class="fa fa-eye" aria-hidden="true">&nbsp&nbsp</i>本文共<span id="busuanzi_value_page_pv"></span>次阅读 &nbsp·&nbsp
+         <i class="fa fa-book" aria-hidden="true">&nbsp&nbsp</i><span class="post-count">字数统计：2.6k</span> &nbsp·&nbsp
+           <span class="post-count"><i class="fa fa-coffee" aria-hidden="true">&nbsp&nbsp</i>阅读时长≈16分钟</span></p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div id="point"></div>
+
+        <script>
+          function intervalTime(startTime,endTime){
+              var date1 = new Date(startTime);
+              var date2 = new Date(endTime);  
+              var date3 = date2.getTime() - date1.getTime(); 
+              var days = Math.floor(date3 / (24 * 3600 * 1000));
+              return days;
+          }
+          function format(Date){
+            var Y = Date.getFullYear();
+            var M = Date.getMonth() + 1;
+              M = M < 10 ? '0' + M : M;// 不够两位补充0
+            var D = Date.getDate();
+              D = D < 10 ? '0' + D : D;
+            var H = Date.getHours();
+              H = H < 10 ? '0' + H : H;
+            var Mi = Date.getMinutes();
+              Mi = Mi < 10 ? '0' + Mi : Mi;
+            var S = Date.getSeconds();
+              S = S < 10 ? '0' + S : S;
+              return Y + '-' + M + '-' + D + ' ' + H + ':' + Mi + ':' + S;
+          }
+          var pdate = new Date("Sun Jun 16 2019 00:00:00 GMT+0800");
+          var update = new Date("Thu Apr 02 2020 00:13:51 GMT+0800");
+          var now = new Date();
+          now=format(now);
+          pdate=format(pdate);
+          update=format(update);
+          var days=intervalTime(pdate,now),udays=intervalTime(update,now);
+          var mid=parseInt(days,10);
+          var mi=parseInt("30",10);
+          // alert(mid+mi);
+          if(mid > mi){
+            document.getElementById("point").innerHTML="<div class=\"tip share\">请注意，本文编写于"+days+"天前，最后修改于"+udays+"天前，其中某些信息可能已经过时。<img src=\"https://cdn.jsdelivr.net/gh/drew233/cdn/kawayi.webp\"><\img> </div>";
+            // alert(days);
+          }
+        </script>
+
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+
+        <div class="entry-content">
+
+          <p><font color="red">Reprinted from&lt;/color&gt;: <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">https://squidfunk.github.io/mkdocs-material/</a></font></p>
+<h1 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h1><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Installing-MkDocs"><a href="#Installing-MkDocs" class="headerlink" title="Installing MkDocs"></a>Installing MkDocs</h3><p>Before installing <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>, you need to make sure you have Python and <code>pip</code><br>– the Python package manager – up and running. You can verify if you&#39;re already<br>good to go with the following commands:</p>
+<pre><code class="lang-sh">python --version
+# Python 2.7.13
+pip --version
+# pip 9.0.1
+</code></pre>
+<p>Installing and verifying MkDocs is as simple as:</p>
+<pre><code class="lang-sh">pip install mkdocs &amp;&amp; mkdocs --version
+# mkdocs, version 0.17.1
+</code></pre>
+<p>Material requires MkDocs &gt;= 0.17.1.</p>
+<h3 id="Installing-Material"><a href="#Installing-Material" class="headerlink" title="Installing Material"></a>Installing Material</h3><h4 id="using-pip"><a href="#using-pip" class="headerlink" title="using pip"></a>using pip</h4><p>Material can be installed with <code>pip</code>:</p>
+<pre><code class="lang-sh">pip install mkdocs-material
+</code></pre>
+<h4 id="using-choco"><a href="#using-choco" class="headerlink" title="using choco"></a>using choco</h4><p>If you&#39;re on Windows you can use <a href="https://chocolatey.org" target="_blank" rel="noopener">Chocolatey</a> to install <a href="https://chocolatey.org/packages/mkdocs-material" target="_blank" rel="noopener">Material</a>:</p>
+<pre><code class="lang-dos">choco install mkdocs-material
+</code></pre>
+<p>This will install all required dependencies like <a href="https://chocolatey.org/packages/python" target="_blank" rel="noopener">Python</a> and <a href="https://chocolatey.org/packages/mkdocs" target="_blank" rel="noopener">MkDocs</a>.</p>
+<h4 id="cloning-from-GitHub"><a href="#cloning-from-GitHub" class="headerlink" title="cloning from GitHub"></a>cloning from GitHub</h4><p>Material can also be used without a system-wide installation by cloning the<br>repository into a subfolder of your project&#39;s root directory:</p>
+<pre><code class="lang-sh">git clone https://github.com/squidfunk/mkdocs-material.git
+</code></pre>
+<p>This is especially useful if you want to <a href="customization.md#extending-the-theme">extend the theme</a> and<br><a href="customization.md#overriding-partials">override some parts</a> of the theme. The theme will reside in the folder<br><code>mkdocs-material/material</code>.</p>
+<h3 id="Troubleshooting"><a href="#Troubleshooting" class="headerlink" title="Troubleshooting"></a>Troubleshooting</h3><p>!!! warning &quot;Installation on macOS&quot;</p>
+<pre><code>When you&#39;re running the pre-installed version of Python on macOS, `pip`
+tries to install packages in a folder for which your user might not have
+the adequate permissions. There are two possible solutions for this:
+
+1. **Installing in user space** (recommended): Provide the `--user` flag
+  to the install command and `pip` will install the package in a user-site
+  location. This is the recommended way.
+
+2. **Switching to a homebrewed Python**: Upgrade your Python installation
+  to a self-contained solution by installing Python with Homebrew. This
+  should eliminate a lot of problems you may be having with `pip`.
+</code></pre><p>!!! failure &quot;Error: unrecognized theme &#39;material&#39;&quot;</p>
+<pre><code>If you run into this error, the most common reason is that you installed
+MkDocs through some package manager (e.g. Homebrew or `apt-get`) and the
+Material theme through `pip`, so both packages end up in different
+locations. MkDocs only checks its install location for themes.
+</code></pre><h3 id="Alternative-Using-Docker"><a href="#Alternative-Using-Docker" class="headerlink" title="Alternative: Using Docker"></a>Alternative: Using Docker</h3><p>If you&#39;re familiar with Docker, the official <a href="https://hub.docker.com/r/squidfunk/mkdocs-material/" target="_blank" rel="noopener">Docker image</a> for Material<br>comes with all dependencies pre-installed and ready-to-use with the latest<br>version published on PyPI, packaged in a very small image. Pull it with:</p>
+<pre><code>docker pull squidfunk/mkdocs-material
+</code></pre><p>The <code>mkdocs</code> executable is provided as an entrypoint, <code>serve</code> is the default<br>command. Start the development server in your project root with:</p>
+<pre><code>docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+</code></pre><p>If you&#39;re using Windows command prompt (<code>cmd.exe</code>), substitute <code>${PWD}</code> with<br><code>&quot;%cd%&quot;</code>.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>In order to enable the theme just add one of the following lines to your<br>project&#39;s <code>mkdocs.yml</code>. If you installed Material using a package manager:</p>
+<pre><code class="lang-yaml">theme:
+  name: &#39;material&#39;
+</code></pre>
+<p>If you cloned Material from GitHub:</p>
+<pre><code class="lang-yaml">theme:
+  name: null
+  custom_dir: &#39;mkdocs-material/material&#39;
+</code></pre>
+<p>MkDocs includes a development server, so you can review your changes as you go.<br>The development server can be started with the following command:</p>
+<pre><code class="lang-sh">mkdocs serve
+</code></pre>
+<p>Now you can point your browser to <a href="https://localhost:8000" target="_blank" rel="noopener">https://localhost:8000</a> and the Material<br>theme should be visible. From here on, you can start writing your documentation,<br>or read on and customize the theme.</p>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><h3 id="Color-palette"><a href="#Color-palette" class="headerlink" title="Color palette"></a>Color palette</h3><p>A default hue is defined for every primary and accent color on Google&#39;s<br>Material Design <a href="https://www.materialui.co/colors" target="_blank" rel="noopener">color palette</a>, which makes it very easy to change the<br>overall look of the theme. Just set the primary and accent colors using the<br>following variables:</p>
+<pre><code class="lang-yaml">theme:
+  palette:
+    primary: &#39;indigo&#39;
+    accent: &#39;indigo&#39;
+</code></pre>
+<p>Color names are case-insensitive, but must match the names of the Material<br>Design color palette. Valid values are: <code>red</code>, <code>pink</code>, <code>purple</code>, <code>deep purple</code>,<br><code>indigo</code>, <code>blue</code>, <code>light blue</code>, <code>cyan</code>, <code>teal</code>, <code>green</code>, <code>light green</code>, <code>lime</code>,<br><code>yellow</code>, <code>amber</code>, <code>orange</code>, <code>deep orange</code>, <code>brown</code>, <code>grey</code>, <code>blue grey</code> and<br><code>white</code>. The last four colors can only be used as a primary color.</p>
+<p>If the color is set via this configuration, an additional CSS file that<br>defines the color palette is automatically included. If you want to keep things<br>lean, clone the repository and recompile the theme with your custom colors set.<br>See the guide on <a href="customization.md">customization</a> for more information.</p>
+<h4 id="Primary-colors"><a href="#Primary-colors" class="headerlink" title="Primary colors"></a>Primary colors</h4><blockquote>
+<p>Default: <code>indigo</code></p>
+</blockquote>
+<p>Click on a tile to change the primary color of the theme:</p>
+<button data-md-color-primary="red">Red</button>
+<button data-md-color-primary="pink">Pink</button>
+<button data-md-color-primary="purple">Purple</button>
+<button data-md-color-primary="deep-purple">Deep Purple</button>
+<button data-md-color-primary="indigo">Indigo</button>
+<button data-md-color-primary="blue">Blue</button>
+<button data-md-color-primary="light-blue">Light Blue</button>
+<button data-md-color-primary="cyan">Cyan</button>
+<button data-md-color-primary="teal">Teal</button>
+<button data-md-color-primary="green">Green</button>
+<button data-md-color-primary="light-green">Light Green</button>
+<button data-md-color-primary="lime">Lime</button>
+<button data-md-color-primary="yellow">Yellow</button>
+<button data-md-color-primary="amber">Amber</button>
+<button data-md-color-primary="orange">Orange</button>
+<button data-md-color-primary="deep-orange">Deep Orange</button>
+<button data-md-color-primary="brown">Brown</button>
+<button data-md-color-primary="grey">Grey</button>
+<button data-md-color-primary="blue-grey">Blue Grey</button>
+<button data-md-color-primary="white">White</button>
+
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-primary]");
+  Array.prototype.forEach.call(buttons, function(button) {
+    button.addEventListener("click", function() {
+      document.body.dataset.mdColorPrimary = this.dataset.mdColorPrimary;
+    })
+  })
+</script>
+
+<h4 id="Accent-colors"><a href="#Accent-colors" class="headerlink" title="Accent colors"></a>Accent colors</h4><blockquote>
+<p>Default: <code>indigo</code></p>
+</blockquote>
+<p>Click on a tile to change the accent color of the theme:</p>
+<button data-md-color-accent="red">Red</button>
+<button data-md-color-accent="pink">Pink</button>
+<button data-md-color-accent="purple">Purple</button>
+<button data-md-color-accent="deep-purple">Deep Purple</button>
+<button data-md-color-accent="indigo">Indigo</button>
+<button data-md-color-accent="blue">Blue</button>
+<button data-md-color-accent="light-blue">Light Blue</button>
+<button data-md-color-accent="cyan">Cyan</button>
+<button data-md-color-accent="teal">Teal</button>
+<button data-md-color-accent="green">Green</button>
+<button data-md-color-accent="light-green">Light Green</button>
+<button data-md-color-accent="lime">Lime</button>
+<button data-md-color-accent="yellow">Yellow</button>
+<button data-md-color-accent="amber">Amber</button>
+<button data-md-color-accent="orange">Orange</button>
+<button data-md-color-accent="deep-orange">Deep Orange</button>
+
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-accent]");
+  Array.prototype.forEach.call(buttons, function(button) {
+    button.addEventListener("click", function() {
+      document.body.dataset.mdColorAccent = this.dataset.mdColorAccent;
+    })
+  })
+</script>
+
+<h3 id="Font-family"><a href="#Font-family" class="headerlink" title="Font family"></a>Font family</h3><blockquote>
+<p>Default: <code>Roboto</code> and <code>Roboto Mono</code></p>
+</blockquote>
+<p>By default the <a href="https://fonts.google.com/specimen/Roboto" target="_blank" rel="noopener">Roboto font family</a> is included with the theme, specifically<br>the regular sans-serif type for text and the <code>monospaced</code> type for code. Both<br>fonts are loaded from <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a> and can be changed to other fonts,<br>like for example the <a href="https://fonts.google.com/specimen/Ubuntu" target="_blank" rel="noopener">Ubuntu font family</a>:</p>
+<pre><code class="lang-yaml">theme:
+  font:
+    text: &#39;Ubuntu&#39;
+    code: &#39;Ubuntu Mono&#39;
+</code></pre>
+<p>The text font will be loaded in weights 400 and <strong>700</strong>, the <code>monospaced</code> font<br>in regular weight. If you want to load fonts from other destinations or don&#39;t<br>want to use the Google Fonts loading magic, just set <code>font</code> to <code>false</code>:</p>
+<pre><code class="lang-yaml">theme:
+  font: false
+</code></pre>
+<h3 id="Logo"><a href="#Logo" class="headerlink" title="Logo"></a>Logo</h3><blockquote>
+<p>Default icon: <code>school</code></p>
+</blockquote>
+<p>Your logo should have rectangular shape with a minimum resolution of 128x128,<br>leave some room towards the edges and be composed of high contrast areas on a<br>transparent ground, as it will be placed on the colored header bar and drawer.<br>Simply create the folder <code>docshttps://cdn.jsdelivr.net/gh/drew233/cdn</code>, add your logo and embed it with:</p>
+<pre><code class="lang-yaml">theme:
+  logo: &#39;images/logo.svg&#39;
+</code></pre>
+<p>Additionally, the default icon can be changed by setting an arbitrary ligature<br>(or Unicode code point) from the <a href="https://material.io/icons/" target="_blank" rel="noopener">Material Design icon font</a>, e.g.</p>
+<pre><code class="lang-yaml">theme:
+  logo:
+    icon: &#39;cloud&#39;
+</code></pre>
+<h3 id="Language"><a href="#Language" class="headerlink" title="Language"></a>Language</h3><p>!!! info &quot;Call for Contributions: Add languages/translations to Material&quot;</p>
+<pre><code>Help translate Material into more languages - it&#39;s just **one click** and
+takes approximately **2 minutes**: [click here](https://bit.ly/2EbzFc8)
+</code></pre><h4 id="Localization"><a href="#Localization" class="headerlink" title="Localization"></a>Localization</h4><blockquote>
+<p>Default: <code>en</code></p>
+</blockquote>
+<p>Material for MkDocs supports internationalization (i18n) and provides<br>translations for all template variables and labels in the following languages:</p>
+<table style="white-space: nowrap;">
+  <thead>
+    <tr>
+      <th colspan="4">Available languages
+    </th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ar</code> / Arabic</td>
+      <td><code>ca</code> / Catalan</td>
+      <td><code>cs</code> / Czech</td>
+      <td><code>da</code> / Danish</td>
+    </tr>
+    <tr>
+      <td><code>nl</code> / Dutch</td>
+      <td><code>en</code> / English</td>
+      <td><code>fi</code> / Finnish</td>
+      <td><code>fr</code> / French</td>
+    </tr>
+    <tr>
+      <td><code>gl</code> / Galician</td>
+      <td><code>de</code> / German</td>
+      <td><code>gr</code> / Greek</td>
+      <td><code>he</code> / Hebrew</td>
+    </tr>
+    <tr>
+      <td><code>hi</code> / Hindi</td>
+      <td><code>hr</code> / Croatian</td>
+      <td><code>hu</code> / Hungarian</td>
+      <td><code>id</code> / Indonesian</td>
+    </tr>
+    <tr>
+      <td><code>it</code> / Italian</td>
+      <td><code>ja</code> / Japanese</td>
+      <td><code>kr</code> / Korean</td>
+      <td><code>no</code> / Norwegian</td>
+    </tr>
+    <tr>
+      <td colspan="2"><code>nn</code> / Norwegian (Nynorsk)</td>
+      <td><code>fa</code> / Persian</td>
+      <td><code>pl</code> / Polish</td>
+    </tr>
+    <tr>
+      <td><code>pt</code> / Portugese</td>
+      <td><code>ru</code> / Russian</td>
+      <td><code>sr</code> / Serbian</td>
+      <td><code>sh</code> / Serbo-Croatian</td>
+    </tr>
+    <tr>
+      <td><code>sk</code> / Slovak</td>
+      <td><code>si</code> / Slovenian</td>
+      <td><code>es</code> / Spanish</td>
+      <td><code>sv</code> / Swedish</td>
+    </tr>
+    <tr>
+      <td><code>tr</code> / Turkish</td>
+      <td><code>uk</code> / Ukrainian</td>
+      <td><code>vi</code> / Vietnamese</td>
+      <td><code>zh</code> / Chinese (Simplified)</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <code>zh-Hant</code> / Chinese (Traditional)
+      </td>
+      <td colspan="2"><code>zh-TW</code> / Chinese (Taiwanese)</td>
+    </tr>
+    <tr>
+      <td colspan="4" align="right">
+        <a href="https://bit.ly/2EbzFc8" target="_blank" rel="noopener">Submit a new language</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Specify the language with:</p>
+<pre><code class="lang-yaml">theme:
+  language: &#39;en&#39;
+</code></pre>
+<p>If the language is not specified, Material falls back to English. To create a<br>translation for another language, copy the localization file of an existing<br>language, name the new file using the <a href="https://www.w3schools.com/tags/ref_language_codes.asp" target="_blank" rel="noopener">2-letter language code</a> and adjust<br>all translations:</p>
+<pre><code class="lang-sh">cp partials/language/en.html partials/language/jp.html
+</code></pre>
+<h4 id="Text-direction"><a href="#Text-direction" class="headerlink" title="Text direction"></a>Text direction</h4><blockquote>
+<p>Default: best match for given theme language, automatically set</p>
+</blockquote>
+<p>Material supports both, left-to-right (<code>ltr</code>) and right-to-left (<code>rtl</code>) text<br>direction. This enables more languages like Arabic, Hebrew, Syriac and others<br>to be used with the theme:</p>
+<pre><code class="lang-yaml">theme:
+  direction: &#39;rtl&#39;
+</code></pre>
+<h4 id="Site-search"><a href="#Site-search" class="headerlink" title="Site search"></a>Site search</h4><blockquote>
+<p>Default: best match for given theme language, automatically set</p>
+</blockquote>
+<p>Site search is implemented using <a href="https://lunrjs.com" target="_blank" rel="noopener">lunr.js</a>, which includes stemmers for the<br>English language by default, while stemmers for other languages are included<br>with <a href="https://github.com/MihaiValentin/lunr-languages" target="_blank" rel="noopener">lunr-languages</a>, both of which are integrated with this theme.<br>Material selects the matching (or best-matching) stemmer for the given theme<br>language. Multilingual search can be activated in your project&#39;s <code>mkdocs.yml</code><br>by explicitly defining the search language(s):</p>
+<pre><code class="lang-yaml">extra:
+  search:
+    language: &#39;en, de, ru&#39;
+</code></pre>
+<p>At the time of writing, the following languages are supported:</p>
+<table style="white-space: nowrap;">
+  <thead>
+    <tr>
+      <th colspan="4">Available language stemmers
+    </th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>da</code> / Danish</td>
+      <td><code>du</code> / Dutch</td>
+      <td><code>en</code> / English</td>
+      <td><code>fi</code> / Finnish</td>
+    </tr>
+    <tr>
+      <td><code>fr</code> / French</td>
+      <td><code>de</code> / German</td>
+      <td><code>hu</code> / Hungarian</td>
+      <td><code>it</code> / Italian</td>
+    </tr>
+    <tr>
+      <td><code>ja</code> / Japanese</td>
+      <td><code>no</code> / Norwegian</td>
+      <td><code>pt</code> / Portugese</td>
+      <td><code>ro</code> / Romanian</td>
+    </tr>
+    <tr>
+      <td><code>ru</code> / Russian</td>
+      <td><code>es</code> / Spanish</td>
+      <td><code>sv</code> / Swedish</td>
+      <td><code>tr</code> / Turkish</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>!!! warning &quot;MkDocs 1.0 compatibility&quot;</p>
+<pre><code>While MkDocs 1.0 supports prebuilding the search index, Material currently
+doesn&#39;t support this setting as the default search behavior of the original
+theme was heavily modified for the sake of a better UX. Integration is
+possible, but a small subset of the features Material provides will not be
+portable to the prebuilt index mainly due to missing localization.
+</code></pre><p>!!! warning &quot;Only specify the languages you really need&quot;</p>
+<pre><code>Be aware that including support for other languages increases the general
+JavaScript payload by around 20kb (without gzip) and by another 15-30kb per
+language.
+</code></pre><p>The separator for tokenization can be customized which makes it possible<br>to index parts of words that are separated by <code>-</code> or <code>.</code>:</p>
+<pre><code class="lang-yaml">extra:
+  search:
+    tokenizer: &#39;[\s\-\.]+&#39;
+</code></pre>
+<h3 id="Favicon"><a href="#Favicon" class="headerlink" title="Favicon"></a>Favicon</h3><blockquote>
+<p>Default: <code>assetshttps://cdn.jsdelivr.net/gh/drew233/cdn/favicon.webp</code></p>
+</blockquote>
+<p>The default favicon can be changed by setting the <code>favicon</code> variable to an<br><code>.ico</code> or image file:</p>
+<pre><code class="lang-yaml">theme:
+  favicon: &#39;assetshttps://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico&#39;
+</code></pre>
+<h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><h4 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h4><blockquote>
+<p>Default: <code>false</code></p>
+</blockquote>
+<p>By default, the entire navigation is rendered on the left side using collapsible<br>sections (different from the default MkDocs theme which renders the top-level<br>sections in the header), because horizontal navigation is often problematic on<br>smaller screens. However, for large documentation projects it&#39;s sometimes<br>desirable to add another navigation layer to separate top-level sections.<br>Material achieves this with the tabs feature, which can be enabled by setting<br>the respective feature flag to <code>true</code>:</p>
+<pre><code class="lang-yaml">theme:
+  feature:
+    tabs: true
+</code></pre>
+<p>When tabs are enabled, <em>top-level sections</em> will be rendered in an additional<br>layer directly below the header. The navigation on the left side will only<br>include the pages contained within the selected section. Furthermore, <em>top-level<br>pages</em> defined inside your project&#39;s <code>mkdocs.yml</code> will be grouped under the<br>first tab which will receive the title of the first page.</p>
+<h2 id="Customization"><a href="#Customization" class="headerlink" title="Customization"></a>Customization</h2><h3 id="Adding-a-source-repository"><a href="#Adding-a-source-repository" class="headerlink" title="Adding a source repository"></a>Adding a source repository</h3><p>To include a link to the repository of your project within your documentation,<br>set the following variables via your project&#39;s <code>mkdocs.yml</code>:</p>
+<pre><code class="lang-yaml">repo_name: &#39;squidfunk/mkdocs-material&#39;
+repo_url: &#39;https://github.com/squidfunk/mkdocs-material&#39;
+</code></pre>
+<p>The name of the repository will be rendered next to the search bar on big<br>screens and as part of the main navigation drawer on smaller screen sizes.<br>Furthermore, if <code>repo_url</code> points to a GitHub, BitBucket or GitLab repository,<br>the respective service logo will be shown next to the name of the repository.<br>Additionally, for GitHub, the number of stars and forks is shown.</p>
+<p>If the repository is hosted in a private environment, the service logo can be<br>set explicitly by setting <code>extra.repo_icon</code> to <code>github</code>, <code>gitlab</code> or<br><code>bitbucket</code>.</p>
+<p>!!! question &quot;Why is there an edit button at the top of every article?&quot;</p>
+<pre><code>If the `repo_url` is set to a GitHub or BitBucket repository, and the
+`repo_name` is set to *GitHub* or *BitBucket* (implied by default), an
+edit button will appear at the top of every article. This is the automatic
+behavior that MkDocs implements. See the [MkDocs documentation][19] on more
+guidance regarding the `edit_uri` attribute, which defines whether the edit
+button is shown or not.
+</code></pre><h3 id="Adding-social-links"><a href="#Adding-social-links" class="headerlink" title="Adding social links"></a>Adding social links</h3><p>Social accounts can be linked in the footer of the documentation using the<br>automatically included <a href="https://fontawesome.io/icons/" target="_blank" rel="noopener">FontAwesome</a> webfont. The <code>type</code> must denote the<br>name of the social service, e.g. <code>github</code>, <code>twitter</code> or <code>linkedin</code> and the<br><code>link</code> must contain the URL you want to link to:</p>
+<pre><code class="lang-yaml">extra:
+  social:
+    - type: &#39;github&#39;
+      link: &#39;https://github.com/squidfunk&#39;
+    - type: &#39;twitter&#39;
+      link: &#39;https://twitter.com/squidfunk&#39;
+    - type: &#39;linkedin&#39;
+      link: &#39;https://linkedin.com/in/squidfunk&#39;
+</code></pre>
+<p>The links are generated in order and the <code>type</code> of the links must match the<br>name of the FontAwesome glyph. The <code>fa</code> is automatically added, so <code>github</code><br>will result in <code>fa fa-github</code>.</p>
+<h3 id="Adding-a-Web-App-Manifest"><a href="#Adding-a-Web-App-Manifest" class="headerlink" title="Adding a Web App Manifest"></a>Adding a Web App Manifest</h3><p>A <a href="https://developers.google.com/web/fundamentals/web-app-manifest/" target="_blank" rel="noopener">Web App Manifest</a> is a simple JSON file that tells the browser about your<br>web application and how it should behave when installed on the user&#39;s mobile<br>device or desktop. You can specify a manifest in your <code>mkdocs.yml</code>:</p>
+<pre><code class="lang-yaml">extra:
+  manifest: &#39;manifest.webmanifest&#39;
+</code></pre>
+<h3 id="More-advanced-customization"><a href="#More-advanced-customization" class="headerlink" title="More advanced customization"></a>More advanced customization</h3><p>  If you want to change the general appearance of the Material theme, see<br>  <a href="customization.md">this article</a> for more information on advanced customization.</p>
+<h2 id="Integrations"><a href="#Integrations" class="headerlink" title="Integrations"></a>Integrations</h2><h3 id="Google-Analytics"><a href="#Google-Analytics" class="headerlink" title="Google Analytics"></a>Google Analytics</h3><p>MkDocs makes it easy to integrate site tracking with Google Analytics.<br>Besides basic tracking, clicks on all outgoing links can be tracked as well as<br>how site search is used. Tracking can be activated in your project&#39;s<br><code>mkdocs.yml</code>:</p>
+<pre><code class="lang-yaml">google_analytics:
+  - &#39;UA-XXXXXXXX-X&#39;
+  - &#39;auto&#39;
+</code></pre>
+<h3 id="Disqus"><a href="#Disqus" class="headerlink" title="Disqus"></a>Disqus</h3><p>Material for MkDocs is integrated with <a href="https://disqus.com" target="_blank" rel="noopener">Disqus</a>, so if you want to add a<br>comments section to your documentation set the shortname of your Disqus project<br>in your <code>mkdocs.yml</code>:</p>
+<pre><code class="lang-yaml">extra:
+  disqus: &#39;your-shortname&#39;
+</code></pre>
+<p>The comments section is inserted on <em>every page, except the index page</em>.<br>Additionally, a new entry at the bottom of the table of contents is generated<br>that is linking to the comments section. The necessary JavaScript is<br>automatically included.</p>
+<p>!!! warning &quot;Requirements&quot;</p>
+<pre><code>`site_url` value must be set in `mkdocs.yml` for the Disqus integration to
+load properly.
+</code></pre><p>Disqus can also be enabled or disabled for specific pages using <a href="extensions/metadata.md#disqus">Metadata</a>.</p>
+<h2 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h2><p>MkDocs supports several <a href="https://www.mkdocs.org/user-guide/writing-your-docs/#markdown-extensions" target="_blank" rel="noopener">Markdown extensions</a>. The following extensions<br>are not enabled by default (see the link for which are enabled by default)<br>but highly recommended, so they should be switched on at all times:</p>
+<pre><code class="lang-yaml">markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+</code></pre>
+<p>For more information, see the following list of extensions supported by the<br>Material theme including more information regarding installation and usage:</p>
+<ul>
+<li><a href="extensions/admonition.md">Admonition</a></li>
+<li><a href="extensions/codehilite.md">Codehilite</a></li>
+<li><a href="extensions/footnotes.md">Footnotes</a></li>
+<li><a href="extensions/metadata.md">Metadata</a></li>
+<li><a href="extensions/permalinks.md">Permalinks</a></li>
+<li><a href="extensions/pymdown.md">PyMdown Extensions</a></li>
+</ul>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><p>MkDocs&#39;s plugin architecture makes it possible to add pre- or post-processing<br>steps that sit between the theme and your documentation. A great example of a<br>third-party plugin is the <a href="https://github.com/byrnereese/mkdocs-minify-plugin" target="_blank" rel="noopener">mkdocs-minify-plugin</a> which strips all whitespace<br>from the generated documentation.</p>
+<p>Install it with <code>pip</code>:</p>
+<pre><code class="lang-sh">pip install mkdocs-minify-plugin
+</code></pre>
+<p>Enable it with the following lines in your <code>mkdocs.yml</code>:</p>
+<pre><code class="lang-yaml">plugins:
+  - search
+  - minify:
+      minify_html: true
+</code></pre>
+<p>The MkDocs wiki contains a <a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins" target="_blank" rel="noopener">list of all available plugins</a>.</p>
+<p>!!! warning &quot;Remember to re-add the <code>search</code> plugin&quot;</p>
+<pre><code>If you have no `plugins` entry in your config file yet, you&#39;ll likely also
+want to add the `search` plugin. MkDocs enables it by default if there is
+no `plugins` entry set.
+</code></pre><h2 id="Full-example"><a href="#Full-example" class="headerlink" title="Full example"></a>Full example</h2><p>Below is a full example configuration for a <code>mkdocs.yml</code>:</p>
+<pre><code class="lang-yaml"># Project information
+site_name: &#39;Material for MkDocs&#39;
+site_description: &#39;A Material Design theme for MkDocs&#39;
+site_author: &#39;Martin Donath&#39;
+site_url: &#39;https://squidfunk.github.io/mkdocs-material/&#39;
+
+# Repository
+repo_name: &#39;squidfunk/mkdocs-material&#39;
+repo_url: &#39;https://github.com/squidfunk/mkdocs-material&#39;
+
+# Copyright
+copyright: &#39;Copyright &amp;copy; 2016 - 2017 Martin Donath&#39;
+
+# Configuration
+theme:
+  name: &#39;material&#39;
+  language: &#39;en&#39;
+  palette:
+    primary: &#39;indigo&#39;
+    accent: &#39;indigo&#39;
+  font:
+    text: &#39;Roboto&#39;
+    code: &#39;Roboto Mono&#39;
+
+# Customization
+extra:
+  manifest: &#39;manifest.webmanifest&#39;
+  social:
+    - type: &#39;github&#39;
+      link: &#39;https://github.com/squidfunk&#39;
+    - type: &#39;twitter&#39;
+      link: &#39;https://twitter.com/squidfunk&#39;
+    - type: &#39;linkedin&#39;
+      link: &#39;https://linkedin.com/in/squidfunk&#39;
+
+# Google Analytics
+google_analytics:
+  - &#39;UA-XXXXXXXX-X&#39;
+  - &#39;auto&#39;
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+</code></pre>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏<div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/alipay.webp"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/wechat.webp"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/06/18/mkdocs_template/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804085422.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804085422.webp">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Make your own template by mkdocs.</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/06/16/past/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804084920.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804084920.webp">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                1874：写给未来恋人的情书</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+      document.getElementById("page_loading_time").innerHTML="It took me "+loadTime+"ms to meet you this time";
+      console.log('Page load time is '+ loadTime);  
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        avatar: 'monsterid',
+        appId: "pNiuQ1a1Kllv1bupuAAOYjl3-gzGzoHsz",
+        appKey: "0cJBUKqrJsFhMOrGAyxfL9VU",
+        path: window.location.pathname,
+        serverURL: "https://valine.cndrew.cn/",
+        placeholder: "若想及时收到回复消息，请在上方填入常用邮箱."
+      })
+  }
+</script>
+
+
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="https://cndrew.cn/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp" itemprop="image" alt="Uncle_drew" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://cndrew.cn/" itemprop="url" rel="author">Uncle_drew</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>
+    
+    
+
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Uncle_drew<br>
+      powered_by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019-2020 Uncle_drew</p>
+      <p style="color: #666666;" id="page_loading_time"></p>
+    </div>
+   
+
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a></a>
+        </span>
+      </p>
+   <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="静态网页托管于阿里云服务器">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+      <span class="badge-subject">DNS</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-brightgreen">jsDelivr</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv" target="_blank" title="本站访客量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">PV</span><span class="badge-value bg-orange" id="busuanzi_value_site_pv" target="_blank" title="本站浏览量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet" target="_blank" title="全站字数">340.2k</span>
+    </div>
+    </div><!-- .site-info -->
+
+
+  </footer>
+
+  
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/mmp/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/bug/sakura-ap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/fasearch.min.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/drew233/css/lvaline.min.js'></script>
+<script src="//cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20191003172815.webp"></img></center>
+
+<!-- 不蒜子 网页计数器 -->
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+    </div>
+
+
+    <div class="site-search">
+      <div class="popup search-popup" style="display: none;">
+      <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-container">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="输入关键词搜索" spellcheck="false" type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    </div>
+
+    <div id="search-result">
+      <div id="no-result"><i class="fa fa-frown-o fa-5x"></i>
+      </div>
+    </div>
+    </div>
+    <div class="search-pop-overlay" style="display: none;"></div>
+    </div>
+  </section>
+  
+
+  <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+ <div class="theme-controls row-container">
+  <ul class="menu-list">
+   <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+   <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+   <li id="gribs-bg"> <i class="fas fa-atom" aria-hidden="true"></i></li>
+   <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+   <li id="totem-bg"> <i class="fas fa-fish" aria-hidden="true"></i></li>
+   <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+   <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+   <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+  </ul>
+ </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+
+  <div class="changeSkin-gear no-select">
+  <div class="keys" id="setbtn">
+   <span id="open-skinMenu"> 切换主题 | SCHEME TOOL
+     <i class="iconfont icon-gear inline-block rotating"></i>
+   </span>
+  </div>
+</div>
+
+  
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Uncle_drew</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Drew233" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=1120437716&site=qq&menu=yes" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Algorithm/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  算法
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Life/">
+                  <i class="fa fa-bathtub" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Training/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  集训
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/analytics/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-line-chart" aria-hidden="true"></i>
+            统计
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  lab
+                </a>
+              </li>
+            
+              <li>
+                <a href="/category/">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  分类
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
+                <a href="/2020/06/02/mcwallpaper/">
+                  <i class="fa fa-television" aria-hidden="true"></i>
+                  MC壁纸
+                </a>
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                  订阅
+                </a>
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                  打赏
+                </a>
+              </li>
+            
+              <li>
+                <a href="/random.html">
+                  <i class="fa fa-random" aria-hidden="true"></i>
+                  随机文章
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/shuoshuo/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-clock-o" aria-hidden="true"></i>
+            说说
+          </span>
+        </a>
+        
+      </li>
+    
+    <li>
+      <a role="button" class="popup-trigger">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          搜索
+      </a>
+      
+    </li>
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">Hand down,man down</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+   
+
+
+
+</body>
+
+</html>

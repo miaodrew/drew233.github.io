@@ -1,0 +1,4271 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta itemprop="name" content="Uncle_drew">
+  <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  <meta name="description" itemprop="description" content="Hand down,man down">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="keywords" content="Uncle_drew,drew,欧文,acm,icpc,algorithm,算法,篮球,web,建站,chevereto,hexo">
+  
+  <title itemprop="name">Archive: 2019/10 | Uncle_drew</title>
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//cdn.bootcss.com">
+  <link rel="dns-prefetch" href="//cdn.mathjax.org">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/cdn/gg.css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="https://cdn.jsdelivr.net/gh/drew233/css/wustyle.min.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/lib.min.css" media="all">
+  <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/rfsearch.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/font.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/zoom.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/sharejs.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/matery.min.css">
+
+
+  <style type="text/css">
+          #drew {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              margin-bottom: 15px;
+              margin-top: 15px;
+              text-align: center;
+              border: 0;
+              border-radius: 10px;
+              color: rgba(0, 0, 0, .87);
+              background: #fff 50%;
+              background-size: cover;
+              box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+              margin:0 auto;
+          }
+  </style>
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+
+   Function.prototype.getMultiLine = function () {
+            var lines = new String(this);
+            lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));
+            return lines;
+        }
+
+        var string = function () {
+/*
+  Hello!
+（〃｀ 3′〃）
+*/
+        }
+        window.console.log(string.getMultiLine());
+
+
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /*
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+  /*End of Initial Variables*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/drew233/imgcdn/1589450799625.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200514082037.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200508193114.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/at166.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200407230036.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  var issafariBrowser = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+  if(issafariBrowser){
+    alert('本站图片主要采用Webp，暂不兼容Safari');
+  };
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="/random.html">
+          <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Hand down,man down.</p>
+        <div class="top-social_v2">
+          <!-- <li id="bg-pre"> -->
+            <!-- <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/Drew233" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811021906.webp">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1120437716&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811022455.webp">
+                  </a>
+                </li>
+              
+            
+          
+          <!-- <li id="bg-next"> -->
+            <!-- <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+
+    <div id="page" class="site wrapper">
+      
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top" id="pcmenu">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Uncle_drew</span>
+            <span class="shironeko"></span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Algorithm/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          算法
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Life/">
+                          <i class="fa fa-bathtub" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Training/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          集训
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/analytics/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-line-chart" aria-hidden="true"></i>
+                    统计
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          lab
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/category/">
+                          <i class="fa fa-list" aria-hidden="true"></i>
+                          分类
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/">
+                          <i class="fa fa-tags" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/2020/06/02/mcwallpaper/">
+                          <i class="fa fa-television" aria-hidden="true"></i>
+                          MC壁纸
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/atom.xml">
+                          <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                          订阅
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/donate/">
+                          <i class="fa fa-money" aria-hidden="true"></i>
+                          打赏
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/random.html">
+                          <i class="fa fa-random" aria-hidden="true"></i>
+                          随机文章
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/shuoshuo/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-clock-o" aria-hidden="true"></i>
+                    说说
+                  </span>
+                </a>
+                
+              </li>
+            
+            <li>
+              <a role="button" class="popup-trigger">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  搜索
+              </a>
+              
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+     
+      <div class="pattern-center-blank">
+</div>
+<div class="pattern-center ">
+  <div class="pattern-attachment-img">
+    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200303110349.webp" data-src="" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+  </div>
+<header class="pattern-header ">
+  <h1 class="entry-title">
+  归档</h1>
+</header>
+</div>
+
+
+<div class="blank" style="padding-top: 75px;">
+</div>
+<div id="content" class="site-content">
+  <div id="main">
+    <div id="main-part">
+      <article class="art">
+        <div class="art-main">
+          <div class="art-content">
+            <div id="archives">
+              <p style="text-align:right;">
+                [<span id="al_expand_collapse" style="cursor: s-resize;">
+                全部展开/收缩</span>
+              ]</p>
+              
+              
+              
+              
+              
+                
+                <h3 class="al_year">2020年</h3>
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      07月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2020/07/23/xswl/">
+                          <span style="color:#0bf;">
+                          23日00:29:22</span>
+                          凌晨惊醒，一夜无眠
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/07/05/domjudge/">
+                          <span style="color:#0bf;">
+                          05日22:00:30</span>
+                          Domjudge的安装与使用
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      06月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2020/06/01/UCF2014/">
+                          <span style="color:#0bf;">
+                          01日09:55:46</span>
+                          J - Factorial Products UCF Local Programming Contest 2014
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      05月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2020/05/17/licenses/">
+                          <span style="color:#0bf;">
+                          17日19:41:34</span>
+                          基于我的视线，谈谈我对现在网络环境的一些看法
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/05/14/nowcoder14411/">
+                          <span style="color:#0bf;">
+                          14日17:40:07</span>
+                          团结就是力量
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/05/14/88picgo/">
+                          <span style="color:#0bf;">
+                          14日10:42:48</span>
+                          Picgo上传到GitHub莫名其妙的出错后，我选择自己实现上传功能
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/05/14/COVID-19/">
+                          <span style="color:#0bf;">
+                          14日07:56:03</span>
+                          COVID-19与我
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/05/11/artitalk/">
+                          <span style="color:#0bf;">
+                          11日09:45:23</span>
+                          Hexo添加可实时发布的说说界面 | Artitalk.js
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/05/08/artiimg/">
+                          <span style="color:#0bf;">
+                          08日18:33:33</span>
+                          一步步带你通过Ajax+Github提供的api 实现前端剪切板图片上传
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/05/07/imgupload/">
+                          <span style="color:#0bf;">
+                          07日11:55:51</span>
+                          Javascript+Ajax+SMMS 实现前端剪切板图片上传
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/05/05/PNRC2019B/">
+                          <span style="color:#0bf;">
+                          05日09:09:45</span>
+                          ICPC Pacific Northwest Regional Contest 2019  B. Perfect Flush
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/05/03/abc166/">
+                          <span style="color:#0bf;">
+                          03日22:34:04</span>
+                          Atcoder ABC 166 题解
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/05/03/hdu1043/">
+                          <span style="color:#0bf;">
+                          03日16:09:39</span>
+                          Eight HDU - 1043
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      04月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2020/04/26/jloi2011/">
+                          <span style="color:#0bf;">
+                          26日16:50:54</span>
+                          JLOI2011-飞行路线
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/22/SCOI2009/">
+                          <span style="color:#0bf;">
+                          22日09:03:11</span>
+                          SCOI2009 最长距离
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/18/mdjj/">
+                          <span style="color:#0bf;">
+                          18日22:24:11</span>
+                          Hexo-Markdown写作进阶——标签
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/10/hexo-shuoshuo/">
+                          <span style="color:#0bf;">
+                          10日15:33:31</span>
+                          为你的hexo博客添加动态的（可直接发布说说的）说说页面
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/09/valinebq/">
+                          <span style="color:#0bf;">
+                          09日20:54:31</span>
+                          valine添加自定义表情
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/09/cf1333D/">
+                          <span style="color:#0bf;">
+                          09日17:08:19</span>
+                          Codeforces Round 632 (Div. 2) D. Challenges in school №41
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/09/cf1333F/">
+                          <span style="color:#0bf;">
+                          09日17:08:19</span>
+                          Codeforces Round 632 (Div. 2) F. Kate and imperfection
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/07/local-search/">
+                          <span style="color:#0bf;">
+                          07日22:32:43</span>
+                          Hexo使用hexo-generator-search添加local-search
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/06/hdu1074/">
+                          <span style="color:#0bf;">
+                          06日16:28:38</span>
+                          HDU-1074  Doing Homework
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/04/date/">
+                          <span style="color:#0bf;">
+                          04日23:30:52</span>
+                          Javascript实现Hexo中给时间久远的文章增加友好的提示
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/04/02/jsdelivr/">
+                          <span style="color:#0bf;">
+                          02日08:34:01</span>
+                          从七牛到又拍，最后我选择了jsDelivr
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      03月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2020/03/26/oneyear/">
+                          <span style="color:#0bf;">
+                          26日09:20:09</span>
+                          博客一周年纪念暨INFO-CF正式发布
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/25/cfapi/">
+                          <span style="color:#0bf;">
+                          25日11:39:49</span>
+                          CodeForces获取Personal apiKey&amp;secret
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/24/cf1327E/">
+                          <span style="color:#0bf;">
+                          24日08:40:38</span>
+                          Educational Codeforces Round 84 (Rated for Div. 2) E. Count The Blocks
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/23/poj2528/">
+                          <span style="color:#0bf;">
+                          23日10:25:56</span>
+                          POJ - 2528   Mayor&#39;s posters
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/20/cf1325E/">
+                          <span style="color:#0bf;">
+                          20日15:45:20</span>
+                          Codeforces Round 628 (Div. 2) E. Ehab&#39;s REAL Number Theory Problem
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/20/cf1326D/">
+                          <span style="color:#0bf;">
+                          20日08:21:30</span>
+                          Codeforces Global Round 7  D. Prefix-Suffix Palindrome
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/19/poj2886/">
+                          <span style="color:#0bf;">
+                          19日09:23:05</span>
+                          POJ - 2886  Who Gets the Most Candies?
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/18/poj2828/">
+                          <span style="color:#0bf;">
+                          18日13:03:00</span>
+                          POJ - 2828   Buy Tickets
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/15/pjax/">
+                          <span style="color:#0bf;">
+                          15日11:03:00</span>
+                          本站弃用pjax
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/15/cf1325D/">
+                          <span style="color:#0bf;">
+                          15日10:03:00</span>
+                          Codeforces Round 628 (Div. 2) D. Ehab the Xorcist
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/10/INFO-cf-contest/">
+                          <span style="color:#0bf;">
+                          10日15:03:00</span>
+                          竞赛清单页面的搭建 | INFO-cf搭建历程
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/10/INFO-cf/">
+                          <span style="color:#0bf;">
+                          10日03:03:00</span>
+                          序章 | INFO-cf搭建历程
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/10/cf1312D/">
+                          <span style="color:#0bf;">
+                          10日02:03:00</span>
+                          Educational Codeforces Round 83 (Rated for Div. 2) D. Count the Arrays
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/08/cf1323D/">
+                          <span style="color:#0bf;">
+                          08日13:03:00</span>
+                          Codeforces Round 626 (Div. 2, based on Moscow Open Olympiad in Informatics) D. Present
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/05/cf1316C/">
+                          <span style="color:#0bf;">
+                          05日08:03:00</span>
+                          CodeCraft-20 (Div. 2) C. Primitive Primes
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/04/cf1305D/">
+                          <span style="color:#0bf;">
+                          04日09:03:00</span>
+                          Ozon Tech Challenge 2020 (Div.1 + Div.2, Rated, T-shirts + prizes!) D. Kuroni and the Celebration
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/03/post-charts/">
+                          <span style="color:#0bf;">
+                          03日15:03:00</span>
+                          花里胡哨的Hexo | 给你的hexo博客加上文章分析
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/03/calender/">
+                          <span style="color:#0bf;">
+                          03日13:03:00</span>
+                          花里胡哨的Hexo | 给你的hexo博客加上仿GIthub文章日历以及分类雷达图
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/02/loj2823/">
+                          <span style="color:#0bf;">
+                          02日16:03:00</span>
+                          「BalticOI 2014 Day 1」三个朋友
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/03/02/cf1321D/">
+                          <span style="color:#0bf;">
+                          02日10:03:00</span>
+                          Codeforces Round 625 (Div. 2, based on Technocup 2020 Final Round) D. Navigation System
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      02月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2020/02/27/poj3321/">
+                          <span style="color:#0bf;">
+                          27日16:02:00</span>
+                          POJ - 3321   Apple Tree
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/25/swiftype/">
+                          <span style="color:#0bf;">
+                          25日13:02:00</span>
+                          为你的博客添加swiftype搜索——图文教程
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/24/cf1304E/">
+                          <span style="color:#0bf;">
+                          24日16:02:00</span>
+                          Codeforces Round 620 (Div. 2)  E. 1-Trees and Queries
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/23/cf1313C/">
+                          <span style="color:#0bf;">
+                          23日23:13:43</span>
+                          Codeforces Round 622 (Div. 2)  C. Skyscrapers
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/19/webp/">
+                          <span style="color:#0bf;">
+                          19日11:02:00</span>
+                          批量转换jpg/png/gif为webp为网站提速
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/18/cf1307/">
+                          <span style="color:#0bf;">
+                          18日10:02:00</span>
+                          Codeforces Round621 (Div. 1 + Div. 2) D. Cow and Fields
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/17/lsqxx/">
+                          <span style="color:#0bf;">
+                          17日23:02:00</span>
+                          使用链式前向星进行存图以及搜索(模板)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/17/iziToast/">
+                          <span style="color:#0bf;">
+                          17日12:02:00</span>
+                          使用iziToast给自己的博客加上消息提示框
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/16/cf1304D/">
+                          <span style="color:#0bf;">
+                          16日22:02:00</span>
+                          Codeforces Round 620 (Div. 2)  D. Shortest and Longest LIS
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/10/cf1300E/">
+                          <span style="color:#0bf;">
+                          10日10:02:00</span>
+                          Codeforces Round 618 (Div. 2)  E. Water Balance
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/10/cf1300D/">
+                          <span style="color:#0bf;">
+                          10日08:02:00</span>
+                          Codeforces Round 618 (Div. 2)  D. Aerodynamic
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/08/2020yx/">
+                          <span style="color:#0bf;">
+                          08日11:02:00</span>
+                          元宵节快乐！一起来猜字谜啊
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/02/04/nowcoder3002/">
+                          <span style="color:#0bf;">
+                          04日13:00:00</span>
+                          2020牛客寒假算法基础集训营1
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      01月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2020/01/22/test/">
+                          <span style="color:#0bf;">
+                          22日11:01:00</span>
+                          为hexo添加Latex渲染
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/01/20/mathpix/">
+                          <span style="color:#0bf;">
+                          20日21:01:00</span>
+                          Mathpix更新收费之后我选择了阿里云企业邮箱
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/01/20/cf613D/">
+                          <span style="color:#0bf;">
+                          20日00:26:00</span>
+                          Codeforces Round 614 (Div. 2)  D. Aroma&#39;s Search
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/01/19/smtp/">
+                          <span style="color:#0bf;">
+                          19日15:01:00</span>
+                          记一次给valine添加评论回复功能
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/01/17/cfedu80E/">
+                          <span style="color:#0bf;">
+                          17日17:31:00</span>
+                          Educational Codeforces Round 80 (Rated for Div. 2) E. Messenger Simulator
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2020/01/17/cfedu80D/">
+                          <span style="color:#0bf;">
+                          17日17:01:00</span>
+                          Educational Codeforces Round 80 (Rated for Div. 2) D. Minimax Problem
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+                
+                <h3 class="al_year">2019年</h3>
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      12月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2019/12/31/2019/">
+                          <span style="color:#0bf;">
+                          31日19:39:00</span>
+                          Goodbye 2019
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/12/23/HPU10th/">
+                          <span style="color:#0bf;">
+                          23日07:12:00</span>
+                          The 10th Henan Polytechnic University Programming Contest
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/12/21/nowcoder3282A/">
+                          <span style="color:#0bf;">
+                          21日21:12:00</span>
+                          牛客小白月赛20 A 斐波那契
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/12/20/cfedu78D/">
+                          <span style="color:#0bf;">
+                          20日17:12:00</span>
+                          Educational Codeforces Round 78 (Rated for Div. 2) D. Segment Tree
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/12/20/cfedu728c/">
+                          <span style="color:#0bf;">
+                          20日08:12:00</span>
+                          Educational Codeforces Round 78 (Rated for Div. 2) C. Berry Jam
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/12/17/ecfinal/">
+                          <span style="color:#0bf;">
+                          17日06:12:00</span>
+                          2019icpc-ecfinal西安游记
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/12/09/px/">
+                          <span style="color:#0bf;">
+                          09日13:12:00</span>
+                          数据结构中的排序方式（堆,简单选择,快速,冒泡,希尔,折半插入,直接插入）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/12/04/xhkl/">
+                          <span style="color:#0bf;">
+                          04日18:12:00</span>
+                          我们这一辈最大的姐，她结婚了
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      11月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2019/11/28/irv5/">
+                          <span style="color:#0bf;">
+                          28日13:11:00</span>
+                          欧文五（捕蝇草）如何系鞋带——视频教学
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/26/hdu3118/">
+                          <span style="color:#0bf;">
+                          26日10:11:00</span>
+                          HDU-3118 Arbiter
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/25/icpcsh/">
+                          <span style="color:#0bf;">
+                          25日18:11:00</span>
+                          三傻打铁日记-2019ICPC上海站
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/22/Atcoder5635/">
+                          <span style="color:#0bf;">
+                          22日09:11:00</span>
+                          Shortest Path on a Line
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/19/health/">
+                          <span style="color:#0bf;">
+                          19日16:11:00</span>
+                          养胃和伤胃水果名单，一起养生吧
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/17/cf1253/">
+                          <span style="color:#0bf;">
+                          17日20:11:00</span>
+                          Codeforces Round 600 (Div. 2) - D. Harmonious Graph
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/15/cfedu76E/">
+                          <span style="color:#0bf;">
+                          15日20:11:00</span>
+                          Educational Codeforces Round 76 (Rated for Div. 2) - E. The Contest
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/15/cfedu76C/">
+                          <span style="color:#0bf;">
+                          15日09:11:00</span>
+                          Educational Codeforces Round 76 (Rated for Div. 2) - C.Dominated Subarray
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/15/cfedu76D/">
+                          <span style="color:#0bf;">
+                          15日08:11:00</span>
+                          Educational Codeforces Round 76 (Rated for Div. 2) - D. Yet Another Monster Killing Problem
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/11/sghexo/">
+                          <span style="color:#0bf;">
+                          11日20:11:00</span>
+                          免费搭建一个属于你的个人博客 |git+nodejs+github+hexo|（傻瓜式操作）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/10/cstring/">
+                          <span style="color:#0bf;">
+                          10日17:11:00</span>
+                          Cycle String?
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/09/nowcoder1105A/">
+                          <span style="color:#0bf;">
+                          09日19:11:00</span>
+                          牛客CSP-S提高组赛前集训营6 A 集合统计
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/08/cd599D/">
+                          <span style="color:#0bf;">
+                          08日19:11:00</span>
+                          Codeforces Round 599 (Div. 2) D	 0-1 MST
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/07/cf592/">
+                          <span style="color:#0bf;">
+                          07日13:11:00</span>
+                          Codeforces Round 597 (Div. 2)  D. Shichikuji and Power Grid
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/11/04/lg-2683/">
+                          <span style="color:#0bf;">
+                          04日14:11:00</span>
+                          牛的舞会The Cow Prom(tarjan求强连通分量板子题)
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      10月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2019/10/23/cf479-E/">
+                          <span style="color:#0bf;">
+                          23日13:09:00</span>
+                          Codeforces Round 479 (Div. 3) E. Cyclic Components
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/10/21/cf548-C/">
+                          <span style="color:#0bf;">
+                          21日16:10:00</span>
+                          Codeforces Round 548 (Div. 2) - C  Edgy Trees
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/10/19/plugin/">
+                          <span style="color:#0bf;">
+                          19日10:10:00</span>
+                          hexo-generator-random | Hexo插件
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/10/15/cf592-D/">
+                          <span style="color:#0bf;">
+                          15日11:10:00</span>
+                          Codeforces Round 592 (Div. 2)   D. Paint the Tree
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/10/13/Triangle/">
+                          <span style="color:#0bf;">
+                          13日14:10:00</span>
+                          HDU - 6222   Heron and His Triangle
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/10/09/uva7263/">
+                          <span style="color:#0bf;">
+                          09日18:10:00</span>
+                          UVA 7263 - Today Is a Rainy Day
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/10/05/nanshou/">
+                          <span style="color:#0bf;">
+                          05日16:10:00</span>
+                          The 2016 ACM-ICPC Asia China-Final Contest  L - World Cup
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/10/03/random/">
+                          <span style="color:#0bf;">
+                          03日16:10:00</span>
+                          现已更新自动实现随机文章（插件）| Hexo实现随机文章 （暴力实现）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/10/02/Peekaboo/">
+                          <span style="color:#0bf;">
+                          02日18:10:00</span>
+                          The Preliminary Contest for ICPC Asia Shanghai 2019   K. Peekaboo
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/10/02/mcserver/">
+                          <span style="color:#0bf;">
+                          02日10:10:00</span>
+                          Linux服务器+宝塔面板+Xshell 搭建MC联机服务器 - 傻瓜式操作
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      09月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2019/09/28/zj28/">
+                          <span style="color:#0bf;">
+                          28日08:09:00</span>
+                          （4-9月 小总结）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/26/hdu-2512/">
+                          <span style="color:#0bf;">
+                          26日21:09:00</span>
+                          一卡通大冒险
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/24/cf1230C/">
+                          <span style="color:#0bf;">
+                          24日07:09:00</span>
+                          Codeforces Round 588 (Div. 2) - C. Anadi and Domino
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/22/poj2492/">
+                          <span style="color:#0bf;">
+                          22日21:09:00</span>
+                          POJ - 2492   A Bug&#39;s Life
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/20/nowcoder1087-c/">
+                          <span style="color:#0bf;">
+                          20日21:09:00</span>
+                          斐波那契数列卷积
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/20/cfedu73-D/">
+                          <span style="color:#0bf;">
+                          20日08:09:00</span>
+                          Educational Codeforces Round 73 (Rated for Div. 2) - D. Make The Fence Great Again
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/17/funny/">
+                          <span style="color:#0bf;">
+                          17日17:09:00</span>
+                          Google常用语法(转载)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/17/Privatebin/">
+                          <span style="color:#0bf;">
+                          17日16:09:00</span>
+                          服务器+宝塔+PrivateBin 搭建代码分享平台
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/16/mcgy/">
+                          <span style="color:#0bf;">
+                          16日15:09:00</span>
+                          为什么电脑配置不错，玩mc的时候开光影却特别卡（傻瓜式操作）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/13/zhongqiu/">
+                          <span style="color:#0bf;">
+                          13日15:26:07</span>
+                          中秋快乐！
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/13/cf1201-C/">
+                          <span style="color:#0bf;">
+                          13日07:49:05</span>
+                          Codeforces Round 577 (Div. 2) - C
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/12/cf1214-D/">
+                          <span style="color:#0bf;">
+                          12日22:29:14</span>
+                          Codeforces Round 583 (Div. 1 + Div. 2, based on Olympiad of Metropolises) - D
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/12/DS-sxb/">
+                          <span style="color:#0bf;">
+                          12日18:31:13</span>
+                          顺序表实现数组的功能
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/11/shuoshuo/">
+                          <span style="color:#0bf;">
+                          11日13:21:38</span>
+                          为你的hexo博客添加说说页面
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/09/xuzhou/">
+                          <span style="color:#0bf;">
+                          09日20:58:45</span>
+                          The Preliminary Contest for ICPC Asia Xuzhou 2019-M
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/09/zom/">
+                          <span style="color:#0bf;">
+                          09日20:35:33</span>
+                          哈皮的一天
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/08/nowcoder1086-A/">
+                          <span style="color:#0bf;">
+                          08日20:39:04</span>
+                          FBI树
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/08/cfedu72-C/">
+                          <span style="color:#0bf;">
+                          08日15:43:20</span>
+                          Educational Codeforces Round 72 (Rated for Div. 2) - C
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/07/nowc1083/">
+                          <span style="color:#0bf;">
+                          07日14:54:04</span>
+                          牛客练习赛51 - B,C,D
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/06/cfedu72-B/">
+                          <span style="color:#0bf;">
+                          06日18:58:11</span>
+                          Educational Codeforces Round 72 (Rated for Div. 2) - B
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/06/cfedu72/">
+                          <span style="color:#0bf;">
+                          06日08:25:47</span>
+                          Educational Codeforces Round 72 (Rated for Div. 2) - A
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/09/01/cnChevereto/">
+                          <span style="color:#0bf;">
+                          01日07:52:23</span>
+                          Chevereto的中文文档
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      08月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2019/08/31/cf582/">
+                          <span style="color:#0bf;">
+                          31日09:10:26</span>
+                          Codeforces Round 582 (Div. 3)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/30/img/">
+                          <span style="color:#0bf;">
+                          30日17:32:35</span>
+                          服务器+宝塔+Chevereto 搭建个人图床
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/29/https/">
+                          <span style="color:#0bf;">
+                          29日17:20:07</span>
+                          基于宝塔的服务器建站开启https(一如既往的傻瓜式)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/27/beian/">
+                          <span style="color:#0bf;">
+                          27日20:23:13</span>
+                          关于备案
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/23/oj/">
+                          <span style="color:#0bf;">
+                          23日09:56:43</span>
+                          开源青岛大学oj的搭建(傻瓜式操作)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/20/36/">
+                          <span style="color:#0bf;">
+                          20日19:53:00</span>
+                          河南理工大学图灵杯 （Day36）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/19/summer-final/">
+                          <span style="color:#0bf;">
+                          19日19:33:17</span>
+                          尾声，也是开始
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/19/35/">
+                          <span style="color:#0bf;">
+                          19日17:14:22</span>
+                          HPU Summer Training Day 35（河南理工大学暑期第三十五天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/18/34/">
+                          <span style="color:#0bf;">
+                          18日16:19:02</span>
+                          HPU积分赛 （Day34）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/17/33/">
+                          <span style="color:#0bf;">
+                          17日23:27:09</span>
+                          河南理工大学算法协会暑期集训积分赛（五） Day33
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/16/32/">
+                          <span style="color:#0bf;">
+                          16日19:31:55</span>
+                          HPU Summer Training Day 32（河南理工大学暑期第三十二天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/15/31/">
+                          <span style="color:#0bf;">
+                          15日21:32:14</span>
+                          HPU Summer Training Day 31（河南理工大学暑期第三十一天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/14/30/">
+                          <span style="color:#0bf;">
+                          14日22:21:46</span>
+                          HPU Summer Training Day 30（河南理工大学暑期第三十天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/13/29/">
+                          <span style="color:#0bf;">
+                          13日16:02:50</span>
+                          HPU Summer Training Day 29（河南理工大学暑期第二十九天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/12/28/">
+                          <span style="color:#0bf;">
+                          12日22:58:30</span>
+                          HPU Summer Training Day 28（河南理工大学暑期第二十八天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/11/27/">
+                          <span style="color:#0bf;">
+                          11日23:45:28</span>
+                          HPU Summer Training Day 27（河南理工大学暑期第二十七天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/11/jf4/">
+                          <span style="color:#0bf;">
+                          11日08:31:19</span>
+                          河南理工大学算法协会暑期集训积分赛（四） Day26
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/11/newthe/">
+                          <span style="color:#0bf;">
+                          11日04:30:56</span>
+                          HPU Summer Day 25（河南理工大学暑期第二十五天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/10/super/">
+                          <span style="color:#0bf;">
+                          10日00:00:00</span>
+                          Win10 or Win7 下下载并配置gcc/g++编译环境
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/09/sadcon/">
+                          <span style="color:#0bf;">
+                          09日00:00:00</span>
+                          HPU算法协会一二年级联合训练赛(Day 24)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/08/23/">
+                          <span style="color:#0bf;">
+                          08日00:00:00</span>
+                          HPU Summer Day23(河南理工大学暑期第二十三天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/07/22/">
+                          <span style="color:#0bf;">
+                          07日00:00:00</span>
+                          HPU Summer Day22(河南理工大学暑期第二十二天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/06/21/">
+                          <span style="color:#0bf;">
+                          06日00:00:00</span>
+                          HPU Summer Day21(河南理工大学暑期第二十一天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/05/20/">
+                          <span style="color:#0bf;">
+                          05日00:00:00</span>
+                          HPU Summer Day 20(河南理工大学暑期第二十天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/05/stringstream/">
+                          <span style="color:#0bf;">
+                          05日00:00:00</span>
+                          stringstream(常见函数及其常见用法)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/04/19/">
+                          <span style="color:#0bf;">
+                          04日00:00:00</span>
+                          HPU Summer Day 19(河南理工大学暑期第十九天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/04/mapsave/">
+                          <span style="color:#0bf;">
+                          04日00:00:00</span>
+                          树的直径以及邻接表，链式前向星的存图
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/03/18/">
+                          <span style="color:#0bf;">
+                          03日00:00:00</span>
+                          HPU Summer Day 18(河南理工大学暑期第十八天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/03/jifen3/">
+                          <span style="color:#0bf;">
+                          03日00:00:00</span>
+                          河南理工大学算法协会暑期集训积分赛（三）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/02/17/">
+                          <span style="color:#0bf;">
+                          02日00:00:00</span>
+                          HPU Summer Day 17(河南理工大学暑期第十七天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/08/01/16/">
+                          <span style="color:#0bf;">
+                          01日00:00:00</span>
+                          HPU Summer Day 16(河南理工大学暑期第十六天)
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      07月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2019/07/31/15/">
+                          <span style="color:#0bf;">
+                          31日00:00:00</span>
+                          HPU Summer Day 15(河南理工大学暑期第十五天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/31/dx/">
+                          <span style="color:#0bf;">
+                          31日00:00:00</span>
+                          HPU Summer Training Day x（河南理工大学暑期第x天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/31/sp-gcd/">
+                          <span style="color:#0bf;">
+                          31日00:00:00</span>
+                          Something about __gcd
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/30/14/">
+                          <span style="color:#0bf;">
+                          30日00:00:00</span>
+                          HPU Summer Day 14(河南理工大学暑期第十四天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/29/13/">
+                          <span style="color:#0bf;">
+                          29日00:00:00</span>
+                          HPU Summer Day 13(河南理工大学暑期第十三天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/28/12/">
+                          <span style="color:#0bf;">
+                          28日00:00:00</span>
+                          HPU Summer Day 12(河南理工大学暑期第十二天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/27/11/">
+                          <span style="color:#0bf;">
+                          27日00:00:00</span>
+                          HPU Summer Day 11(河南理工大学暑期第十一天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/27/jf2/">
+                          <span style="color:#0bf;">
+                          27日00:00:00</span>
+                          河南理工大学算法协会暑期集训积分赛（二）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/26/10/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          HPU Summer Training Day 10(河南理工大学暑期第十天)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/25/9/">
+                          <span style="color:#0bf;">
+                          25日00:00:00</span>
+                          HPU Summer Training Day 9（河南理工大学暑期第九天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/24/8/">
+                          <span style="color:#0bf;">
+                          24日00:00:00</span>
+                          HPU Summer Training Day 8（河南理工大学暑期第八天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/23/7/">
+                          <span style="color:#0bf;">
+                          23日00:00:00</span>
+                          HPU Summer Training Day 7（河南理工大学暑期第七天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/22/6/">
+                          <span style="color:#0bf;">
+                          22日00:00:00</span>
+                          HPU Summer Training Day 6（河南理工大学暑期第六天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/21/5/">
+                          <span style="color:#0bf;">
+                          21日00:00:00</span>
+                          HPU Summer Training Day 5（河南理工大学暑期第五天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/20/4/">
+                          <span style="color:#0bf;">
+                          20日00:00:00</span>
+                          HPU Summer Training Day 4（河南理工大学暑期第四天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/20/jf11/">
+                          <span style="color:#0bf;">
+                          20日00:00:00</span>
+                          河南理工大学算法协会暑期集训积分赛（一）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/19/3/">
+                          <span style="color:#0bf;">
+                          19日00:00:00</span>
+                          HPU Summer Training Day 3（河南理工暑期集训第三天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/18/2/">
+                          <span style="color:#0bf;">
+                          18日00:00:00</span>
+                          HPU Summer Training Day 2（河南理工暑期集训第二天）
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/07/17/1/">
+                          <span style="color:#0bf;">
+                          17日00:00:00</span>
+                          HPU Summer Training Day 1（河南理工大学暑期第一天）
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      06月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2019/06/26/nowcoder-946/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          筱玛爱地理
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/25/Codeforces-572/">
+                          <span style="color:#0bf;">
+                          25日00:00:00</span>
+                          Codeforces Round 572 (Div. 2)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/25/about-past/">
+                          <span style="color:#0bf;">
+                          25日00:00:00</span>
+                          Past About
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/21/3dAlbum/">
+                          <span style="color:#0bf;">
+                          21日00:00:00</span>
+                          A 3D-Album
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/20/RSS/">
+                          <span style="color:#0bf;">
+                          20日00:00:00</span>
+                          How to use rss.
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/19/ins/">
+                          <span style="color:#0bf;">
+                          19日00:00:00</span>
+                          How to download images on instagram
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/18/mkdocs_template/">
+                          <span style="color:#0bf;">
+                          18日00:00:00</span>
+                          Make your own template by mkdocs.
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/16/getting-started-mkdocs/">
+                          <span style="color:#0bf;">
+                          16日00:00:00</span>
+                          Getting started-MkDocs
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/16/past/">
+                          <span style="color:#0bf;">
+                          16日00:00:00</span>
+                          1874：写给未来恋人的情书
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/14/Times_17/">
+                          <span style="color:#0bf;">
+                          14日00:00:00</span>
+                          Times 17
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/13/Codeforces-570/">
+                          <span style="color:#0bf;">
+                          13日00:00:00</span>
+                          Codeforces Round 570 (Div. 3)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/13/Solve/">
+                          <span style="color:#0bf;">
+                          13日00:00:00</span>
+                          A solution
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/12/Floyd/">
+                          <span style="color:#0bf;">
+                          12日00:00:00</span>
+                          Floyd
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/11/curriculum/">
+                          <span style="color:#0bf;">
+                          11日00:00:00</span>
+                          Put my curriculum on my blog
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/10/Dijkstra/">
+                          <span style="color:#0bf;">
+                          10日00:00:00</span>
+                          Dijkstra
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/08/My_hobby/">
+                          <span style="color:#0bf;">
+                          08日00:00:00</span>
+                          Somewhere magical
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/07/Picture/">
+                          <span style="color:#0bf;">
+                          07日00:00:00</span>
+                          Plus from Picture
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/06/Filling/">
+                          <span style="color:#0bf;">
+                          06日00:00:00</span>
+                          Filling Shapes
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/04/Lose_it!/">
+                          <span style="color:#0bf;">
+                          04日00:00:00</span>
+                          Lose it!
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/03/valine/">
+                          <span style="color:#0bf;">
+                          03日00:00:00</span>
+                          How to change the avatar under valine
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/02/chedan/">
+                          <span style="color:#0bf;">
+                          02日00:00:00</span>
+                          Arithmetic Sequence
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/06/01/dating/">
+                          <span style="color:#0bf;">
+                          01日00:00:00</span>
+                          Greedy-dating Ⅱ
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      05月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2019/05/31/templa/">
+                          <span style="color:#0bf;">
+                          31日00:00:00</span>
+                          Uncle Drew&#39;s ACM Template
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/29/Kruskal/">
+                          <span style="color:#0bf;">
+                          29日00:00:00</span>
+                          Kruskal
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/28/atom/">
+                          <span style="color:#0bf;">
+                          28日00:00:00</span>
+                          C++ with Atom
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/27/nowcoder 910 D/">
+                          <span style="color:#0bf;">
+                          27日00:00:00</span>
+                          最大的湖
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/26/nowcoder-900-A/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          风雨无阻
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/24/Little-knowledge-point(Reprint)/">
+                          <span style="color:#0bf;">
+                          24日00:00:00</span>
+                          Little knowledge point(Reprint)
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/24/nowcoder-215-A/">
+                          <span style="color:#0bf;">
+                          24日00:00:00</span>
+                          灰魔法师
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/23/poj-1321/">
+                          <span style="color:#0bf;">
+                          23日00:00:00</span>
+                          棋盘问题
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/22/ICPC-Invitational-in-Xi'an/">
+                          <span style="color:#0bf;">
+                          22日00:00:00</span>
+                          ICPC-Invitational in Xi&#39;an
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/21/LIS/">
+                          <span style="color:#0bf;">
+                          21日00:00:00</span>
+                          LIS
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/10/movie-dyht/">
+                          <span style="color:#0bf;">
+                          10日00:00:00</span>
+                          大鱼海棠
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/06/Edit distance/">
+                          <span style="color:#0bf;">
+                          06日00:00:00</span>
+                          Edit distance
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/05/Find-the-Tth-Char/">
+                          <span style="color:#0bf;">
+                          05日00:00:00</span>
+                          Find the Tth Char
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/03/Discrete mathematics-Chapter Six/">
+                          <span style="color:#0bf;">
+                          03日00:00:00</span>
+                          Discrete mathematics-Chapter Six
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/02/LCS/">
+                          <span style="color:#0bf;">
+                          02日00:00:00</span>
+                          LCS
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/05/01/A-Basic-Greedy/">
+                          <span style="color:#0bf;">
+                          01日00:00:00</span>
+                          A Basic Greedy
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      04月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2019/04/27/Basic-Dynamic-programming/">
+                          <span style="color:#0bf;">
+                          27日00:00:00</span>
+                          Basic Dynamic programming
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/26/Stone/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          Stone
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/25/QAQ/">
+                          <span style="color:#0bf;">
+                          25日00:00:00</span>
+                          QAQ
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/24/Go-back-home/">
+                          <span style="color:#0bf;">
+                          24日00:00:00</span>
+                          Go back home
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/22/Prefix Sum Primes/">
+                          <span style="color:#0bf;">
+                          22日00:00:00</span>
+                          Prefix Sum Primes
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/21/Neko Performs Cat Furrier Transform/">
+                          <span style="color:#0bf;">
+                          21日00:00:00</span>
+                          Neko Performs Cat Furrier Transform
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/20/Number/">
+                          <span style="color:#0bf;">
+                          20日00:00:00</span>
+                          Long Number
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/19/STL-bitset/">
+                          <span style="color:#0bf;">
+                          19日00:00:00</span>
+                          STL-bitset
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/16/White-book-example/">
+                          <span style="color:#0bf;">
+                          16日00:00:00</span>
+                          White-book-example
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/16/nowcoder-699-B/">
+                          <span style="color:#0bf;">
+                          16日00:00:00</span>
+                          复读机
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/15/A-big-change/">
+                          <span style="color:#0bf;">
+                          15日00:00:00</span>
+                          The experience of building blog
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/14/nowcoder-634-A/">
+                          <span style="color:#0bf;">
+                          14日00:00:00</span>
+                          小y的序列
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/13/life-only/">
+                          <span style="color:#0bf;">
+                          13日00:00:00</span>
+                          生活不止眼前的苟且，还有诗和远方的田野
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/12/Expedition/">
+                          <span style="color:#0bf;">
+                          12日00:00:00</span>
+                          Expedition
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/11/Gourmet Cat/">
+                          <span style="color:#0bf;">
+                          11日00:00:00</span>
+                          Gourmet Cat
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/10/hdu-champion/">
+                          <span style="color:#0bf;">
+                          10日00:00:00</span>
+                          产生冠军
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/09/CCPC-silver/">
+                          <span style="color:#0bf;">
+                          09日00:00:00</span>
+                          咕咕的计数题 II
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/08/Childhood-dream/">
+                          <span style="color:#0bf;">
+                          08日00:00:00</span>
+                          Childhood dream
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/06/add-bn/">
+                          <span style="color:#0bf;">
+                          06日00:00:00</span>
+                          实现大数加法
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/05/Asiaqyz/">
+                          <span style="color:#0bf;">
+                          05日00:00:00</span>
+                          Asia区域制
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/05/Hangman Judge/">
+                          <span style="color:#0bf;">
+                          05日00:00:00</span>
+                          Hangman Judge
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/04/hpu C16 H/">
+                          <span style="color:#0bf;">
+                          04日00:00:00</span>
+                          矩形面积并
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/03/pta stack/">
+                          <span style="color:#0bf;">
+                          03日00:00:00</span>
+                          彩虹瓶
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/02/tentobin/">
+                          <span style="color:#0bf;">
+                          02日00:00:00</span>
+                          递归实现十进制与二进制的转换
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/04/01/Maxhw/">
+                          <span style="color:#0bf;">
+                          01日00:00:00</span>
+                          最长对称子串
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      03月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2019/03/31/10th lq/">
+                          <span style="color:#0bf;">
+                          31日00:00:00</span>
+                          第十届蓝桥杯
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/30/finish/">
+                          <span style="color:#0bf;">
+                          30日00:00:00</span>
+                          终于搭好了
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/30/zx2/">
+                          <span style="color:#0bf;">
+                          30日00:00:00</span>
+                          河南理工大学18级算法协会招新赛(第二场)非官方题解
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/28/google-search/">
+                          <span style="color:#0bf;">
+                          28日00:00:00</span>
+                          不翻墙使用谷歌搜索的方法
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/27/movie-drew/">
+                          <span style="color:#0bf;">
+                          27日00:00:00</span>
+                          德鲁大叔观后感
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/Even Substrings/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          Even Substrings
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/Game 23/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          Game 23
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/GCD和LCM/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          GCD和LCM
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/Hexo-bgchange/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          Hexo背景的更换
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/Summarize-to-the-Power-of-Two/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          map的应用之Summarize to the Power of Two
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/bir hap/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          祝某凡生日快乐
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/drew-finish/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          德鲁大叔学编程搭建基本完成
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/li san/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          离散数学程序作业
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/poj-2386/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          基础dfs之Lake Counting
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/pta-erase/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          删除字符串中的子串
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/pythonStudy/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          python学习笔记
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/26/study-note/">
+                          <span style="color:#0bf;">
+                          26日00:00:00</span>
+                          学习笔记
+                        </a>
+                      </li>
+                      
+              
+              
+              
+              
+              
+                      <li>
+                        <a href="/2019/03/01/funoperator/">
+                          <span style="color:#0bf;">
+                          01日00:00:00</span>
+                          运算符的妙用
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+              
+              
+              
+                
+                <h3 class="al_year">2018年</h3>
+              
+              
+                
+                <ul class="al_mon_list">
+                  <li class="al_li">
+                    <span class="al_mon" style="cursor: s-resize;">
+                      12月(<span id="post-num">
+                      </span>
+                    篇文章)</span>
+                    <ul class="al_post_list" >
+              
+                      <li>
+                        <a href="/2018/12/12/Hexo-Theme-Sakura/">
+                          <span style="color:#0bf;">
+                          12日22:16:01</span>
+                          Comment 测试专用
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              
+              
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+<script>
+
+
+    </div>
+    
+    
+
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Uncle_drew<br>
+      powered_by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019-2020 Uncle_drew</p>
+      <p style="color: #666666;" id="page_loading_time"></p>
+    </div>
+   
+
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a></a>
+        </span>
+      </p>
+   <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="静态网页托管于阿里云服务器">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+      <span class="badge-subject">DNS</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-brightgreen">jsDelivr</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv" target="_blank" title="本站访客量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">PV</span><span class="badge-value bg-orange" id="busuanzi_value_site_pv" target="_blank" title="本站浏览量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet" target="_blank" title="全站字数">340.2k</span>
+    </div>
+    </div><!-- .site-info -->
+
+
+  </footer>
+
+  
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/mmp/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/bug/sakura-ap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/fasearch.min.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/drew233/css/lvaline.min.js'></script>
+<script src="//cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20191003172815.webp"></img></center>
+
+<!-- 不蒜子 网页计数器 -->
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+    </div>
+
+
+    <div class="site-search">
+      <div class="popup search-popup" style="display: none;">
+      <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-container">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="输入关键词搜索" spellcheck="false" type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    </div>
+
+    <div id="search-result">
+      <div id="no-result"><i class="fa fa-frown-o fa-5x"></i>
+      </div>
+    </div>
+    </div>
+    <div class="search-pop-overlay" style="display: none;"></div>
+    </div>
+  </section>
+  
+
+  <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+ <div class="theme-controls row-container">
+  <ul class="menu-list">
+   <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+   <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+   <li id="gribs-bg"> <i class="fas fa-atom" aria-hidden="true"></i></li>
+   <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+   <li id="totem-bg"> <i class="fas fa-fish" aria-hidden="true"></i></li>
+   <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+   <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+   <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+  </ul>
+ </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+
+  <div class="changeSkin-gear no-select">
+  <div class="keys" id="setbtn">
+   <span id="open-skinMenu"> 切换主题 | SCHEME TOOL
+     <i class="iconfont icon-gear inline-block rotating"></i>
+   </span>
+  </div>
+</div>
+
+  
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Uncle_drew</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Drew233" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=1120437716&site=qq&menu=yes" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Algorithm/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  算法
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Life/">
+                  <i class="fa fa-bathtub" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Training/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  集训
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/analytics/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-line-chart" aria-hidden="true"></i>
+            统计
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  lab
+                </a>
+              </li>
+            
+              <li>
+                <a href="/category/">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  分类
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
+                <a href="/2020/06/02/mcwallpaper/">
+                  <i class="fa fa-television" aria-hidden="true"></i>
+                  MC壁纸
+                </a>
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                  订阅
+                </a>
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                  打赏
+                </a>
+              </li>
+            
+              <li>
+                <a href="/random.html">
+                  <i class="fa fa-random" aria-hidden="true"></i>
+                  随机文章
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/shuoshuo/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-clock-o" aria-hidden="true"></i>
+            说说
+          </span>
+        </a>
+        
+      </li>
+    
+    <li>
+      <a role="button" class="popup-trigger">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          搜索
+      </a>
+      
+    </li>
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">Hand down,man down</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+   
+
+
+
+</body>
+
+</html>

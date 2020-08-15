@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta itemprop="name" content="Uncle_drew">
+  <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  <meta name="description" itemprop="description" content="Hand down,man down">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="keywords" content="Uncle_drew,drew,欧文,acm,icpc,algorithm,算法,篮球,web,建站,chevereto,hexo">
+  
+  <title itemprop="name">河南理工大学算法协会暑期集训积分赛（三） | Uncle_drew</title>
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//cdn.bootcss.com">
+  <link rel="dns-prefetch" href="//cdn.mathjax.org">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/cdn/gg.css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="https://cdn.jsdelivr.net/gh/drew233/css/wustyle.min.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/lib.min.css" media="all">
+  <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/rfsearch.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/font.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/zoom.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/sharejs.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/matery.min.css">
+
+
+  <style type="text/css">
+          #drew {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              margin-bottom: 15px;
+              margin-top: 15px;
+              text-align: center;
+              border: 0;
+              border-radius: 10px;
+              color: rgba(0, 0, 0, .87);
+              background: #fff 50%;
+              background-size: cover;
+              box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+              margin:0 auto;
+          }
+  </style>
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+
+   Function.prototype.getMultiLine = function () {
+            var lines = new String(this);
+            lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));
+            return lines;
+        }
+
+        var string = function () {
+/*
+  Hello!
+（〃｀ 3′〃）
+*/
+        }
+        window.console.log(string.getMultiLine());
+
+
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /*
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+  /*End of Initial Variables*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/drew233/imgcdn/1589450799625.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200514082037.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200508193114.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/at166.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200407230036.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  var issafariBrowser = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+  if(issafariBrowser){
+    alert('本站图片主要采用Webp，暂不兼容Safari');
+  };
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="/random.html">
+          <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Hand down,man down.</p>
+        <div class="top-social_v2">
+          <!-- <li id="bg-pre"> -->
+            <!-- <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/Drew233" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811021906.webp">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1120437716&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811022455.webp">
+                  </a>
+                </li>
+              
+            
+          
+          <!-- <li id="bg-next"> -->
+            <!-- <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+
+    <div id="page" class="site wrapper">
+      
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top" id="pcmenu">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Uncle_drew</span>
+            <span class="shironeko"></span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Algorithm/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          算法
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Life/">
+                          <i class="fa fa-bathtub" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Training/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          集训
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/analytics/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-line-chart" aria-hidden="true"></i>
+                    统计
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          lab
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/category/">
+                          <i class="fa fa-list" aria-hidden="true"></i>
+                          分类
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/">
+                          <i class="fa fa-tags" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/2020/06/02/mcwallpaper/">
+                          <i class="fa fa-television" aria-hidden="true"></i>
+                          MC壁纸
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/atom.xml">
+                          <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                          订阅
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/donate/">
+                          <i class="fa fa-money" aria-hidden="true"></i>
+                          打赏
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/random.html">
+                          <i class="fa fa-random" aria-hidden="true"></i>
+                          随机文章
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/shuoshuo/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-clock-o" aria-hidden="true"></i>
+                    说说
+                  </span>
+                </a>
+                
+              </li>
+            
+            <li>
+              <a role="button" class="popup-trigger">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  搜索
+              </a>
+              
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+     
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/10.webp);" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/10.webp">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      河南理工大学算法协会暑期集训积分赛（三）</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://cndrew.cn/">
+            <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+          </a>
+        </span>
+        <span>
+          <a href="https://cndrew.cn/">Uncle_drew</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        <i class="fa fa-calendar" aria-hidden="true">&nbsp&nbsp</i>2019-8-3<span class="bull">
+        ·</span>
+      <i class="fa fa-eye" aria-hidden="true">&nbsp&nbsp</i>本文共<span id="busuanzi_value_page_pv"></span>次阅读 &nbsp·&nbsp
+         <i class="fa fa-book" aria-hidden="true">&nbsp&nbsp</i><span class="post-count">字数统计：4.1k</span> &nbsp·&nbsp
+           <span class="post-count"><i class="fa fa-coffee" aria-hidden="true">&nbsp&nbsp</i>阅读时长≈18分钟</span></p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div id="point"></div>
+
+        <script>
+          function intervalTime(startTime,endTime){
+              var date1 = new Date(startTime);
+              var date2 = new Date(endTime);  
+              var date3 = date2.getTime() - date1.getTime(); 
+              var days = Math.floor(date3 / (24 * 3600 * 1000));
+              return days;
+          }
+          function format(Date){
+            var Y = Date.getFullYear();
+            var M = Date.getMonth() + 1;
+              M = M < 10 ? '0' + M : M;// 不够两位补充0
+            var D = Date.getDate();
+              D = D < 10 ? '0' + D : D;
+            var H = Date.getHours();
+              H = H < 10 ? '0' + H : H;
+            var Mi = Date.getMinutes();
+              Mi = Mi < 10 ? '0' + Mi : Mi;
+            var S = Date.getSeconds();
+              S = S < 10 ? '0' + S : S;
+              return Y + '-' + M + '-' + D + ' ' + H + ':' + Mi + ':' + S;
+          }
+          var pdate = new Date("Sat Aug 03 2019 00:00:00 GMT+0800");
+          var update = new Date("Thu Apr 02 2020 00:13:51 GMT+0800");
+          var now = new Date();
+          now=format(now);
+          pdate=format(pdate);
+          update=format(update);
+          var days=intervalTime(pdate,now),udays=intervalTime(update,now);
+          var mid=parseInt(days,10);
+          var mi=parseInt("30",10);
+          // alert(mid+mi);
+          if(mid > mi){
+            document.getElementById("point").innerHTML="<div class=\"tip share\">请注意，本文编写于"+days+"天前，最后修改于"+udays+"天前，其中某些信息可能已经过时。<img src=\"https://cdn.jsdelivr.net/gh/drew233/cdn/kawayi.webp\"><\img> </div>";
+            // alert(days);
+          }
+        </script>
+
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+
+        <div class="entry-content">
+
+          <h3 id="蚂蚁觅食（一）"><a href="#蚂蚁觅食（一）" class="headerlink" title="蚂蚁觅食（一）"></a>蚂蚁觅食（一）</h3><p>Description:<br>一只饥饿的小蚂蚁外出觅食，幸运的小蚂蚁发现了好多食物，但是它只有一次搬食物的机会。<br>可因为力气太小了，它不能搬走重量超过自己体重的食物,且只能搬走位置相邻的两个食物，或者只搬走其中一个。<br>食物的位置不会改变。<br>这可难住了这只蚂蚁，它不知道它最多能搬走多重的食物。请帮小蚂蚁计算。</p>
+<p>输入格式</p>
+<blockquote>
+<p>第一行一个正整数n，(n&gt;=0并且n&lt;=1000)<br>第二行n个正整数 A[1].....A[n]，A[i] 表示在第i 个位置上食物的重量。A[i]&lt;=1e9.<br>第三行一个正整数m，表示蚂蚁的体重。(m&lt;=1e9).</p>
+</blockquote>
+<p>输出格式</p>
+<blockquote>
+<p>一个整数表示小蚂蚁能带走的食物的重量。</p>
+</blockquote>
+<p>样例<br>input</p>
+<blockquote>
+<p>3<br>1 3 3<br>4</p>
+</blockquote>
+<p>output</p>
+<blockquote>
+<p>4</p>
+</blockquote>
+<p>Problem solving:<br>神TM签到题，愣是没看懂是啥意思。。。<br>最后看懂了，就是找一个跟m尽量接近的一个数或者相邻两个数的和尽量接近m的。<br>我是把每个数和相邻的数的和存进一个数组然后O(N)查找<br>找到输出就行</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int maxn = 2005;
+long long a[maxn],m;
+int main()
+{
+    int n,ans=0;
+    cin&gt;&gt;n;
+    for(int i=0;i&lt;n;i++)    cin&gt;&gt;a[i];
+    for(int i=n;i&lt;2*n-1;i++)    a[i]=a[i-n]+a[i-n+1];
+    sort(a,a+2*n-1);
+    cin&gt;&gt;m;
+    for(int i=0;i&lt;2*n-1;i++)
+    {
+        if(a[i]&gt;m)    break;
+        ans=a[i];
+    }
+    cout&lt;&lt;ans&lt;&lt;endl;
+}
+</code></pre><h2 id><a href="#" class="headerlink" title="#"></a>#</h2><p>Description:<br>一只饥饿的小蚂蚁外出觅食，幸运的的小蚂蚁发现了好多食物。<br>但是这些食物位于一个N∗M的方格魔法阵的右下角，而小蚂蚁位于方格法阵的左上角。<br>并且小蚂蚁被施展了魔法，它只能向下或者向右走。<br>请你帮助小蚂蚁计算一下，它一共有多少条路可以走到有食物的方格。</p>
+<p>输入格式</p>
+<blockquote>
+<p>多组输入，<br>每一组两个正整数N， M （N,M≤30）。表示一个方格魔法阵。</p>
+</blockquote>
+<p>输出格式</p>
+<blockquote>
+<p>一个整数表示一共有多少条路。</p>
+</blockquote>
+<p>样例<br>input</p>
+<blockquote>
+<p>2 3</p>
+</blockquote>
+<p>output</p>
+<blockquote>
+<p>3</p>
+</blockquote>
+<p>Problem solving:<br>这道题据说可以用排列数做（高中知识。）<br>倒是我哪会高中知识啊，就推呗。<br>然后找到了递推式，我们用dp[x][y]来表示（x，y）位置到终点有几条路。那么可以得到dp[x][y]=dp[i-1][j]+dp[i][j-1]<br>边界条件是，当x或者y等于1的时候只有一条路，因为只能往右或者往下走。<br>推理过程：<br>首先看一下图吧<br><a href="https://cdn.jsdelivr.net/gh/drew233/cdn/jifen1.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/jifen1.webp" class="img-shadow img-margin"></center></a><br>假设我们现在要求(4,3)这个位置到终点(1,1)的路径条数，从(4,3)走出来只有两种选择，向右或者向下，所以我们走到了(4,2),(3,3),这时我们只需要求(4,2)(3,3)到终点的路径条数然后求和就行了。以此类推，就可以得到上面的递推式了。</p>
+<p>然后就是注意这个是多组输入。。！！！<br>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef unsigned long long ll;
+ll ans[32][32];
+int main()
+{
+    for(int i=1;i&lt;=31;i++)
+    {
+        for(int j=1;j&lt;=31;j++)
+        {
+            if(i==1||j==1)    ans[i][j]=1;
+            else ans[i][j]=ans[i-1][j]+ans[i][j-1];
+        }
+    }
+    ll n,m;
+    while(cin&gt;&gt;n&gt;&gt;m)
+    {
+        cout&lt;&lt;ans[n][m]&lt;&lt;endl;
+    }
+}
+</code></pre><h3 id="蚂蚁觅食（三）"><a href="#蚂蚁觅食（三）" class="headerlink" title="蚂蚁觅食（三）"></a>蚂蚁觅食（三）</h3><p>Description:<br>马上就要冬天了，勤劳的小蚂蚁需要储存足够多的食物才能安全过冬。<br>今天，这只小蚂蚁走出巢穴寻找食物，但是这次蚁巢周围只有很少的食物，它需要去别的地方。<br>不幸的是小蚂蚁的体力很有限，而且每走一个单位长度就要消耗一点体力，不能找的时间太久，所以想让你帮忙计算一下它是否能用剩下的体力把足够多的食物搬回蚁巢。<br>由于蚂蚁的嘴太小，每次最多只能衔起一个食物。</p>
+<p>输入格式</p>
+<blockquote>
+<p>输入t组, t≤20<br>第一行三个数n,E,V表示食物的个数，蚂蚁剩余的体力，安全过冬需要的最少食物体积, 0&lt;n≤100,0&lt;E,V≤10000。<br>接下来n行，每行两个数pi,vi,表示第i个食物的位置和体积,0&lt;p[i],v[i]≤1000。<br>初始蚂蚁和蚁巢均在坐标轴原点。</p>
+</blockquote>
+<p>输出格式</p>
+<blockquote>
+<p>每个输出占一行。<br>如果蚂蚁能安全过冬，输出 “YES”,否则输出”NO”。</p>
+</blockquote>
+<p>样例<br>input</p>
+<blockquote>
+<p>2<br>1 2 2<br>1 2<br>1 2 2<br>2 1</p>
+</blockquote>
+<p>output</p>
+<blockquote>
+<p>YES<br>NO</p>
+</blockquote>
+<p>Problem solving:<br>一道简单的01背包题，背包容量是蚂蚁当前剩余的体力值。<br>每个物品的价值就是食物的体积，所占的背包容量的大小就是距离乘2（因为还要回来）。<br>然后比较最多能达到的食物体积，与需要的最少的食物体积进行标比较就行了。01背包的部分套板子写的<br>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+int n,e,v;
+const int maxn=100005;
+int si[maxn],jia[maxn],dp[100005];
+using namespace std;
+int main()
+{
+    int t;
+    cin&gt;&gt;t;
+    while(t--)
+    {
+        memset(dp,0,sizeof(dp));
+        cin&gt;&gt;n&gt;&gt;e&gt;&gt;v;
+        for(int i=0;i&lt;n;i++)
+        {
+            cin&gt;&gt;si[i]&gt;&gt;jia[i];
+            si[i]*=2;
+        }
+        for(int i=0;i&lt;n;i++)
+        {
+            for(int j=e;j&gt;=si[i];j--)
+            {
+                dp[j]=max(dp[j],dp[j-si[i]]+jia[i]);
+            }
+        }
+        if(dp[e]&gt;=v)    puts(&quot;YES&quot;);
+        else    puts(&quot;NO&quot;);
+    }
+}
+</code></pre><h3 id="蚂蚁平面"><a href="#蚂蚁平面" class="headerlink" title="蚂蚁平面"></a>蚂蚁平面</h3><p>Description:<br>平面上有 n只蚂蚁，它走过的路径可以看作一条直线</p>
+<p>由这n 条直线定义的某些区域是无界的，而另一些区域则是有界的。</p>
+<p>有界区域的最大个数是多少？</p>
+<p>比如现在有4条直线，只有下面最左边的图中直线定义的有界区域是最多的</p>
+<a href="https://cdn.jsdelivr.net/gh/drew233/cdn/jay.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/jay.webp" class="img-shadow img-margin"></center></a>
+<p>输入格式</p>
+<blockquote>
+<p>T 组输入, (1≤T≤100)<br>每组一个数 n ，(1≤n≤109)</p>
+</blockquote>
+<p>输出格式</p>
+<blockquote>
+<p>对于每组数据，输出一个整数表示有界区域的最大个数。</p>
+</blockquote>
+<p>样例</p>
+<p>input</p>
+<blockquote>
+<p>1<br>4</p>
+</blockquote>
+<p>output</p>
+<blockquote>
+<p>3</p>
+</blockquote>
+<p>Problem solving:<br>这道题就是一个公式，n条线能组成的有界区域的最大个数是从1加到n。<br>比赛时候谁知道这是公式啊，画图画到5条线的时候发现的规律写了一遍交了，嘿，还真过了。<br>佩服用矩快的同学，我是真的不知道咋构建矩阵。<br>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+int main()
+{
+    ll n,t;
+    cin&gt;&gt;t;
+    while(t--)
+    {
+        cin&gt;&gt;n;
+        ll ans;
+        ans=(n-1)*(n-2)/2;
+        cout&lt;&lt;ans&lt;&lt;endl;
+    }
+}
+</code></pre><h3 id="蚂蚁和斐波那契"><a href="#蚂蚁和斐波那契" class="headerlink" title="蚂蚁和斐波那契"></a>蚂蚁和斐波那契</h3><p>Description:<br>聪明的小蚂蚁最近学习了斐波那契数列,但是它想到了一个问题：<br>从L到R之间斐波那契数列和的奇偶是什么呢？<br>其中Fib[1]=1,Fib[2]=1 .</p>
+<p>输入格式</p>
+<blockquote>
+<p>单组输入:<br>每组输入两个以空格隔开的数字 L 和 R<br>其中 (0&lt;L&lt;=R&lt;1e18)</p>
+</blockquote>
+<p>输出格式</p>
+<blockquote>
+<p>从 L 到 R 斐波那契数列和的奇偶，如果是奇数输出 &quot;1&quot; (不带引号) ，否则输出 &quot;0&quot; (不带引号)</p>
+</blockquote>
+<p>样例<br>input</p>
+<blockquote>
+<p>1 2</p>
+</blockquote>
+<p>output</p>
+<blockquote>
+<p>0</p>
+</blockquote>
+<p>Problem solving:<br>这道题就是个找规律的题没啥好说的，看代码自行体会吧。（我可能写的麻烦了）</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+ll ans[55];
+int main()
+{
+    ll mid,miid,l,r;
+    cin&gt;&gt;l&gt;&gt;r;
+    mid=l%3,miid=r%3;
+    if(mid==0&amp;&amp;miid==0)    puts(&quot;0&quot;);
+    else if(mid==miid)    puts(&quot;1&quot;);
+    else if(mid==0&amp;&amp;miid==1)    puts(&quot;1&quot;);
+    else if(mid==0&amp;&amp;miid==2)    puts(&quot;0&quot;);
+    else if(mid==1&amp;&amp;miid==0)        puts(&quot;0&quot;);
+    else if(mid==2&amp;&amp;miid==0)        puts(&quot;1&quot;);
+    else if(mid==2&amp;&amp;miid==1)        puts(&quot;0&quot;);
+    else if(mid==1&amp;&amp;miid==2)        puts(&quot;0&quot;);
+    return 0;
+}
+</code></pre><h3 id="蚂蚁装修"><a href="#蚂蚁装修" class="headerlink" title="蚂蚁装修"></a>蚂蚁装修</h3><p>Description:<br>还有一个月就开学了，爱学习的小蚂蚁想庆祝一下！于是它要把它的“家”装修一下。<br>首先要做的就是贴地板。<br>小蚂蚁“家”的地面可以看成一个2∗N 的方格 ，它拥有无数块1∗2 和 2∗1的地板。<br>请你帮下蚂蚁计算一下一共有多少种方法能把地面给放满 。<br>地板不能切割，也不能重叠。</p>
+<p>输入格式</p>
+<blockquote>
+<p>单组输入：<br>只有一个数字 N<br>其中 (0&lt;N&lt;1e18)</p>
+</blockquote>
+<p>输出格式</p>
+<blockquote>
+<p>输出放法数对1e9+7取模的结果</p>
+</blockquote>
+<p>样例<br>input</p>
+<blockquote>
+<p>2</p>
+</blockquote>
+<p>output</p>
+<blockquote>
+<p>2</p>
+</blockquote>
+<p>input</p>
+<blockquote>
+<p>1</p>
+</blockquote>
+<p>output</p>
+<blockquote>
+<p>1</p>
+</blockquote>
+<p>Problem solving:<br>手动画了几个状态，发现这个个数就是斐波那契数列，但是要求的最大的是1e18项，所以正好可以用矩快解决。注意用long long</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int  mod=1e9+7;
+typedef long long ll;
+struct node{
+    ll m[2][2];
+};
+node mul(node a,node b)
+{
+    node ans;
+    memset(ans.m,0,sizeof(ans.m));
+    for(ll i=0;i&lt;2;i++)
+    {
+        for(ll j=0;j&lt;2;j++)
+        {
+            for(ll k=0;k&lt;2;k++)
+            {
+                ans.m[i][j]=(ans.m[i][j]+a.m[i][k]*b.m[k][j])%mod;
+            }
+        }
+    }
+    return ans;
+}
+node poww(node a,ll b)
+{
+    node ans;
+    memset(ans.m,0,sizeof(ans.m));
+    for(ll i=0;i&lt;2;i++)    ans.m[i][i]=1;
+    while(b)
+    {
+        if(b&amp;1)    ans=mul(ans,a);
+        a=mul(a,a);
+        b/=2;
+    }
+    return ans;
+}
+node si,jia;
+int main()
+{
+    si.m[0][0]=2,si.m[1][0]=1,si.m[0][1]=0,si.m[1][1]=0;
+    jia.m[0][0]=1,jia.m[1][0]=1,jia.m[0][1]=1,jia.m[1][1]=0;
+    ll n;
+    cin&gt;&gt;n;
+    if(n==1)
+    {
+        cout&lt;&lt;1%mod&lt;&lt;endl;return 0;
+    }
+    if(n==2)
+    {
+        cout&lt;&lt;2%mod&lt;&lt;endl;return 0;
+    }
+    node xiaozhu=poww(jia,n-2);
+    xiaozhu=mul(xiaozhu,si);
+    cout&lt;&lt;xiaozhu.m[0][0]&lt;&lt;endl;
+}
+</code></pre><h3 id="蚂蚁的镜像串"><a href="#蚂蚁的镜像串" class="headerlink" title="蚂蚁的镜像串"></a>蚂蚁的镜像串</h3><p>Description:</p>
+<p>Problem solving:<br>这道题，，是真的坑啊。<br>把可以组成镜像串的字母列出来，判断每一个字符，如果出现了不可以组成镜像串的直接就不是镜像串了。如果你也是这样想的这么单纯，恭喜你你会WA很多次。WA到怀疑人生那种。<br>因为bdpq他们也是可以组成镜像串的。<br>知道了这一点就可以很简单的解决这个问题了</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+    int t;
+    string s;
+    cin&gt;&gt;t;
+    while(t--)
+    {
+        cin&gt;&gt;s;
+        int flag=1;
+         string mid=s;
+         reverse(mid.begin(),mid.end());
+        for(int i=0;i&lt;s.size();i++)
+        {
+            if((s[i]==&#39;b&#39;&amp;&amp;mid[i]==&#39;d&#39;)||(s[i]==&#39;d&#39;&amp;&amp;mid[i]==&#39;b&#39;)||(s[i]==&#39;p&#39;&amp;&amp;mid[i]==&#39;q&#39;)||(s[i]==&#39;q&#39;&amp;&amp;mid[i]==&#39;p&#39;)||(s[i]==mid[i]&amp;&amp;(s[i]==&#39;A&#39;||s[i]==&#39;H&#39;||s[i]==&#39;I&#39;||s[i]==&#39;i&#39;||s[i]==&#39;l&#39;||s[i]==&#39;M&#39;||s[i]==&#39;m&#39;||s[i]==&#39;n&#39;||s[i]==&#39;O&#39;||s[i]==&#39;o&#39;||s[i]==&#39;T&#39;||s[i]==&#39;U&#39;||s[i]==&#39;u&#39;||s[i]==&#39;V&#39;||s[i]==&#39;v&#39;||s[i]==&#39;W&#39;||s[i]==&#39;w&#39;||s[i]==&#39;X&#39;||s[i]==&#39;x&#39;||s[i]==&#39;Y&#39;)))
+            {
+                continue;
+            }
+            else
+            {
+                flag=0;
+                break;
+            }
+        }
+        if(flag==1)    puts(&quot;YES&quot;);
+        else    puts(&quot;NO&quot;);
+    }
+}
+</code></pre><h3 id="蚂蚁赛跑"><a href="#蚂蚁赛跑" class="headerlink" title="蚂蚁赛跑"></a>蚂蚁赛跑</h3><p>Description:<br>小白和小黑非常喜欢养蚂蚁，他们每个人都养了n只蚂蚁。<br>有一天，他们想比一比谁养蚂蚁的本领更强，于是就举办了一场蚂蚁赛跑比赛。假设蚂蚁都是匀速直线奔跑。<br>比赛的规则是这样的：每只蚂蚁必须且最多比一场，赢一场得10分，输一场扣10分。平局都不得分也不扣分。<br>狡猾的小黑同学为了赢得比赛，提前偷到了小白所有蚂蚁得速度，请你帮小黑算一算，他在比赛中最多得多少分。</p>
+<p>输入格式</p>
+<blockquote>
+<p>有多组测试案例，最多有100组，对于每一组案例：<br>第一行以正整数n ,（n≤1000），即每个人的蚂蚁数量。<br>第二行的n个整数是小黑的蚂蚁的速度。<br>第三行的n整数是小白的蚂蚁速度。<br>蚂蚁的速度小于100</p>
+</blockquote>
+<p>输出格式</p>
+<blockquote>
+<p>对于每个输入案例，输出一个整数，这是小黑能够获得的最大分数。</p>
+</blockquote>
+<p>样例<br>input</p>
+<blockquote>
+<p>2<br>10 10<br>10 10<br>2<br>10 1<br>100 8</p>
+</blockquote>
+<p>output</p>
+<blockquote>
+<p>0<br>0</p>
+</blockquote>
+<p>Problem solving:<br>贪心，但是我们贪出来，等到我够贪心了再补上</p>
+<p>Code:</p>
+<pre><code>/**
+ *　　　　　　　　┏┓　　 　┏┓
+ * 　　　　　　　┏┛┗━━━━━━━┛┗━━━┓
+ * 　　　　　　　┃　　　　　　　┃ 　
+ * 　　　　　　　┃　　　━　　 　┃
+ * 　　　　　　　┃　＞　　　＜　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┃...　⌒　... 　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┗━┓　　　┏━┛
+ * 　　　　　　　　　┃　　　┃　Code is far away from bug with the animal protecting　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃   神兽保佑,代码无bug
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃  　　　　　　
+ * 　　　　　　　　　┃　　　┃
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┗━━━┓
+ * 　　　　　　　　　┃　　　　　　　┣┓
+ * 　　　　　　　　　┃　　　　　　　┏┛
+ * 　　　　　　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　　　　　　┃┫┫　┃┫┫
+ * 　　　　　　　　　　┗┻┛　┗┻┛
+ */
+// warm heart, wagging tail,and a smile just for you!
+//
+//                            _ooOoo_
+//                           o8888888o
+//                           88&quot; . &quot;88
+//                           (| -_- |)
+//                           O\  =  /O
+//                        ____/`---&#39;\____
+//                      .&#39;  \|     |//  `.
+//                     /  \|||  :  |||//  \
+//                    /  _||||| -:- |||||-  \
+//                    |   | \\  -  /// |   |
+//                    | \_|  &#39;&#39;\---/&#39;&#39;  |   |
+//                    \  .-\__  `-`  ___/-. /
+//                  ___`. .&#39;  /--.--\  `. . __
+//               .&quot;&quot; &#39;&lt;  `.___\_&lt;|&gt;_/___.&#39;  &gt;&#39;&quot;&quot;.
+//              | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+//              \  \ `-.   \_ __\ /__ _/   .-` /  /
+//         ======`-.____`-.___\_____/___.-`____.-&#39;======
+//                            `=---=&#39;
+//        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//
+</code></pre><h3 id="蚂蚁上树"><a href="#蚂蚁上树" class="headerlink" title="蚂蚁上树"></a>蚂蚁上树</h3><p>Description:<br>蚂蚁上树（Sauteed Vermicelli with minced Pork），又名肉末粉条，是四川省及重庆市的特色传统名菜之一。因肉末贴在粉丝上，形似蚂蚁爬在树枝上而得名。这道菜具体的历史，已不可考。但在四川省、重庆市一带，该菜很常见。</p>
+<p>蚂蚁上树通常由粉丝（或者粉条）、肉末为主料，辅以胡萝卜、姜、葱、豆瓣酱等辅料制作而成。成菜后，口味清淡，爽滑美味，色泽红亮，食之别有风味。</p>
+<p>蚂蚁想知道这棵树上距离最远的两个点之间的距离</p>
+<p>给你一个具有 n 个节点的树</p>
+<p>求这棵树上距离最远的两个点之间的距离</p>
+<p>输入格式</p>
+<blockquote>
+<p>第一行一个整数 n ，(1≤n≤1e4)<br>接下来 n−1 行，每行三个整数 x,y,z 表示 x 与 y 之间有一条长度为 z 的边 (1≤x,y≤n,1≤z≤104)</p>
+</blockquote>
+<p>输出格式</p>
+<blockquote>
+<p>一个整数表示树上距离最远的两个点之间的距离</p>
+</blockquote>
+<p>样例<br>input</p>
+<blockquote>
+<p>5<br>1 2 9<br>1 3 3<br>1 5 2<br>2 4 10</p>
+</blockquote>
+<p>output</p>
+<blockquote>
+<p>22</p>
+</blockquote>
+<p>Problem solving:<br>求树的直径，套班子就行啦，别忘了long long</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=1e4+10;
+ll n,x,y,z,dis[maxn],vis[maxn];
+vector&lt;pair&lt;int,int&gt; &gt; v[maxn];
+void bfs(ll x)
+{
+    queue&lt;int&gt; q;
+    q.push(x);
+    vis[x]=1;
+    dis[x]=0;
+    while(!q.empty())
+    {
+        x=q.front();
+        q.pop();
+        for(int i=0;i&lt;v[x].size();i++)
+        {
+            if(!vis[v[x][i].first])
+            {
+                q.push(v[x][i].first);
+                dis[v[x][i].first]=dis[x]+v[x][i].second;
+                vis[v[x][i].first]=1;
+            }
+        }
+    }
+}
+int main()
+{
+    cin&gt;&gt;n;
+    for(int i=0;i&lt;n-1;i++)
+    {
+        cin&gt;&gt;x&gt;&gt;y&gt;&gt;z;
+        v[x].push_back(make_pair(y,z));
+        v[y].push_back(make_pair(x,z));
+    }
+    bfs(1);
+    ll si=0,jia,ans=0;
+    for(int i=1;i&lt;=n;i++)
+    {
+        if(dis[i]&gt;si)
+        {
+            si=dis[i];
+            jia=i;
+        }
+    }
+    memset(vis,0,sizeof(vis));
+    memset(dis,0,sizeof(dis));
+    bfs(jia);
+    for(int i=1;i&lt;=n;i++)
+    {
+        ans=max(ans,dis[i]);
+    }
+    cout&lt;&lt;ans&lt;&lt;endl;
+}
+</code></pre><h3 id="蚂蚁的游戏"><a href="#蚂蚁的游戏" class="headerlink" title="蚂蚁的游戏"></a>蚂蚁的游戏</h3><p>Description:<br>蚂蚁Bob和蚂蚁Alice是青梅竹蚁，Alice喜欢和Bob一起玩游戏，每当Alice想到新的游戏，都会找Bob一起玩</p>
+<p>今天Alice的游戏是这样的：</p>
+<p>n堆石子，两人轮流取。每次只能在1堆中取，不能不取，最先取完石子者胜</p>
+<p>Alice先取石子，Alice和Bob都非常聪明，拿石子的过程中不会出现失误。</p>
+<p>输入格式</p>
+<blockquote>
+<p>第一行有一个整数T，有T组输入数据(T≤50)<br>每组第一行有一个数n表示有n堆石子，(1≤n≤20000)<br>第二行有n个非零整数x，表示每堆石子的数量(x≤1e3)</p>
+</blockquote>
+<p>输出格式</p>
+<blockquote>
+<p>请你判断Alice能否在游戏中获胜，如果不能获胜，输出NO。<br>否则，输出YES，并输出第一次取石子的所有方法（具体参见样例和提示）</p>
+</blockquote>
+<p>样例<br>input</p>
+<blockquote>
+<p>2<br>2<br>45 45<br>5<br>5 7 8 9 10</p>
+</blockquote>
+<p>output</p>
+<blockquote>
+<p>NO<br>YES<br>3 1<br>4 0<br>5 3</p>
+</blockquote>
+<p>提示<br>对于第一组样例，不论Alice怎么取，Bob总能拿到最后一个石子，所以输出为NO</p>
+<p>对于第二组样例，Alice可以第一次取石子有三种取法：</p>
+<p>第3堆取出7个，剩下1个<br>第4堆全部取出，剩下0个<br>第5堆取出7个，剩下3个<br>对于每组输出，总是按照堆的编号顺序输出的<br>Problem solving:<br>博弈论的问题，好像有板子可以套，但是我并不会。学会了再补吧</p>
+<p>Code:</p>
+<pre><code>/**
+ *　　　　　　　　┏┓　　 　┏┓
+ * 　　　　　　　┏┛┗━━━━━━━┛┗━━━┓
+ * 　　　　　　　┃　　　　　　　┃ 　
+ * 　　　　　　　┃　　　━　　 　┃
+ * 　　　　　　　┃　＞　　　＜　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┃...　⌒　... 　┃
+ * 　　　　　　　┃　　　　　　　┃
+ * 　　　　　　　┗━┓　　　┏━┛
+ * 　　　　　　　　　┃　　　┃　Code is far away from bug with the animal protecting　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃   神兽保佑,代码无bug
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┃  　　　　　　
+ * 　　　　　　　　　┃　　　┃
+ * 　　　　　　　　　┃　　　┃　　　　　　　　　　　
+ * 　　　　　　　　　┃　　　┗━━━┓
+ * 　　　　　　　　　┃　　　　　　　┣┓
+ * 　　　　　　　　　┃　　　　　　　┏┛
+ * 　　　　　　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　　　　　　┃┫┫　┃┫┫
+ * 　　　　　　　　　　┗┻┛　┗┻┛
+ */
+// warm heart, wagging tail,and a smile just for you!
+//
+//                            _ooOoo_
+//                           o8888888o
+//                           88&quot; . &quot;88
+//                           (| -_- |)
+//                           O\  =  /O
+//                        ____/`---&#39;\____
+//                      .&#39;  \|     |//  `.
+//                     /  \|||  :  |||//  \
+//                    /  _||||| -:- |||||-  \
+//                    |   | \\  -  /// |   |
+//                    | \_|  &#39;&#39;\---/&#39;&#39;  |   |
+//                    \  .-\__  `-`  ___/-. /
+//                  ___`. .&#39;  /--.--\  `. . __
+//               .&quot;&quot; &#39;&lt;  `.___\_&lt;|&gt;_/___.&#39;  &gt;&#39;&quot;&quot;.
+//              | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+//              \  \ `-.   \_ __\ /__ _/   .-` /  /
+//         ======`-.____`-.___\_____/___.-`____.-&#39;======
+//                            `=---=&#39;
+//        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//
+</code></pre>
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏<div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/alipay.webp"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/wechat.webp"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/08/03/18/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/11.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/11.webp">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                HPU Summer Day 18(河南理工大学暑期第十八天)</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/08/02/17/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                HPU Summer Day 17(河南理工大学暑期第十七天)</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+      document.getElementById("page_loading_time").innerHTML="It took me "+loadTime+"ms to meet you this time";
+      console.log('Page load time is '+ loadTime);  
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        avatar: 'monsterid',
+        appId: "pNiuQ1a1Kllv1bupuAAOYjl3-gzGzoHsz",
+        appKey: "0cJBUKqrJsFhMOrGAyxfL9VU",
+        path: window.location.pathname,
+        serverURL: "https://valine.cndrew.cn/",
+        placeholder: "若想及时收到回复消息，请在上方填入常用邮箱."
+      })
+  }
+</script>
+
+
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="https://cndrew.cn/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp" itemprop="image" alt="Uncle_drew" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://cndrew.cn/" itemprop="url" rel="author">Uncle_drew</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>
+    
+    
+
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Uncle_drew<br>
+      powered_by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019-2020 Uncle_drew</p>
+      <p style="color: #666666;" id="page_loading_time"></p>
+    </div>
+   
+
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a></a>
+        </span>
+      </p>
+   <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="静态网页托管于阿里云服务器">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+      <span class="badge-subject">DNS</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-brightgreen">jsDelivr</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv" target="_blank" title="本站访客量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">PV</span><span class="badge-value bg-orange" id="busuanzi_value_site_pv" target="_blank" title="本站浏览量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet" target="_blank" title="全站字数">340.2k</span>
+    </div>
+    </div><!-- .site-info -->
+
+
+  </footer>
+
+  
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/mmp/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/bug/sakura-ap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/fasearch.min.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/drew233/css/lvaline.min.js'></script>
+<script src="//cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20191003172815.webp"></img></center>
+
+<!-- 不蒜子 网页计数器 -->
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+    </div>
+
+
+    <div class="site-search">
+      <div class="popup search-popup" style="display: none;">
+      <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-container">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="输入关键词搜索" spellcheck="false" type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    </div>
+
+    <div id="search-result">
+      <div id="no-result"><i class="fa fa-frown-o fa-5x"></i>
+      </div>
+    </div>
+    </div>
+    <div class="search-pop-overlay" style="display: none;"></div>
+    </div>
+  </section>
+  
+
+  <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+ <div class="theme-controls row-container">
+  <ul class="menu-list">
+   <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+   <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+   <li id="gribs-bg"> <i class="fas fa-atom" aria-hidden="true"></i></li>
+   <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+   <li id="totem-bg"> <i class="fas fa-fish" aria-hidden="true"></i></li>
+   <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+   <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+   <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+  </ul>
+ </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+
+  <div class="changeSkin-gear no-select">
+  <div class="keys" id="setbtn">
+   <span id="open-skinMenu"> 切换主题 | SCHEME TOOL
+     <i class="iconfont icon-gear inline-block rotating"></i>
+   </span>
+  </div>
+</div>
+
+  
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Uncle_drew</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Drew233" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=1120437716&site=qq&menu=yes" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Algorithm/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  算法
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Life/">
+                  <i class="fa fa-bathtub" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Training/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  集训
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/analytics/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-line-chart" aria-hidden="true"></i>
+            统计
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  lab
+                </a>
+              </li>
+            
+              <li>
+                <a href="/category/">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  分类
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
+                <a href="/2020/06/02/mcwallpaper/">
+                  <i class="fa fa-television" aria-hidden="true"></i>
+                  MC壁纸
+                </a>
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                  订阅
+                </a>
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                  打赏
+                </a>
+              </li>
+            
+              <li>
+                <a href="/random.html">
+                  <i class="fa fa-random" aria-hidden="true"></i>
+                  随机文章
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/shuoshuo/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-clock-o" aria-hidden="true"></i>
+            说说
+          </span>
+        </a>
+        
+      </li>
+    
+    <li>
+      <a role="button" class="popup-trigger">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          搜索
+      </a>
+      
+    </li>
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">Hand down,man down</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+   
+
+
+
+</body>
+
+</html>

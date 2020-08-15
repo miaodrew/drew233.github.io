@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta itemprop="name" content="Uncle_drew">
+  <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  <meta name="description" itemprop="description" content="Hand down,man down">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="keywords" content="Uncle_drew,drew,欧文,acm,icpc,algorithm,算法,篮球,web,建站,chevereto,hexo">
+  
+  <title itemprop="name">河南理工大学18级算法协会招新赛(第二场)非官方题解 | Uncle_drew</title>
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//cdn.bootcss.com">
+  <link rel="dns-prefetch" href="//cdn.mathjax.org">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/cdn/gg.css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="https://cdn.jsdelivr.net/gh/drew233/css/wustyle.min.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/lib.min.css" media="all">
+  <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/rfsearch.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/font.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/zoom.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/sharejs.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/matery.min.css">
+
+
+  <style type="text/css">
+          #drew {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              margin-bottom: 15px;
+              margin-top: 15px;
+              text-align: center;
+              border: 0;
+              border-radius: 10px;
+              color: rgba(0, 0, 0, .87);
+              background: #fff 50%;
+              background-size: cover;
+              box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+              margin:0 auto;
+          }
+  </style>
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+
+   Function.prototype.getMultiLine = function () {
+            var lines = new String(this);
+            lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));
+            return lines;
+        }
+
+        var string = function () {
+/*
+  Hello!
+（〃｀ 3′〃）
+*/
+        }
+        window.console.log(string.getMultiLine());
+
+
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /*
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+  /*End of Initial Variables*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/drew233/imgcdn/1589450799625.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200514082037.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200508193114.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/at166.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200407230036.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  var issafariBrowser = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+  if(issafariBrowser){
+    alert('本站图片主要采用Webp，暂不兼容Safari');
+  };
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="/random.html">
+          <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Hand down,man down.</p>
+        <div class="top-social_v2">
+          <!-- <li id="bg-pre"> -->
+            <!-- <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/Drew233" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811021906.webp">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1120437716&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811022455.webp">
+                  </a>
+                </li>
+              
+            
+          
+          <!-- <li id="bg-next"> -->
+            <!-- <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+
+    <div id="page" class="site wrapper">
+      
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top" id="pcmenu">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Uncle_drew</span>
+            <span class="shironeko"></span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Algorithm/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          算法
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Life/">
+                          <i class="fa fa-bathtub" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Training/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          集训
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/analytics/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-line-chart" aria-hidden="true"></i>
+                    统计
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          lab
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/category/">
+                          <i class="fa fa-list" aria-hidden="true"></i>
+                          分类
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/">
+                          <i class="fa fa-tags" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/2020/06/02/mcwallpaper/">
+                          <i class="fa fa-television" aria-hidden="true"></i>
+                          MC壁纸
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/atom.xml">
+                          <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                          订阅
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/donate/">
+                          <i class="fa fa-money" aria-hidden="true"></i>
+                          打赏
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/random.html">
+                          <i class="fa fa-random" aria-hidden="true"></i>
+                          随机文章
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/shuoshuo/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-clock-o" aria-hidden="true"></i>
+                    说说
+                  </span>
+                </a>
+                
+              </li>
+            
+            <li>
+              <a role="button" class="popup-trigger">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  搜索
+              </a>
+              
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+     
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/20190804081414.webp);" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804081414.webp">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      河南理工大学18级算法协会招新赛(第二场)非官方题解</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://cndrew.cn/">
+            <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+          </a>
+        </span>
+        <span>
+          <a href="https://cndrew.cn/">Uncle_drew</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        <i class="fa fa-calendar" aria-hidden="true">&nbsp&nbsp</i>2019-3-30<span class="bull">
+        ·</span>
+      <i class="fa fa-eye" aria-hidden="true">&nbsp&nbsp</i>本文共<span id="busuanzi_value_page_pv"></span>次阅读 &nbsp·&nbsp
+         <i class="fa fa-book" aria-hidden="true">&nbsp&nbsp</i><span class="post-count">字数统计：4.9k</span> &nbsp·&nbsp
+           <span class="post-count"><i class="fa fa-coffee" aria-hidden="true">&nbsp&nbsp</i>阅读时长≈20分钟</span></p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div id="point"></div>
+
+        <script>
+          function intervalTime(startTime,endTime){
+              var date1 = new Date(startTime);
+              var date2 = new Date(endTime);  
+              var date3 = date2.getTime() - date1.getTime(); 
+              var days = Math.floor(date3 / (24 * 3600 * 1000));
+              return days;
+          }
+          function format(Date){
+            var Y = Date.getFullYear();
+            var M = Date.getMonth() + 1;
+              M = M < 10 ? '0' + M : M;// 不够两位补充0
+            var D = Date.getDate();
+              D = D < 10 ? '0' + D : D;
+            var H = Date.getHours();
+              H = H < 10 ? '0' + H : H;
+            var Mi = Date.getMinutes();
+              Mi = Mi < 10 ? '0' + Mi : Mi;
+            var S = Date.getSeconds();
+              S = S < 10 ? '0' + S : S;
+              return Y + '-' + M + '-' + D + ' ' + H + ':' + Mi + ':' + S;
+          }
+          var pdate = new Date("Sat Mar 30 2019 00:00:00 GMT+0800");
+          var update = new Date("Thu Apr 02 2020 00:13:51 GMT+0800");
+          var now = new Date();
+          now=format(now);
+          pdate=format(pdate);
+          update=format(update);
+          var days=intervalTime(pdate,now),udays=intervalTime(update,now);
+          var mid=parseInt(days,10);
+          var mi=parseInt("30",10);
+          // alert(mid+mi);
+          if(mid > mi){
+            document.getElementById("point").innerHTML="<div class=\"tip share\">请注意，本文编写于"+days+"天前，最后修改于"+udays+"天前，其中某些信息可能已经过时。<img src=\"https://cdn.jsdelivr.net/gh/drew233/cdn/kawayi.webp\"><\img> </div>";
+            // alert(days);
+          }
+        </script>
+
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+
+        <div class="entry-content">
+
+          <p>我校oj：<a href="https://hpuoj.com/" target="_blank" rel="noopener">HPUOJ</a><br>本场招新赛：<a href="https://hpuoj.com/contest/15/" target="_blank" rel="noopener">河南理工大学18级算法协会招新赛(第二场)</a></p>
+<h3 id="A-wzy学长温暖的签到题"><a href="#A-wzy学长温暖的签到题" class="headerlink" title="A. wzy学长温暖的签到题"></a>A. wzy学长温暖的签到题</h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>单测试点时限: 1.0 秒</p>
+<p>内存限制: 256 MB</p>
+<p>每位ACMer（JBer）都是从a+b开始的！<br>作为本场比赛的良心出题人，怎么能忘记出a+b这么经典的题目呢？<br>请作为ACMer的你来尝试解决它吧！</p>
+<p>输入<br>单组输入<br>每行输入两个实数a，b（用空格隔开）</p>
+<p>输出<br>输出a+b的结果（结果保留两位小数）</p>
+<p>样例<br>input<br>1 1<br>output<br>2.00<br>input<br>1.555 1.001<br>output<br>2.56<br>提示<br>0≤a,b≤100<br>请使用double定义变量，并使用%lf输入和输出</p>
+<h4 id="题意分析"><a href="#题意分析" class="headerlink" title="题意分析"></a>题意分析</h4><p>这道题确实没有什么难得，简单的a+b，很多人也都a了，提示写的明明白白(wzy学长是真的可爱</p>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><pre><code>#include&lt;stdio.h&gt;
+int main()
+{
+    double a,b;
+    scanf(&quot;%lf %lf&quot;,&amp;a,&amp;b);
+    printf(&quot;%.2lf\n&quot;,a+b);
+    return 0;
+}
+</code></pre><h3 id="B-分糖果"><a href="#B-分糖果" class="headerlink" title="B. 分糖果"></a>B. 分糖果</h3><h4 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h4><p>单测试点时限: 2.0 秒</p>
+<p>内存限制: 512 MB</p>
+<p>Codancer 现在有n颗糖果，现在他要把这n颗糖果全部分给两个小朋友Dicer和thelittleboy,已知第i颗糖果能够使小朋友的开心值增加i,为了不让两个小朋友争吵，他必须使两个小朋友最终的开心值的差值最小化，现在Codancer很头疼，请你快来帮帮他吧QAQ。</p>
+<p>输入<br>单组输入<br>输入一个数n,代表codancer的糖的数量。<br>(1≤n≤1000000000)</p>
+<p>输出<br>输出两个小朋友的开心值的最小差值</p>
+<p>样例<br>input<br>3<br>output<br>0<br>input<br>1<br>output<br>1</p>
+<h4 id="题意分析-1"><a href="#题意分析-1" class="headerlink" title="题意分析"></a>题意分析</h4><p>输入一个数n，题意就是把从1-n个数分成两组让他们的和的差最小。这道题我看到第一感觉就是找规律，其实规律无非也就哪几种。这道题我们可以列出来几个情况求出来答案来找规律<br>1 2 3 4 5 6 7 8</p>
+<pre><code>糖果数量  分配方案    最小差值
+1         1    0        1
+2         1    2        1
+3         1，2     3       0
+4         1，4     2.3     0
+5         1，2，5    3，4    1
+6         1，2，3，5    4，6   1
+7         1，2，5，6    3，4，7    0
+8         4,6,8    1,2,3,5,7    0
+</code></pre><p>现在看起来规律就很明显了，1，1，0，0，1，1，0，0......<br>在找规律的过程中我发现从1到n的和如果是偶数，最小差值就是0，如果是奇数，最小差值就是1.于是我直接定义了一个求和函数后判断奇偶，直接T了。。。其实可以发现1100是四个一组出现的，直接n对4求余判断余数就好了。</p>
+<h4 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h4><pre><code>#include&lt;stdio.h&gt;
+int main()
+{
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    if(n%4==0||n%4==3)
+    puts(&quot;0&quot;);
+    else
+    puts(&quot;1&quot;);
+    return 0;
+}
+</code></pre><p>有些题掌握了规律实现起来就会很简单。<br>(什么时候codancer能给我们发糖吃呢</p>
+<h3 id="C-中位数"><a href="#C-中位数" class="headerlink" title="C. 中位数"></a>C. 中位数</h3><h4 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h4><p>单测试点时限: 2.0 秒</p>
+<p>内存限制: 512 MB</p>
+<p>给出一个1−n的排列，统计该排列有多少个长度为奇数的连续子序列的中位数是k。中位数是指把所有元素从小到大排列后，位于中间的数。<br>接下来一行n个数代表这个排列。</p>
+<p>输入<br>单组输入<br>一行两个数n,k代表排列的长度以及中位数。(1≤n≤100000,1≤k≤n)</p>
+<p>输出<br>输出满足条件的区间个数。</p>
+<p>样例<br>input<br>7 4<br>5 7 2 4 3 1 6<br>output<br>4<br>提示<br>样例解释：满足条件的区间为{4}, {7,2,4}, {5,7,2,4,3}和{5,7,2,4,3,1,6}。</p>
+<h4 id="题意分析-2"><a href="#题意分析-2" class="headerlink" title="题意分析"></a>题意分析</h4><p>这道题刚看见以为是很简单的一道题，WA了几次之后才发现并不简单。最后好像也没几个人做出来这道题。学长讲的时候也没听懂。。咳咳，确实挺难。这两天为了更好的帮(ceng)助(re)大(du)家，这几天也是一直在搞这道题。不断地查阅资料，现在也差不多是搞懂了，快点来帮(ceng)助(re)大(du)家。<br>参考于：<a href="https://www.luogu.org/problemnew/solution/P1627" target="_blank" rel="noopener">洛谷P1627题解</a><br>中位数说明这个区间内大于他的数的数量与小于他的数的数量相等。且这个题中符合题意的区间顺序是必须与输入一样的，不能更改。<br>先找到中位数的位置标记一下，然后输入的同时对每一个数进行判断，大于中位数的标记为1，小于中位数的标记为-1。然后从中位数的左边开始第一次循环，对标记求和，如果有和为0的情况（即大于中位数的数的数量与小于中位数的数量相等），即说明这是一个符合题意的区间。接着对右边开始第二次循环，与第一次循环相等的步骤，但是要多一步，就是要考虑中位数位于区间中间（不是两端）的情况。具体可以在代码中解释。最后得到的答案还要加一，因为中位数自己一个区间也是可以的。</p>
+<h4 id="代码实现-2"><a href="#代码实现-2" class="headerlink" title="代码实现"></a>代码实现</h4><pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[100050],flag[100050],f[200050];
+const int key=100000;
+int main()
+{
+    int n,k,bj,s,ans;
+    cin&gt;&gt;n&gt;&gt;k;
+    for(int i=1;i&lt;=n;i++)
+    {
+        cin&gt;&gt;a[i];
+        if(a[i]==k)        bj=i;
+        else if(a[i]&gt;k)        flag[i]=1;
+        else     flag[i]=-1;
+    }//进行标记
+    s=ans=0;
+    for(int i=bj-1;i&gt;=1;i--)
+    {
+        s+=flag[i];
+        f[s+key]++;//用一个f数组来记录s为为-1，0，1时候的个数
+        if(s==0)    ans++;
+    }
+    s=0;
+    for(int i=bj+1;i&lt;=n;i++)
+    {
+        s+=flag[i];
+        if(s==0)    ans++;
+        ans+=f[-s+key];//中位数在区间中的情况。
+    }
+    ans+=1;
+    cout&lt;&lt;ans&lt;&lt;endl;
+    return 0;
+}
+</code></pre><p>咳咳，可以对着样例和代码自己跑一遍可以加深一下理解。</p>
+<h3 id="D-打麻将"><a href="#D-打麻将" class="headerlink" title="D. 打麻将"></a>D. 打麻将</h3><h4 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h4><p>单测试点时限: 2.0 秒</p>
+<p>内存限制: 512 MB</p>
+<p>打麻将实在是太有趣了，不知道大家过年的时候有没有打麻将呢？</p>
+<p>我是十分喜欢打麻将的，但是因为我不够聪明，所以我经常会诈胡(不具备胡牌的条件而胡牌)，因此我希望你能帮我判断一下我当前的手牌是否符合胡牌的条件。</p>
+<p>为了简化这个问题，我们规定胡牌的条件如下：</p>
+<p>你必须有且仅能有一个对子(即两张相同的牌)。<br>除了那个对子之外，其他的都是刻子(3张相同的牌)。(刻子的数量可以为0)<br>我们用两个字符表示一张麻将：</p>
+<p>B，T, W 分别表示牌的种类为 筒子，条子，万子 。(可能你不知道这是什么意思，不过没有关系，你只需要知道这三种类型的牌是互不相同的。)<br>数字1~9表示牌上的数字。<br>另外用HZ，FC，BB，EE，WW，SS，NN 来分别表示除了 筒子，条子，万子 以外的 红中，发财，白板，东风，西风，南风，北风 。<br>对于两种牌来说，只要表示它们的两个字符中第一个字符或第二个字符任意一个不同，那么它们就是不同的牌，每种牌最多只有四张。(例如：B1 和 B2，B1 和 T1,HZ 和 FC 都是不同的。)<br>输入<br>第一行是一个数字T，表示你需要判断的次数。(1 \leq T \leq 10000)<br>接下来2*T行，前一行是一个数字 n 是你的手牌数，2≤n≤14，接下来一行有 n 对字符，每一对字符代表你的一张手牌。<br>保证不会有未知的牌型，不会有任何一种牌出现超过四次，但是你的手牌数因为某种原因可能会是正常出牌不能出现的个数。<br>输出<br>如果可以胡牌请输出 YES，否则输出 NO 。</p>
+<p>样例<br>input<br>3<br>14<br>B1 B1 B1 T1 T1 T1 W1 W1 W1 HZ HZ HZ WW WW<br>2<br>BB BB<br>7<br>BB BB B1 B1 B1 B2 B2<br>output<br>YES<br>YES<br>NO</p>
+<h4 id="题意分析-3"><a href="#题意分析-3" class="headerlink" title="题意分析"></a>题意分析</h4><p>题面看起来很长，但是我们需要学会如何找到有用的信息。这道题我们需要知道的就是我们手中的牌只能有一种是出现了两次，别的牌出现的只能是三次。思路一清晰实现起来就会简单点了。这道题如果按我的方法的话希望大家补一下相关的知识：基础容器之map以及c++中的string(用char数组应该也是可以的，但是string会方便一些)类型。更详细的解释我会加在代码里。</p>
+<h4 id="代码实现-3"><a href="#代码实现-3" class="headerlink" title="代码实现"></a>代码实现</h4><pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+    string s[15];
+    int n,a;
+    cin&gt;&gt;n;
+    map&lt;string,int&gt; ma;
+    while(n--)
+    {
+        ma.clear();//因为是多组输入，所以每次开始时都需要将map清空，避免干扰到下一次的判断。
+        int flag=1;
+        cin&gt;&gt;a;
+        for(int i=0;i&lt;a;i++)
+        {
+            cin&gt;&gt;s[i];
+            ma[s[i]]++;
+        }
+        map&lt;string,int&gt;::iterator it;
+        for(it=ma.begin();it!=ma.end();it++)
+        {
+            if(it-&gt;second==1||it-&gt;second==4)
+            {
+                flag=0;
+                break;
+            }//如果有出现一次的或者出现四次的，肯定不能胡牌。
+            if(it-&gt;second==2)
+                flag++;//判断出现两次的牌的数量。
+        }
+        if(flag==2)//因为flag定义时的赋值是1，所以如果现在的值是2则说明出项两次的牌（字符串）只有一个，符合条件，可以胡牌。否则就不能胡牌。
+        puts(&quot;YES&quot;);
+        else
+        puts(&quot;NO&quot;);
+    }
+    return 0;
+}
+</code></pre><p>(咳咳，我还是个麻将“高手”呢，</p>
+<h3 id="E-假票"><a href="#E-假票" class="headerlink" title="E. 假票"></a>E. 假票</h3><h4 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h4><p>单测试点时限: 2.0 秒</p>
+<p>内存限制: 512 MB</p>
+<p>春天到了，万物复苏，乍暖还寒。H城为了庆祝春天的到来，将要举办一场盛大的舞会。</p>
+<p>由于舞会非常的盛大，H城许多的居民都想参加舞会，但是舞厅大小有限，只能容纳n个人，为了防止到时候位置不够，人太拥挤，H城城主决定在舞会开始前进行售票。城主规定，每个人只能买一张票，每张票都会有其固定的编号（1~n）。但是有一个人，由于没抢到票，居然制造了一张与真票一模一样的假票！城主知道这个消息后，当然不能允许这种行为，因此就派出他最信任的大臣你去找出制造假票的人。</p>
+<p>输入<br>多组输入，处理到文件结束</p>
+<p>第一行两个数n,m (1&lt;=n&lt;=10000,0&lt;=m&lt;=n+1)，表示总共售出n张票，编号为 1 ~ n，m表示舞会当天到场的人数（注意：由于有些人可能当天有事来不了，这种情况下你可能找不到制造假票的人）。</p>
+<p>接下来一行m个数a1,a2,.....,am，表示检票口收到的所有票的编号。</p>
+<p>输出<br>如果能找到假票，则输出假票编号，否则输出-1。</p>
+<p>样例<br>input<br>5 6<br>3 1 4 2 3 5<br>5 3<br>1 2 4<br>output<br>3<br>-1</p>
+<h4 id="题意分析-4"><a href="#题意分析-4" class="headerlink" title="题意分析"></a>题意分析</h4><p>这个题还是比较容易读懂的，就是让你输出一组数中出现了两次的数。我一开始用的是先排序然后判断每一项与它后面那一项是否相等来判断是否有出现两次的，如果有，就将这个数输出，没有就输出<code>-1</code>，但是不知道为什么会WA，于是又改用了map，还好最后过了。</p>
+<h4 id="补题"><a href="#补题" class="headerlink" title="补题"></a>补题</h4><p>排序的那种方法也是可以的，只不过因为是多组输入，因为第一次的输入票的数量如果比第二次输入的多，此时就可能会存在数组中还依然存在着一些上一组的数据，导致结果错误。参考我之前的错误代码发现其中判断是否相等的时候多循环了一次——最后一次，这就会导致WA了。改一下就行了。代码请看下面。（感谢学长哈）</p>
+<p>这题我跟小伙伴讨论之后发现用set也是可以的，比较前后的和的大小即可，有兴趣的可以自己实现一下。</p>
+<h4 id="代码实现-4"><a href="#代码实现-4" class="headerlink" title="代码实现"></a>代码实现</h4><pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[10050];
+int main()
+{
+    map&lt;int,int&gt; ma;
+    int n,m,b;
+    while(~scanf(&quot;%d %d&quot;,&amp;n,&amp;m))
+    {
+        bool flag=1;
+        ma.clear();
+        while(m--)
+        {
+            cin&gt;&gt;b;
+            ma[b]++;
+        }
+        map&lt;int,int&gt;::iterator it;
+        for(it=ma.begin();it!=ma.end();it++)
+        {
+            if(it-&gt;second==2)
+            {
+                cout&lt;&lt;it-&gt;first&lt;&lt;endl;
+                flag=0;
+                break;
+            }
+        }
+        if(flag)
+        cout&lt;&lt;&quot;-1&quot;&lt;&lt;endl;
+    }
+    return 0;
+}
+
+
+
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a[10050];
+int main()
+{
+    int n,m;
+    while(~scanf(&quot;%d %d&quot;,&amp;n,&amp;m))
+    {
+        int ans=-1;
+        for(int i=0;i&lt;m;i++)
+        {
+            cin&gt;&gt;a[i];
+        }
+        sort(a,a+m);
+        for(int i=0;i&lt;m-1;i++)
+        {
+            if(a[i]==a[i+1])
+            {
+                ans=a[i];
+                break;
+            }
+        }
+        if(ans!=-1)
+        cout&lt;&lt;ans&lt;&lt;endl;
+        else
+        puts(&quot;-1&quot;);
+    }
+    return 0;
+}
+</code></pre><h3 id="F-字符串博弈"><a href="#F-字符串博弈" class="headerlink" title="F. 字符串博弈"></a>F. 字符串博弈</h3><h4 id="题目描述-5"><a href="#题目描述-5" class="headerlink" title="题目描述"></a>题目描述</h4><p>单测试点时限: 2.0 秒</p>
+<p>内存限制: 512 MB</p>
+<p>一天Codancer和Todest玩游戏。现在有一个由大写字母组成的字符串s，Codancer和Todest轮流进行一下操作：<br>如果存在i使得s[i]=s[i+1],就可以把这两个字符从s中删除。比如原本s为ABBA,现在可以把BB删除，此时s就变为AA。<br>如果一方不能再执行此操作时，该方即为败者。现在Codancer先手，判断Codancer能否获胜。</p>
+<p>输入<br>单组输入<br>输入字符串s。1≤|s|≤10000</p>
+<p>输出<br>如果Codancer能够获胜输出”YES”,否则输出”NO”。(不加引号)。</p>
+<p>样例<br>input<br>ABBA<br>output<br>NO</p>
+<h4 id="题意分析-5"><a href="#题意分析-5" class="headerlink" title="题意分析"></a>题意分析</h4><p>我对这道题的理解就是将字符串中相邻且相同的两个字母消掉，消到不能再消，统计消除的次数就是能进行的回合数，再对回合数的奇偶进行判断就可以了。但是消除的实现还是用栈（不会的可以补一下知识，这个我的博客中也有相关的文章不过是偏实用性（就是只讲了几种函数的用法）的）比较轻松。关于栈的传送门：<a href="https://drew233.github.io/2019/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Uncle_drew最帅</a></p>
+<h4 id="代码实现-5"><a href="#代码实现-5" class="headerlink" title="代码实现"></a>代码实现</h4><pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+char s[10005];
+int main()
+{
+    stack&lt;char&gt; sta;
+    cin&gt;&gt;s;
+    int a=0;
+    for(int i=0;i&lt;strlen(s);i++)
+    {
+        if(i&gt;0)
+        {
+            if(sta.top()==s[i])
+            {
+                sta.pop();
+                a++;
+                continue;
+            }
+        }
+        sta.push(s[i]);
+    }
+    if(a%2==0)
+    puts(&quot;NO&quot;);
+    else
+    puts(&quot;YES&quot;);
+}
+</code></pre><p>(Todest很帅的，小学妹们抓住机会，ε=ε=ε=┏(゜ロ゜;)┛</p>
+<h3 id="G-小w的过路费-暂无"><a href="#G-小w的过路费-暂无" class="headerlink" title="G. 小w的过路费(暂无)"></a>G. 小w的过路费(暂无)</h3><h3 id="H-超级简单的斐波那契数列"><a href="#H-超级简单的斐波那契数列" class="headerlink" title="H. 超级简单的斐波那契数列"></a>H. 超级简单的斐波那契数列</h3><h4 id="题目描述-6"><a href="#题目描述-6" class="headerlink" title="题目描述"></a>题目描述</h4><p>单测试点时限: 1.0 秒</p>
+<p>内存限制: 256 MB</p>
+<p>众所周知，斐波那契数列又称黄金分割数列，由数学家列昂纳多·斐波那契（Leonardoda Fibonacci）以兔子繁殖为例子而引入</p>
+<p>斐波那契的通项公式为：</p>
+<a href="https://www.kupan123.com/upload/1552350228x2063928140.webp" data-fancybox="images" data-caption="sakura" target="_blank" rel="noopener"><center><img src="https://www.kupan123.com/upload/1552350228x2063928140.webp" class="img-shadow img-margin"></center></a>
+<p>计算斐波那契的第n项是一件容易的事，但是如果给出第n项的斐波那契数num，你能反推出n吗？</p>
+<p>试一试吧！</p>
+<p>输入<br>第一行一个整数T (0≤T≤100)，表示测试组数。<br>之后的T行，每行一个斐波那契数num (num≠0,1)</p>
+<p>输出<br>对于每个测试数据，输出一行表示数num是斐波那契数列的第几项</p>
+<p>样例<br>input<br>2<br>2<br>5<br>output<br>3<br>5<br>提示<br>保证num在斐波那契数列的前200000项中</p>
+<h4 id="题意分析-6"><a href="#题意分析-6" class="headerlink" title="题意分析"></a>题意分析</h4><p>一开始我看错题，以为是数列的最大值不超过200000.。。。直接交了3次，WA了3次。。。所以说看题还是很重要的。我们昨天也都听学长说了，斐波(肥波)那契数列第50项已经爆了unsigned long long了。所以我们直接存是不现实的，这时候就需要存储的时候对其取模然后存储，并且用map存储一下每个值对应的斐波(肥波)那契数列的项数。因为输入的数会很大，所以我们需要用到字符串输入，然后用到一个很XX的东西——对字符串表示的大数取模。</p>
+<h4 id="代码实现-6"><a href="#代码实现-6" class="headerlink" title="代码实现"></a>代码实现</h4><p>对用字符串输入的大数取模(感谢学长！</p>
+<pre><code>        cin&gt;&gt;s;
+        ll ans,num;
+        ll l=strlen(s);
+        num=0;
+        for(ll i=0;i&lt;l;i++)
+        {
+            num=num*10+s[i]-&#39;0&#39;;
+            num%=maxx;
+        }//num就是这个大数取模之后的结果。
+</code></pre><pre><code>//这道题比赛的时候我是没写出来的，赛后补题。学会了大数取模屁颠屁颠的跑去交题
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int maxx=1e9+7;
+typedef long long ll;
+ll f[200050];
+char s[100000];
+int main()
+{
+    map&lt;ll,ll&gt; ma;
+    f[0]=0;
+    f[1]=1;
+    for(ll i=2;i&lt;200001;i++)
+    {
+        f[i]=(f[i-1]+f[i-2])%maxx;
+        ma[f[i]]=i;
+    }//对斐波(肥波)那契数列进行取模存储
+    ll n;
+    cin&gt;&gt;n;
+    while(n--)
+    {
+        cin&gt;&gt;s;
+        ll ans,num;
+        num=0;
+        for(ll i=0;i&lt;strlen(s);i++)
+        {
+            num=num*10+s[i]-&#39;0&#39;;
+            num%=maxx;
+        }
+        cout&lt;&lt;ma[num]&lt;&lt;endl;        
+    }
+    return 0;
+}
+//然后TLE了。。。观察一下(hao jiu)代码会发现我在大数取模的for循环里面每次都对s的长度重新求一次，这样是很耗费时间的，自然会tle，改一下就好
+
+
+#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int maxx=1e9+7;
+typedef long long ll;
+ll f[200050];
+char s[100000];
+int main()
+{
+    ios::sync_with_stdio(false);
+    map&lt;ll,ll&gt; ma;
+    f[0]=0;
+    f[1]=1;
+    for(ll i=2;i&lt;200001;i++)
+    {
+        f[i]=(f[i-1]+f[i-2])%maxx;
+        ma[f[i]]=i;
+    }
+    ll n;
+    cin&gt;&gt;n;
+    while(n--)
+    {
+        cin&gt;&gt;s;
+        ll ans,num,l;
+        l=strlen(s);//先把长度求出来，用的时候直接用
+        num=0;
+        for(ll i=0;i&lt;l;i++)
+        {
+            num=num*10+s[i]-&#39;0&#39;;
+            num%=maxx;
+        }
+        cout&lt;&lt;ma[num]&lt;&lt;endl;        
+    }
+    return 0;
+}
+取模的部分也可以这样写
+        for(ll i=0;i&lt;s.length();i++)
+        {
+            num=num*10+s[i]-&#39;0&#39;;
+            num%=maxx;
+        }
+</code></pre><h3 id="I-斐波那契（非递归）"><a href="#I-斐波那契（非递归）" class="headerlink" title="I. 斐波那契（非递归）"></a>I. 斐波那契（非递归）</h3><h4 id="题目描述-7"><a href="#题目描述-7" class="headerlink" title="题目描述"></a>题目描述</h4><p>单测试点时限: 2.0 秒</p>
+<p>内存限制: 512 MB</p>
+<p>请输出斐波那契的第n项</p>
+<p>输入<br>多组输入处理到文件结束，每组输入一个数n。1≤n≤10000</p>
+<p>输出<br>输出第n个斐波那契数对109+7取模的结果</p>
+<p>样例<br>input<br>3<br>4<br>output<br>2<br>3</p>
+<h4 id="题意分析-7"><a href="#题意分析-7" class="headerlink" title="题意分析"></a>题意分析</h4><p>简单的斐波(肥波)那契数列问题，与J题差不多，不过加了取模。直接代码就行了。</p>
+<h4 id="代码实现-7"><a href="#代码实现-7" class="headerlink" title="代码实现"></a>代码实现</h4><pre><code>#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+using namespace std;
+typedef long long ll;
+const int maxn=1e9+7;
+ll f[10005];
+int main()
+{
+    f[0]=0;
+    f[1]=1;
+    for(int i=2;i&lt;10001;i++)
+    {
+        f[i]=f[i-1]+f[i-2];
+        f[i]=f[i]%maxn;
+    }//打表
+    int a;
+    while(~scanf(&quot;%d&quot;,&amp;a))
+    {
+        cout&lt;&lt;f[a]&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre><h3 id="J-斐波那契数列"><a href="#J-斐波那契数列" class="headerlink" title="J. 斐波那契数列"></a>J. 斐波那契数列</h3><h4 id="题目描述-8"><a href="#题目描述-8" class="headerlink" title="题目描述"></a>题目描述</h4><p>单测试点时限: 2.0 秒</p>
+<p>内存限制: 512 MB</p>
+<p>请输出斐波那契的第n项</p>
+<p>输入<br>单组输入<br>每组输入一个数n。0≤n≤10</p>
+<p>输出<br>输出斐波那契数列的第n项</p>
+<p>样例<br>input<br>0<br>output<br>0<br>input<br>1<br>output<br>1</p>
+<h4 id="题意分析-8"><a href="#题意分析-8" class="headerlink" title="题意分析"></a>题意分析</h4><p>妥妥的签到</p>
+<h4 id="代码实现-8"><a href="#代码实现-8" class="headerlink" title="代码实现"></a>代码实现</h4><pre><code>#include&lt;stdio.h&gt;
+int a[15];
+int main()
+{
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    a[0]=0;
+    a[1]=1;
+    for(int i=2;i&lt;=10;i++)
+    {
+        a[i]=a[i-1]+a[i-2];
+    }//打表
+    printf(&quot;%d\n&quot;,a[n]);
+    return 0;
+}
+</code></pre><p>咳咳，写这个“题解”，我是为了帮助同学，没有骗访问量没有没有。有不懂的可以直接qq我或者网页右下角有一个可以实时联系我的小框框你们可以直接跟我聊天，看见就会回复的，有什么不同的想法和思路可以在评论区发表一下意见，毕竟不是官方题解，考虑的可能不周全莫名其妙的a题，集思广益。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏<div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/alipay.webp"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/wechat.webp"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/03/30/finish/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804080736.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804080736.webp">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                终于搭好了</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/03/28/google-search/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804083323.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804083323.webp">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                不翻墙使用谷歌搜索的方法</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+      document.getElementById("page_loading_time").innerHTML="It took me "+loadTime+"ms to meet you this time";
+      console.log('Page load time is '+ loadTime);  
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        avatar: 'monsterid',
+        appId: "pNiuQ1a1Kllv1bupuAAOYjl3-gzGzoHsz",
+        appKey: "0cJBUKqrJsFhMOrGAyxfL9VU",
+        path: window.location.pathname,
+        serverURL: "https://valine.cndrew.cn/",
+        placeholder: "若想及时收到回复消息，请在上方填入常用邮箱."
+      })
+  }
+</script>
+
+
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="https://cndrew.cn/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp" itemprop="image" alt="Uncle_drew" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://cndrew.cn/" itemprop="url" rel="author">Uncle_drew</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>
+    
+    
+
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Uncle_drew<br>
+      powered_by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019-2020 Uncle_drew</p>
+      <p style="color: #666666;" id="page_loading_time"></p>
+    </div>
+   
+
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a></a>
+        </span>
+      </p>
+   <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="静态网页托管于阿里云服务器">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+      <span class="badge-subject">DNS</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-brightgreen">jsDelivr</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv" target="_blank" title="本站访客量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">PV</span><span class="badge-value bg-orange" id="busuanzi_value_site_pv" target="_blank" title="本站浏览量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet" target="_blank" title="全站字数">340.2k</span>
+    </div>
+    </div><!-- .site-info -->
+
+
+  </footer>
+
+  
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/mmp/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/bug/sakura-ap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/fasearch.min.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/drew233/css/lvaline.min.js'></script>
+<script src="//cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20191003172815.webp"></img></center>
+
+<!-- 不蒜子 网页计数器 -->
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+    </div>
+
+
+    <div class="site-search">
+      <div class="popup search-popup" style="display: none;">
+      <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-container">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="输入关键词搜索" spellcheck="false" type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    </div>
+
+    <div id="search-result">
+      <div id="no-result"><i class="fa fa-frown-o fa-5x"></i>
+      </div>
+    </div>
+    </div>
+    <div class="search-pop-overlay" style="display: none;"></div>
+    </div>
+  </section>
+  
+
+  <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+ <div class="theme-controls row-container">
+  <ul class="menu-list">
+   <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+   <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+   <li id="gribs-bg"> <i class="fas fa-atom" aria-hidden="true"></i></li>
+   <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+   <li id="totem-bg"> <i class="fas fa-fish" aria-hidden="true"></i></li>
+   <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+   <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+   <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+  </ul>
+ </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+
+  <div class="changeSkin-gear no-select">
+  <div class="keys" id="setbtn">
+   <span id="open-skinMenu"> 切换主题 | SCHEME TOOL
+     <i class="iconfont icon-gear inline-block rotating"></i>
+   </span>
+  </div>
+</div>
+
+  
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Uncle_drew</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Drew233" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=1120437716&site=qq&menu=yes" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Algorithm/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  算法
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Life/">
+                  <i class="fa fa-bathtub" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Training/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  集训
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/analytics/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-line-chart" aria-hidden="true"></i>
+            统计
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  lab
+                </a>
+              </li>
+            
+              <li>
+                <a href="/category/">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  分类
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
+                <a href="/2020/06/02/mcwallpaper/">
+                  <i class="fa fa-television" aria-hidden="true"></i>
+                  MC壁纸
+                </a>
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                  订阅
+                </a>
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                  打赏
+                </a>
+              </li>
+            
+              <li>
+                <a href="/random.html">
+                  <i class="fa fa-random" aria-hidden="true"></i>
+                  随机文章
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/shuoshuo/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-clock-o" aria-hidden="true"></i>
+            说说
+          </span>
+        </a>
+        
+      </li>
+    
+    <li>
+      <a role="button" class="popup-trigger">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          搜索
+      </a>
+      
+    </li>
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">Hand down,man down</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+   
+
+
+
+</body>
+
+</html>

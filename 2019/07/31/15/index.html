@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta itemprop="name" content="Uncle_drew">
+  <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  <meta name="description" itemprop="description" content="Hand down,man down">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="keywords" content="Uncle_drew,drew,欧文,acm,icpc,algorithm,算法,篮球,web,建站,chevereto,hexo">
+  
+  <title itemprop="name">HPU Summer Day 15(河南理工大学暑期第十五天) | Uncle_drew</title>
+  
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/drew233/cdn/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="//cdn.bootcss.com">
+  <link rel="dns-prefetch" href="//cdn.mathjax.org">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/cdn/gg.css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="https://cdn.jsdelivr.net/gh/drew233/css/wustyle.min.css" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/lib.min.css" media="all">
+  <link href="https://cdn.bootcss.com/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/rfsearch.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/font.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/drew233/css/zoom.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/sharejs.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/drew233/css/matery.min.css">
+
+
+  <style type="text/css">
+          #drew {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              margin-bottom: 15px;
+              margin-top: 15px;
+              text-align: center;
+              border: 0;
+              border-radius: 10px;
+              color: rgba(0, 0, 0, .87);
+              background: #fff 50%;
+              background-size: cover;
+              box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07);
+              margin:0 auto;
+          }
+  </style>
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+
+   Function.prototype.getMultiLine = function () {
+            var lines = new String(this);
+            lines = lines.substring(lines.indexOf("/*") + 3, lines.lastIndexOf("*/"));
+            return lines;
+        }
+
+        var string = function () {
+/*
+  Hello!
+（〃｀ 3′〃）
+*/
+        }
+        window.console.log(string.getMultiLine());
+
+
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /*
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+  /*End of Initial Variables*/
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/drew233/imgcdn/1589450799625.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200514082037.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200508193114.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/at166.webp,https://cdn.jsdelivr.net/gh/drew233/cdn/20200407230036.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  var issafariBrowser = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+  if(issafariBrowser){
+    alert('本站图片主要采用Webp，暂不兼容Safari');
+  };
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="/random.html">
+          <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>Hand down,man down.</p>
+        <div class="top-social_v2">
+          <!-- <li id="bg-pre"> -->
+            <!-- <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/Drew233" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811021906.webp">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1120437716&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20190811022455.webp">
+                  </a>
+                </li>
+              
+            
+          
+          <!-- <li id="bg-next"> -->
+            <!-- <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg"> -->
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+
+    <div id="page" class="site wrapper">
+      
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top" id="pcmenu">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Uncle_drew</span>
+            <span class="shironeko"></span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/Algorithm/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          算法
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Life/">
+                          <i class="fa fa-bathtub" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/Training/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          集训
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/analytics/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-line-chart" aria-hidden="true"></i>
+                    统计
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          lab
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/category/">
+                          <i class="fa fa-list" aria-hidden="true"></i>
+                          分类
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/">
+                          <i class="fa fa-tags" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/2020/06/02/mcwallpaper/">
+                          <i class="fa fa-television" aria-hidden="true"></i>
+                          MC壁纸
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/atom.xml">
+                          <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                          订阅
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/donate/">
+                          <i class="fa fa-money" aria-hidden="true"></i>
+                          打赏
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/random.html">
+                          <i class="fa fa-random" aria-hidden="true"></i>
+                          随机文章
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/shuoshuo/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-clock-o" aria-hidden="true"></i>
+                    说说
+                  </span>
+                </a>
+                
+              </li>
+            
+            <li>
+              <a role="button" class="popup-trigger">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  搜索
+              </a>
+              
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+     
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/drew233/cdn/htt.webp);" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/htt.webp">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      HPU Summer Day 15(河南理工大学暑期第十五天)</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://cndrew.cn/">
+            <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+          </a>
+        </span>
+        <span>
+          <a href="https://cndrew.cn/">Uncle_drew</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        <i class="fa fa-calendar" aria-hidden="true">&nbsp&nbsp</i>2019-7-31<span class="bull">
+        ·</span>
+      <i class="fa fa-eye" aria-hidden="true">&nbsp&nbsp</i>本文共<span id="busuanzi_value_page_pv"></span>次阅读 &nbsp·&nbsp
+         <i class="fa fa-book" aria-hidden="true">&nbsp&nbsp</i><span class="post-count">字数统计：5.5k</span> &nbsp·&nbsp
+           <span class="post-count"><i class="fa fa-coffee" aria-hidden="true">&nbsp&nbsp</i>阅读时长≈24分钟</span></p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div id="point"></div>
+
+        <script>
+          function intervalTime(startTime,endTime){
+              var date1 = new Date(startTime);
+              var date2 = new Date(endTime);  
+              var date3 = date2.getTime() - date1.getTime(); 
+              var days = Math.floor(date3 / (24 * 3600 * 1000));
+              return days;
+          }
+          function format(Date){
+            var Y = Date.getFullYear();
+            var M = Date.getMonth() + 1;
+              M = M < 10 ? '0' + M : M;// 不够两位补充0
+            var D = Date.getDate();
+              D = D < 10 ? '0' + D : D;
+            var H = Date.getHours();
+              H = H < 10 ? '0' + H : H;
+            var Mi = Date.getMinutes();
+              Mi = Mi < 10 ? '0' + Mi : Mi;
+            var S = Date.getSeconds();
+              S = S < 10 ? '0' + S : S;
+              return Y + '-' + M + '-' + D + ' ' + H + ':' + Mi + ':' + S;
+          }
+          var pdate = new Date("Wed Jul 31 2019 00:00:00 GMT+0800");
+          var update = new Date("Thu Apr 02 2020 00:13:51 GMT+0800");
+          var now = new Date();
+          now=format(now);
+          pdate=format(pdate);
+          update=format(update);
+          var days=intervalTime(pdate,now),udays=intervalTime(update,now);
+          var mid=parseInt(days,10);
+          var mi=parseInt("30",10);
+          // alert(mid+mi);
+          if(mid > mi){
+            document.getElementById("point").innerHTML="<div class=\"tip share\">请注意，本文编写于"+days+"天前，最后修改于"+udays+"天前，其中某些信息可能已经过时。<img src=\"https://cdn.jsdelivr.net/gh/drew233/cdn/kawayi.webp\"><\img> </div>";
+            // alert(days);
+          }
+        </script>
+
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+
+        <div class="entry-content">
+
+          <h3 id="Bone-Collector"><a href="#Bone-Collector" class="headerlink" title="Bone Collector"></a>Bone Collector</h3><p>Description:<br>涂奥最近迷上了吃鸡，房间有n个配件，每个配件有c(c&lt;=1e3)的重量和v(v&lt;=1e3)的价值，哇，涂奥捡了一个2级包，容量为s，所以涂奥最多当多肥的快递员呢？<br>Input</p>
+<blockquote>
+<p>输入的第一行是T, 表示有一共要打T场比赛.<br>每组数据由三行组成.<br>第1行包含两个整数n和s 第2行包含n个整数, 表示每一个配件的价值. 第3行包含n个整数, 表示每个配件的重量.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>对每一组数据, 输出涂奥可以多肥.</p>
+</blockquote>
+<p>Sample Input<br>1<br>10 10<br>1 3 5 7 9 11 13 15 17 19<br>19 17 15 13 11 9 7 5 3 1<br>Sample Output<br>51</p>
+<p>Problem solving:<br>跟昨天那道题一样，不过就是换了描述。<br>提议就是给定你容量，然后告诉你每个物品的价值和体积，求你能拿到的最大的价值。<br>01背包问题，直接套板子即可</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int tx=1e6;
+int m[tx],M[tx],dp[tx];
+int main()
+{
+    int t,n,s;
+    cin&gt;&gt;t;
+    while(t--)
+    {
+        cin&gt;&gt;n&gt;&gt;s;
+        for(int i=0;i&lt;n;i++)    cin&gt;&gt;m[i];
+        for(int i=0;i&lt;n;i++)    cin&gt;&gt;M[i];
+        memset(dp,0,sizeof(dp));
+        for(int i=0;i&lt;n;i++)
+        {
+            for(int j=s;j&gt;=M[i];j--)
+            {
+                dp[j]=max(dp[j],dp[j-M[i]]+m[i]);
+            }
+        }
+        cout&lt;&lt;dp[s]&lt;&lt;endl;
+    }
+}
+</code></pre><h3 id="饭卡"><a href="#饭卡" class="headerlink" title="饭卡"></a>饭卡</h3><p>Description:<br>电子科大本部食堂的饭卡有一种很诡异的设计，即在购买之前判断余额。如果购买一个商品之前，卡上的剩余金额大于或等于5元，就一定可以购买成功（即使购买后卡上余额为负），否则无法购买（即使金额足够）。所以大家都希望尽量使卡上的余额最少。<br>某天，食堂中有n种菜出售，每种菜可购买一次。已知每种菜的价格以及卡上的余额，问最少可使卡上的余额为多少。<br>Input</p>
+<blockquote>
+<p>多组数据。对于每组数据：<br>第一行为正整数n，表示菜的数量。n&lt;=1000。<br>第二行包括n个正整数，表示每种菜的价格。价格不超过50。<br>第三行包括一个正整数m，表示卡上的余额。m&lt;=1000。<br>n=0表示数据结束。</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>对于每组输入,输出一行,包含一个整数，表示卡上可能的最小余额。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>1<br>50<br>5<br>10<br>1 2 3 2 1 1 2 3 2 1<br>50<br>0</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>-45<br>32</p>
+</blockquote>
+<p>Problem solving:<br>题意就是让你尽可能多的花掉自己的钱，求余额。有一个特殊规定就是如果当前余额大于等于5，能买任何的菜，但是一旦n小于5，就什么都不能买了。<br>也是一道01背包的问题，这里还有一点贪心的感觉就是，为了最后能达到的是最小的余额，我们拿5元出来买最贵的菜。然后就是背包，背包容量是n-5，直接套板子求出n-5的容量下能花费最多钱的情况。<br>最后输出的时候减去最大的花费和最贵的菜即可。<br>但是还有一点就是输入的n就有可能是小于5的。这时直接输出n就行。</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int tx=1005;
+int m[tx],dp[tx];
+int main()
+{
+    int t,n;
+    while(cin&gt;&gt;t&amp;&amp;t)
+    {
+        memset(dp,0,sizeof(dp));
+        for(int i=0;i&lt;t;i++)    cin&gt;&gt;m[i];
+        cin&gt;&gt;n;
+        if(n&lt;5)
+        {
+            cout&lt;&lt;n&lt;&lt;endl;
+            continue;
+        }
+        sort(m,m+t);
+        for(int i=0;i&lt;t-1;i++)
+        for(int j=n-5;j&gt;=m[i];j--)
+        {
+            dp[j]=max(dp[j],dp[j-m[i]]+m[i]);
+        }
+        cout&lt;&lt;n-dp[n-5]-m[t-1]&lt;&lt;endl;
+    }
+}
+</code></pre><h3 id="CD"><a href="#CD" class="headerlink" title="CD"></a>CD</h3><p>Description:<br>PDF题面:<a href="https://vj.ti12z.cn/f38ae0d246e80c425804db33c376c68a?v=1564526721" target="_blank" rel="noopener">戳我戳我</a><br>You have a long drive by car ahead. You have a tape recorder, but unfortunately your best music is on<br>CDs. You need to have it on tapes so the problem to solve is: you have a tape N minutes long. How<br>to choose tracks from CD to get most out of tape space and have as short unused space as possible.<br>Assumptions:<br>• number of tracks on the CD does not exceed 20<br>• no track is longer than N minutes<br>• tracks do not repeat<br>• length of each track is expressed as an integer number<br>• N is also integer<br>Program should find the set of tracks which fills the tape best and print it in the same sequence as<br>the tracks are stored on the CD<br>Input</p>
+<blockquote>
+<p>Any number of lines. Each one contains value N, (after space) number of tracks and durations of the<br>tracks. For example from first line in sample data: N = 5, number of tracks=3, first track lasts for 1<br>minute, second one 3 minutes, next one 4 minutes</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>Set of tracks (and durations) which are the correct solutions and string ‘sum:’ and sum of duration<br>times.</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>5 3 1 3 4<br>10 4 9 8 4 2<br>20 4 10 5 7 4<br>90 8 10 23 1 2 3 4 5 7<br>45 8 4 10 44 43 12 9 8 2</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>1 4 sum:5<br>8 2 sum:10<br>10 5 4 sum:19<br>10 23 1 2 3 4 5 7 sum:55<br>4 10 12 9 8 2 sum:45</p>
+</blockquote>
+<p>Problem solving:<br>这道题的意思就是给你一个数，这个就是背包容量然后给你n个数，问你这n个数怎么放能使背包容量最小，并输出这个方法。</p>
+<p>简单的01背包问题。不简单的输出方法。<br>在每次dp查找最优情况的时候进行标记，最后根据标记输出，并且题目要求的输出是出现在前面的就输出在前面，最后还有一点小优化，可以看一下代码注释理解。</p>
+<p>关于这个输出路径，我也不是理解的很清楚，但是很关键的要理解的一点就是dp[j]这个数组的含义。也就是01背包中dp[i][j]的意思:从前i-1个物品中，选出来总重量不超过j的物品时，总价值的最大值</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int n,m,num;
+const int maxn=10005;
+int a[maxn],dp[maxn],flag[maxn][maxn];
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    while(cin&gt;&gt;n&gt;&gt;m)
+    {
+        for(int i=0;i&lt;m;i++)    cin&gt;&gt;a[i];
+        memset(flag,0,sizeof(flag));
+        memset(dp,0,sizeof(dp));
+        for(int i=m-1;i&gt;=0;i--)//这里倒序主要是在输出的时候方便
+        {
+            for(int j=n;j&gt;=a[i];j--)
+            {
+                if(dp[j]&lt;dp[j-a[i]]+a[i])//选上了a[i]的情况
+                {
+                    dp[j]=dp[j-a[i]]+a[i];
+                    flag[i][j]=1;//进行标记
+                }
+            }
+        }
+        for(int i=0,j=n;i&lt;m;i++)
+        {
+            if(flag[i][j])//标价到的就输出
+            {
+                cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;
+                j-=a[i];
+            }
+        }
+        cout&lt;&lt;&quot;sum:&quot;&lt;&lt;dp[n]&lt;&lt;endl;
+    }
+}
+</code></pre><h3 id="Piggy-Bank"><a href="#Piggy-Bank" class="headerlink" title="Piggy-Bank"></a>Piggy-Bank</h3><p>Description:<br>在 ACM 能够开展之前，必须准备预算，并获得必要的财力支持。该活动的主要收入来自于 Irreversibly Bound Money (IBM)。思路很简单。任何时候，某位 ACM 会员有少量的钱时，他将所有的硬币投入到小猪储钱罐中。这个过程不可逆，因为只有把小猪储钱罐打碎才能取出硬币。在足够长的时间之后，小猪储钱罐中有了足够的现金，用于支付 ACM 活动所需的花费。</p>
+<p>但是，小猪储钱罐存在一个大的问题，即无法确定其中有多少钱。因此，我们可能在打碎小猪储钱罐之后，发现里面的钱不够。显然，我们希望避免这种不愉快的情况。唯一的可能是，称一下小猪储钱罐的重量，并尝试猜测里面的有多少硬币。假定我们能够精确判断小猪储钱罐的重量，并且我们也知道给定币种的所有硬币的重量。那么，我们可以保证小猪储钱罐中最少有多少钱。</p>
+<p>你的任务是找出最差的情形，即判断小猪储钱罐中的硬币最少有多少钱。我们需要你的帮助。不能再贸然打碎小猪储钱罐了！</p>
+<p>输入</p>
+<blockquote>
+<p>输入包含 T 组测试数据。输入文件的第一行，给出了 T 的值。<br>对于每组测试数据，第一行包含 E 和 F 两个整数，它们表示空的小猪储钱罐的重量，以及装有硬币的小猪储钱罐的重量。两个重量的计量单位都是 g (克)。小猪储钱罐的重量不会超过 10 kg (千克)，即 1 &lt;= E &lt;= F &lt;= 10000 。每组测试数据的第二行，有一个整数 N (1 &lt;= N &lt;= 500)，提供了给定币种的不同硬币有多少种。接下来的 N 行，每行指定一种硬币类型，每行包含两个整数 P 和 W (1 &lt;= P &lt;= 50000，1 &lt;= W &lt;=10000)。P 是硬币的金额 (货币计量单位)；W 是它的重量，以 g (克) 为计量单位。</p>
+</blockquote>
+<p>输出</p>
+<blockquote>
+<p>对于每组测试数据，打印一行输出。每行必须包含句子 “The minimum amount of money in the piggy-bank is X.” 其中，X 表示对于给定总重量的硬币，所能得到的最少金额。如果无法恰好得到给定的重量，则打印一行 “This is impossible.” 。</p>
+</blockquote>
+<p>示例输入</p>
+<blockquote>
+<p>3<br>10 110<br>2<br>1 1<br>30 50<br>10 110<br>2<br>1 1<br>50 30<br>1 6<br>2<br>10 3<br>20 4</p>
+</blockquote>
+<p>示例输出</p>
+<blockquote>
+<p>The minimum amount of money in the piggy-bank is 60.<br>The minimum amount of money in the piggy-bank is 100.<br>This is impossible.</p>
+</blockquote>
+<p>Problem solving:<br>这道题的意思是给你一个存钱罐的初始和末状态的质量，然后给定你每种硬币的质量和价值。要求这个存钱罐是否存在着能正好放满硬币的情况，如果有求出最小的情况。</p>
+<p>每个硬币可以挑选任意次，所以这是一道完全背包的题。套板子就行，注意我们要求最小值，所以初始化成一个极大值，然后在dp的过程中取min。<br>还有一点就是dp[0]一定要初始化为0，因为这里我们dp[i]表示的就是在i的空间下，能放人的最小的硬币的值。空间为0即不能再放硬币了，所以价值就是0了。</p>
+<p>Code:</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+using namespace std;
+int p[505],w[505],dp[10005];
+const int INF = 0x3f3f3f3f;
+int main()
+{
+    int t,s,e,n,cs;
+    cin&gt;&gt;t;
+    while(t--)
+    {
+        cin&gt;&gt;s&gt;&gt;e&gt;&gt;n;
+        cs=e-s;
+        for(int i=0;i&lt;=cs;i++)    dp[i]=INF;
+        for(int i=0;i&lt;n;i++)    cin&gt;&gt;p[i]&gt;&gt;w[i];
+        dp[0]=0;
+        for(int i=0;i&lt;n;i++)
+        {
+            for(int j=w[i];j&lt;=cs;j++)
+            {
+                dp[j]=min(dp[j],dp[j-w[i]]+p[i]);
+            }
+        }
+        if(dp[cs]!=INF)
+            cout&lt;&lt;&quot;The minimum amount of money in the piggy-bank is &quot;&lt;&lt;dp[cs]&lt;&lt;&quot;.&quot;;
+        else    cout&lt;&lt;&quot;This is impossible.&quot;;
+        puts(&quot;&quot;);
+    }
+}
+</code></pre><h3 id="Dividing-coins"><a href="#Dividing-coins" class="headerlink" title="Dividing coins"></a>Dividing coins</h3><p>Description:<br>PDF题面：<a href="https://vj.ti12z.cn/59ec771136a22cd223c44370a4f9b67c?v=1564459707" target="_blank" rel="noopener">戳我戳我</a><br>It’s commonly known that the Dutch have invented copper-wire. Two Dutch men were fighting over<br>a nickel, which was made of copper. They were both so eager to get it and the fighting was so fierce,<br>they stretched the coin to great length and thus created copper-wire.<br>Not commonly known is that the fighting started, after the two Dutch tried to divide a bag with<br>coins between the two of them. The contents of the bag appeared not to be equally divisible. The Dutch<br>of the past couldn’t stand the fact that a division should favour one of them and they always wanted<br>a fair share to the very last cent. Nowadays fighting over a single cent will not be seen anymore, but<br>being capable of making an equal division as fair as possible is something that will remain important<br>forever...<br>That’s what this whole problem is about. Not everyone is capable of seeing instantly what’s the<br>most fair division of a bag of coins between two persons. Your help is asked to solve this problem.<br>Given a bag with a maximum of 100 coins, determine the most fair division between two persons.<br>This means that the difference between the amount each person obtains should be minimised. The<br>value of a coin varies from 1 cent to 500 cents. It’s not allowed to split a single coin.<br>Input</p>
+<blockquote>
+<p>A line with the number of problems n, followed by n times:<br>• a line with a non negative integer m (m ≤ 100) indicating the number of coins in the bag<br>• a line with m numbers separated by one space, each number indicates the value of a coin.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>The output consists of n lines. Each line contains the minimal positive difference between the amount<br>the two persons obtain when they divide the coins from the corresponding bag.</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>2<br>3<br>2 3 5<br>4<br>1 2 4 6</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>0<br>1</p>
+</blockquote>
+<p>Problem solving:<br>这道题的意思就是给你n个硬币，让你分成两堆，求所有分法中两堆价值差值最小的情况。<br>这道题乍一看以为是要贪心，但是WA了。<br>然后想到今天讲的是背包诶，然后脑子里灵光一现(去百度了一下)，想到可以以硬币的总价值的一半为背包容量进行01背包的处理。假设总价值为s，这时我们求出的dp[s/2]就是分成差值最小的两堆中的其中一堆，然后另一堆的价值就是s-sp[s/2],两堆价值的差值就是s-2*dp[s/2]</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int tx=1e5+10;
+int m[tx],dp[tx];
+int main()
+{
+    int n,t;
+    cin&gt;&gt;n;
+    while(n--)
+    {
+        cin&gt;&gt;t;
+        memset(dp,0,sizeof(dp));
+        int sum=0;
+        for(int i=0;i&lt;t;i++)    cin&gt;&gt;m[i],sum+=m[i];
+        for(int i=0;i&lt;t;i++)
+        {
+            for(int j=sum/2;j&gt;=m[i];j--)
+            {
+                dp[j]=max(dp[j],dp[j-m[i]]+m[i]);
+            }
+        }
+        cout&lt;&lt;sum-dp[sum/2]-dp[sum/2]&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre><h3 id="Robberies"><a href="#Robberies" class="headerlink" title="Robberies"></a>Robberies</h3><p>Description:<br>可怜的POIUYTREWQ最近想买下dota2的商品，但是手头缺钱。他想起了之前看过的一部大片，觉得抢银行也许是个不错的选择。他认为，坏人被抓是因为没有预先规划。于是他在之前的几个月对各大银行进行了一次评估； 评估内容包括安全性和可盗窃金额： 他想知道在在某个风险系数下可以偷窃的最大金额<br>Input</p>
+<blockquote>
+<p>第一行给出了一个整数T, 表示有T组测试数据. 对于每一组数据，第一行给出了一个浮点数P, 表示POIUYTREWQ允许被抓的最大概率, 和一个整数N，表示他计划去抢劫的N个银行. 接下来N行, 每行给出一个整数数Mj和浮点数Pj.<br>抢劫银行 j 可获得 Mj 百万美金, 被抓的概率是 Pj .</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>对于每组数据，每行输出一个整数，表示POIUYTREWQ在被抓概率小于P的情况下，可抢到的最多的金钱。</p>
+</blockquote>
+<p>Notes and Constraints<br>0 &lt; T &lt;= 100<br>0.0 &lt;= P &lt;= 1.0<br>0 &lt; N &lt;= 100<br>0 &lt; Mj &lt;= 100<br>0.0 &lt;= Pj &lt;= 1.0<br>你可以认为每家银行都是独立的。<br>Sample Input</p>
+<blockquote>
+<p>3<br>0.04 3<br>1 0.02<br>2 0.03<br>3 0.05<br>0.06 3<br>2 0.03<br>2 0.03<br>3 0.05<br>0.10 3<br>1 0.03<br>2 0.02<br>3 0.05</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>2<br>4<br>6</p>
+</blockquote>
+<p>Problem solving:<br>这道题就是先给你一个实数代表这个可怜的孩子能允许的最大的被抓的概率，意思就是你被抓的概率不能超过这个值。然后给你n个银行的获利以及被抓的概率，求最大能偷多少钱。</p>
+<p>这是一道01背包的问题，但是不太一样的是如果我们直接以概率为背包容量的话会出现一个很尴尬的问题就是实数并不可以当做数组的下标，然后我想到了对概率乘上一个较大的数（1e6之类的）然后进行背包的dp，但是这样会WA，由此可见这道题的精度还是很高的，所以这种方法我们行不通。就得换个方向</p>
+<p>这里可以以偷到的美金的数量为背包容量进行01背包，然后求出获得(1~n)内每个美金数量所对应的不被抓住的概率。<br>背包容量就是可以偷到的美金的最大值——所有都偷到。<br>dp[i]表示的就是偷了i美金之后不被抓的概率</p>
+<p>有一点还需要注意的就是dp[0]必须初始化为1，不然后面算出来的dp都是0了。可为什么初始化的是1呢，因为我们现在用的dp数组表示的是偷了i美金之后不被抓的概率，i等于0的意思就是一点美金都没偷，不被抓的概率当然就是1(100%)了。</p>
+<p>为什么我们要求的是不被抓住的概率呢？<br>因为如果是被抓住的概率的话，算总的概率并不好求，可以自己想一下。如果第一次被抓住的概率是0.5，第二次被抓住的概率也是0.5~·~·~第n次被抓住的概率也是0.5，那么总共被抓住的几率并不好求，因为如果第一次被抓住了，后面的就都不用考虑了，以此类推易想到不好求。<br>但是如果是不被抓住的概率，我们直接累乘就行了。<br>最后我们求出对应的每个美金的数量对应的不被抓住的概率，直接O(n)查找到概率大于等于1-p(允许被抓的最大概率)的美金数量输出即可。</p>
+<p>具体可以看一下代码在感受一下，涉及到01背包的直接套板子就行(对和我一样不太理解背包的小伙伴适用<br>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int maxn = 105;
+int m[maxn];double dp[100005],p[maxn];
+int main()
+{
+    ios::sync_with_stdio(0);
+    int t;
+    cin&gt;&gt;t;
+    while(t--)
+    {
+        memset(dp,0,sizeof(dp));
+        double pp;int n,sum=0;
+        cin&gt;&gt;pp&gt;&gt;n;
+        for(int i=0;i&lt;n;i++)
+        {
+            cin&gt;&gt;m[i]&gt;&gt;p[i];
+            sum+=m[i];
+            p[i]=1-p[i];
+        }
+        dp[0]=1;//这个初始化很重要
+        for(int i=0;i&lt;n;i++)
+        {
+            for(int j=sum;j&gt;=m[i];j--)
+            {
+                dp[j]=max(dp[j],dp[j-m[i]]*p[i]);
+            }
+        }
+        for(int i=sum;i&gt;=0;i--)
+        {
+            if(dp[i]&gt;=1-pp)
+            {
+                cout&lt;&lt;i&lt;&lt;endl;
+                break;
+            }
+        }
+    }
+    return 0;
+}
+</code></pre><h3 id="Coin-Change"><a href="#Coin-Change" class="headerlink" title="Coin Change"></a>Coin Change</h3><p>Description:<br>PDF题面:<a href="https://vj.ti12z.cn/0f4c5078f76f023eca12596dd1edb892?v=1564372407" target="_blank" rel="noopener">戳我戳我</a><br>Suppose there are 5 types of coins: 50-cent, 25-cent, 10-cent, 5-cent, and 1-cent. We want to make<br>changes with these coins for a given amount of money.<br>For example, if we have 11 cents, then we can make changes with one 10-cent coin and one 1-cent<br>coin, two 5-cent coins and one 1-cent coin, one 5-cent coin and six 1-cent coins, or eleven 1-cent coins.<br>So there are four ways of making changes for 11 cents with the above coins. Note that we count that<br>there is one way of making change for zero cent.<br>Write a program to find the total number of different ways of making changes for any amount of<br>money in cents. Your program should be able to handle up to 7489 cents.<br>Input</p>
+<blockquote>
+<p>The input file contains any number of lines, each one consisting of a number for the amount of money<br>in cents.</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>For each input line, output a line containing the number of different ways of making changes with the<br>above 5 types of coins.</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>11<br>26</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>4<br>13</p>
+</blockquote>
+<p>Problem solving:<br>这道题的意思就是给你5种硬币，币值都给你了，在给你一个数问有几种方法可以拼出来这个数。</p>
+<p>这是一道完全背包的题，直接套板子就行了。</p>
+<p>这里我第一次不知道为啥TLE了，所以加上了一个记忆化搜索，也可能是cin/cout得锅。<br>Code:</p>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+ll ans[7500];
+ll solve(ll x)
+{
+    if(ans[x])    return ans[x];
+    int coins[13]  = { 1, 5, 10, 25, 50};
+    ll  dp[100005] = { 0 };
+    dp[0] = 1;
+    for (int i = 0; i &lt; 6; i++)
+    {
+        for (int j = coins[i]; j &lt;= x; j++)
+        {
+            dp[j] = dp[j] + dp[j - coins[i]];
+        }
+    }
+    return ans[x]=dp[x];
+}
+int main()
+{
+    ll t, a;
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    while (cin &gt;&gt; a)
+    {
+        cout &lt;&lt; solve(a)/2 &lt;&lt; endl;
+    }
+}
+</code></pre><h3 id="悼念512汶川大地震遇难同胞——珍惜现在，感恩生活"><a href="#悼念512汶川大地震遇难同胞——珍惜现在，感恩生活" class="headerlink" title="悼念512汶川大地震遇难同胞——珍惜现在，感恩生活"></a>悼念512汶川大地震遇难同胞——珍惜现在，感恩生活</h3><p>Description:<br>急！灾区的食物依然短缺！<br>为了挽救灾区同胞的生命，心系灾区同胞的你准备自己采购一些粮食支援灾区，现在假设你一共有资金n元，而市场有m种大米，每种大米都是袋装产品，其价格不等，并且只能整袋购买。<br>请问：你用有限的资金最多能采购多少公斤粮食呢？</p>
+<p>后记：<br>人生是一个充满了变数的生命过程，天灾、人祸、病痛是我们生命历程中不可预知的威胁。<br>月有阴晴圆缺，人有旦夕祸福，未来对于我们而言是一个未知数。那么，我们要做的就应该是珍惜现在，感恩生活——<br>感谢父母，他们给予我们生命，抚养我们成人；<br>感谢老师，他们授给我们知识，教我们做人<br>感谢朋友，他们让我们感受到世界的温暖；<br>感谢对手，他们令我们不断进取、努力。<br>同样，我们也要感谢痛苦与艰辛带给我们的财富～</p>
+<p>Input</p>
+<blockquote>
+<p>输入数据首先包含一个正整数C，表示有C组测试用例，每组测试用例的第一行是两个整数n和m(1&lt;=n&lt;=100, 1&lt;=m&lt;=100),分别表示经费的金额和大米的种类，然后是m行数据，每行包含3个数p，h和c(1&lt;=p&lt;=20,1&lt;=h&lt;=200,1&lt;=c&lt;=20)，分别表示每袋的价格、每袋的重量以及对应种类大米的袋数。</p>
+</blockquote>
+<p>Output</p>
+<blockquote>
+<p>对于每组测试数据，请输出能够购买大米的最多重量，你可以假设经费买不光所有的大米，并且经费你可以不用完。每个实例的输出占一行。</p>
+</blockquote>
+<p>Sample Input</p>
+<blockquote>
+<p>1<br>8 2<br>2 100 4<br>4 100 2</p>
+</blockquote>
+<p>Sample Output</p>
+<blockquote>
+<p>400</p>
+</blockquote>
+<p>Problem solving:<br>这道题的意思就是给了你最大得经费，还给了你每包米的体积以及价格和这种米的个数，问你在最优的情况下可以买到的米的体积</p>
+<p>这是一道多重背包的题，直接套板子即可。</p>
+<p>Code:</p>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+const int tx=1e3;
+int m[tx],p[tx],h[tx],c[tx];
+int main()
+{
+    int t,n,x;
+    cin&gt;&gt;t;
+    while(t--)
+    {
+        cin&gt;&gt;n&gt;&gt;x;
+        memset(m,0,sizeof(m));
+        for(int i=0;i&lt;x;i++)    cin&gt;&gt;p[i]&gt;&gt;h[i]&gt;&gt;c[i];
+        for(int i=0;i&lt;x;i++)
+        {
+            int mid=c[i];
+            for(int k=1;mid&gt;0;k*=2)
+            {
+                int miid=min(k,mid);
+                for(int j=n;j&gt;=p[i]*miid;j--)
+                {
+                    m[j]=max(m[j],m[j-p[i]*miid]+h[i]*miid);
+                }
+                mid-=miid;
+            }
+        }
+        cout&lt;&lt;m[n]&lt;&lt;endl;
+    }
+    return 0;
+}
+</code></pre><p>注意，这个背包问题中如果涉及到多组输入，dp数组的初始化是很重要的。<br>这些dp啊，背包的好多问题一看都感觉好像用贪心可以写，但是过一会你就会发现贪心并不能解决这些问题，还是老老实实学dp吧、、、</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏<div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/alipay.webp"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/wechat.webp"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2019/08/01/16/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190801202956.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190801202956.webp">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                HPU Summer Day 16(河南理工大学暑期第十六天)</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2019/07/31/dx/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20200315221901.webp" data-src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804091942.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/drew233/cdn/20190804091942.webp">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                HPU Summer Training Day x（河南理工大学暑期第x天）</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+  
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+      document.getElementById("page_loading_time").innerHTML="It took me "+loadTime+"ms to meet you this time";
+      console.log('Page load time is '+ loadTime);  
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        avatar: 'monsterid',
+        appId: "pNiuQ1a1Kllv1bupuAAOYjl3-gzGzoHsz",
+        appKey: "0cJBUKqrJsFhMOrGAyxfL9VU",
+        path: window.location.pathname,
+        serverURL: "https://valine.cndrew.cn/",
+        placeholder: "若想及时收到回复消息，请在上方填入常用邮箱."
+      })
+  }
+</script>
+
+
+      
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="https://cndrew.cn/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp" itemprop="image" alt="Uncle_drew" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://cndrew.cn/" itemprop="url" rel="author">Uncle_drew</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+    </div>
+    
+    
+
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Uncle_drew<br>
+      powered_by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2019-2020 Uncle_drew</p>
+      <p style="color: #666666;" id="page_loading_time"></p>
+    </div>
+   
+
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a></a>
+        </span>
+      </p>
+   <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://hexo.io/" target="_blank" title="由 Hexo 强力驱动">
+      <span class="badge-subject">Powered</span><span class="badge-value bg-blue">Hexo</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="静态网页托管于阿里云服务器">
+      <span class="badge-subject">Hosted</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.aliyun.com/" target="_blank" title="阿里云提供域名相关服务">
+      <span class="badge-subject">DNS</span><span class="badge-value bg-red">Aliyun</span></a>
+    </div>
+    <div class="github-badge">
+      <a style="color: #fff" rel="license" href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr 提供 CDN 加速服务">
+      <span class="badge-subject">CDN</span><span class="badge-value bg-brightgreen">jsDelivr</span></a>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">UV</span><span class="badge-value bg-orange" id="busuanzi_value_site_uv" target="_blank" title="本站访客量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">PV</span><span class="badge-value bg-orange" id="busuanzi_value_site_pv" target="_blank" title="本站浏览量"></span>
+    </div>
+    <div class="github-badge">
+      <span class="badge-subject">WordCount</span><span class="badge-value bg-blueviolet" target="_blank" title="全站字数">340.2k</span>
+    </div>
+    </div><!-- .site-info -->
+
+
+  </footer>
+
+  
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/mmp/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/js/zoom.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/bug/sakura-ap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/drew233/cdn/fasearch.min.js"></script>
+<script src='https://cdn.jsdelivr.net/gh/drew233/css/lvaline.min.js'></script>
+<script src="//cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<center><img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20191003172815.webp"></img></center>
+
+<!-- 不蒜子 网页计数器 -->
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"0","movies":{"url": "https://cdn.jsdelivr.net/gh/drew233/cdn/","name":"DLDS%20BD_Trim_Trim.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+    </div>
+
+
+    <div class="site-search">
+      <div class="popup search-popup" style="display: none;">
+      <div class="search-header">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <div class="search-input-container">
+      <input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="输入关键词搜索" spellcheck="false" type="text" id="search-input">
+    </div>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    </div>
+
+    <div id="search-result">
+      <div id="no-result"><i class="fa fa-frown-o fa-5x"></i>
+      </div>
+    </div>
+    </div>
+    <div class="search-pop-overlay" style="display: none;"></div>
+    </div>
+  </section>
+  
+
+  <div class="skin-menu no-select" id="mainskin" style="position: fixed">
+ <div class="theme-controls row-container">
+  <ul class="menu-list">
+   <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+   <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+   <li id="gribs-bg"> <i class="fas fa-atom" aria-hidden="true"></i></li>
+   <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+   <li id="totem-bg"> <i class="fas fa-fish" aria-hidden="true"></i></li>
+   <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+   <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+   <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+  </ul>
+ </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+
+  <div class="changeSkin-gear no-select">
+  <div class="keys" id="setbtn">
+   <span id="open-skinMenu"> 切换主题 | SCHEME TOOL
+     <i class="iconfont icon-gear inline-block rotating"></i>
+   </span>
+  </div>
+</div>
+
+  
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/drew233/cdn/dreww.webp">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Uncle_drew</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/Drew233" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=1120437716&site=qq&menu=yes" class="fa " target="_blank" style="color: #; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-home faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/Algorithm/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  算法
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Life/">
+                  <i class="fa fa-bathtub" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Training/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  集训
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/analytics/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-line-chart" aria-hidden="true"></i>
+            统计
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  lab
+                </a>
+              </li>
+            
+              <li>
+                <a href="/category/">
+                  <i class="fa fa-list" aria-hidden="true"></i>
+                  分类
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/">
+                  <i class="fa fa-tags" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
+                <a href="/2020/06/02/mcwallpaper/">
+                  <i class="fa fa-television" aria-hidden="true"></i>
+                  MC壁纸
+                </a>
+              </li>
+            
+              <li>
+                <a href="/atom.xml">
+                  <i class="fa fa-heart faa-pulse" aria-hidden="true"></i>
+                  订阅
+                </a>
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                  打赏
+                </a>
+              </li>
+            
+              <li>
+                <a href="/random.html">
+                  <i class="fa fa-random" aria-hidden="true"></i>
+                  随机文章
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/shuoshuo/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-clock-o" aria-hidden="true"></i>
+            说说
+          </span>
+        </a>
+        
+      </li>
+    
+    <li>
+      <a role="button" class="popup-trigger">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          搜索
+      </a>
+      
+    </li>
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">Hand down,man down</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+   
+
+
+
+</body>
+
+</html>
